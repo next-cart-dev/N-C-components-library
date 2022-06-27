@@ -24,6 +24,10 @@
   "peerDependencies": {
     "react": ">=16"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/next-cart-dev/N-C-components-library"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -35,7 +39,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@next-cart-dev/components-app-package",
+  "publishConfig": {
+    "@DehLuizSantos:registry": "https://npm.pkg.github.com/"
+  },
+  "name": "@next-cart-dev/n-c-components-library",
   "author": "DehLuizSantos",
   "module": "dist/mylib.esm.js",
   "size-limit": [
