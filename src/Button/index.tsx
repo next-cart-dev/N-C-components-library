@@ -4,7 +4,7 @@ export type ButtonProps = {
 }
 
 
-export const Button: React.FC<ButtonProps> = ({text}) =>{
+ const Button: React.FC<ButtonProps> = ({text}) =>{
     return(
         <button   style={{
         backgroundColor: 'blueviolet',
@@ -18,3 +18,4 @@ export const Button: React.FC<ButtonProps> = ({text}) =>{
     )
 }
 
+export default Button
