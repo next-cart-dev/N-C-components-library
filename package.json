@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "mylib",
+  "name": "@next-cart-dev/components-app-package",
   "author": "DehLuizSantos",
   "module": "dist/mylib.esm.js",
   "size-limit": [
