@@ -1,9 +1,9 @@
 // stories/Button.stories.tsx
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, ButtonProps } from '../src/Button';
+import Button, { ButtonProps } from '../src/Button';
 const meta: Meta = {
-  title: 'Button example',
+  title: 'Button',
   component: Button,
   argTypes: {
     text: {

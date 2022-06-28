@@ -1,56 +1,63 @@
-# TSDX React w/ Storybook User Guide
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
+Este projeto ultiliza as bibliotecas: 
 
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+# React-bootstrap
+# typescript
+# Storybook
+# TSDX
+# Jest
+# commitizen
+# semantic-release
 
-## Commands
+## Comandos
 
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+-yarn start: 
+Starta o projeto localmente.
 
-The recommended workflow is to run TSDX in one terminal:
+-yarn build:
+Gera um novo dist com as alterações que você fez no código.
 
-```bash
-npm start # or yarn start
-```
+-yarn test:
+Roda o Jest.
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+-yarn size:
+Calcula o custo real de sua biblioteca.
 
-Then run either Storybook or the example playground:
+-yarn storybook
+Roda o storybook da aplicação na porta 6006.
+
+-build-storybook
+Cria uma build da aplicação storybook, que está disponivel no link:
 
 ### Storybook
 
-Run inside another terminal:
+Você consegue checar todos components da aplicação no link:
 
-```bash
-yarn storybook
-```
+Caso precise atualizar, siga os seguintes passos:
 
-This loads the stories from `./stories`.
+1) Todos components .stories que você for criar, ou editar, estão localizados na pasta stories, dentro do /src
 
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
+2) Quando terminar de editar sua stories, gere uma nova build e suba o código para main.
+### commitizen
+Você consegue gerar um commit padronizado rodando o comando yarn commit.
 
-### Example
+Ele irá gerar opções detalhadas e subir um versionamento mais completo trabalhando junto com a lib semantic-release.
 
-Then run the example inside another:
+1) Escolha qual é o tipo de alteração que você fez no código.
 
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
+2) Digite o escopo de alteração simplificado do commit.
 
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
+3) Digite o escopo detalhado de alterações do commit.
 
-To do a one-off build, use `npm run build` or `yarn build`.
+4) É um commit com alterações absolutas? exemplo de v1.0 para v2.0
 
-To run tests, use `npm test` or `yarn test`.
+5) Esta alteração soluciona algum issue do github?
 
-## Configuration
+## semantic-release
 
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
+
+
 
 ### Jest
 

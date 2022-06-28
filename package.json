@@ -15,6 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "commit": "cz",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
@@ -56,7 +57,10 @@
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.18.5", 
+    "@babel/core": "^7.18.5",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-info": "^5.3.21",
@@ -66,22 +70,29 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
+    "cz-conventional-changelog": "3.3.0",
     "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
+    "semantic-release": "^19.0.2",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
-  "dependencies": {    
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",    
-    "@fortawesome/fontawesome-common-types": "^0.3.0",       
-    "react-bootstrap": "^1.6.1",    
-    "react-id-generator": "^3.0.2",
+  "dependencies": {
+    "@fortawesome/fontawesome-common-types": "^0.3.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18"
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "react-bootstrap": "^1.6.1",
+    "react-id-generator": "^3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
