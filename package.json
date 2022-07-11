@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,14 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "release": "yarn semantic-release"
+    "release": "yarn semantic-release",
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
   },
   "peerDependencies": {
     "react": ">=16"
@@ -71,12 +78,13 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.7.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^19.0.3",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
