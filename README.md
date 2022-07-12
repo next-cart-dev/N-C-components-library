@@ -37,6 +37,7 @@ Generate a new storybook static
 
 The library documentation is available at the link:
 ```sh
+https://62cd9f7d52b02b1186bd6fd7-odyxxidxxw.chromatic.com/?path=/story/alert--default
 ```
 This library's storybook will be automatically updated whenever you make a pull request to the main branch
 
