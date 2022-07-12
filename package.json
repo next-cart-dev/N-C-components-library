@@ -22,7 +22,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "yarn semantic-release",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "chromatic": "npx chromatic --project-token=298b6b874d70"
   },
   "release": {
     "branches": [
@@ -35,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/next-cart-dev/N-C-components-library"
+    "url": "git+https://github.com/next-cart-dev/N-C-components-library.git"
   },
   "husky": {
     "hooks": {
@@ -52,7 +53,9 @@
     "@next-cart-dev:registry": "https://npm.pkg.github.com/"
   },
   "name": "@next-cart-dev/n-c-components-library",
-  "author": "Next-Cart Dev Team",
+  "author": {
+    "name": "Next-Cart Dev Team"
+  },
   "module": "dist/mylib.esm.js",
   "size-limit": [
     {
@@ -103,5 +106,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/next-cart-dev/N-C-components-library/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/next-cart-dev/N-C-components-library#readme",
+  "_id": "@next-cart-dev/n-c-components-library@0.0.0-development"
 }

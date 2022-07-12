@@ -1,6 +1,5 @@
-import React from 'react'
-import Alert from '../src/Alert'
-
+import React from 'react';
+import Alert from '../src/Alert';
 
 export default {
   title: 'Alert',
@@ -8,35 +7,35 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'A simple alert component'
-      }
-    }
+        component: 'A simple alert component',
+      },
+    },
   },
   argTypes: {
     id: {
       defaultValue: 'alert-success',
       table: {
         type: { summary: 'id único' },
-        defaultValue: { summary: 'alert-success' }
-      }
+        defaultValue: { summary: 'alert-success' },
+      },
     },
     variant: {
       defaultValue: 'success',
-      options: ['success', 'warning', 'info', 'danger'],
+      options: ['success', 'warning', 'info'],
       control: { type: 'radio', defaultStatus: 'success' },
       table: {
         type: { summary: 'tipos de alerta' },
-        defaultValue: { summary: 'success' }
-      }
+        defaultValue: { summary: 'success' },
+      },
     },
     label: {
       defaultValue: 'Transação realizada com sucesso!',
       table: {
         type: { summary: 'descrição do alerta' },
-        defaultValue: { summary: 'Transação realizada com sucesso!' }
-      }
-    }
-  }
-}
-const Template = (args: any) => <Alert {...args} />
-export const Default = Template.bind({})
+        defaultValue: { summary: 'Transação realizada com sucesso!' },
+      },
+    },
+  },
+};
+const Template = (args: any) => <Alert {...args} />;
+export const Default = Template.bind({});
