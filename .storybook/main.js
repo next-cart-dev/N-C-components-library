@@ -1,13 +1,13 @@
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    'storybook-svgr-react-component'
+    "@storybook/addon-interactions"
   ],
-  "framework": "@storybook/react"
+  framework: "@storybook/react",
+  babel: async (options) => {
+    options.plugins.push("babel-plugin-inline-react-svg")
+    return options
+  }
 }
