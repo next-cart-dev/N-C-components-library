@@ -1,8 +1,10 @@
 {
+  "name": "@next-cart-dev/n-c-components-library",
+  "author": "next-cart-dev",
   "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -11,25 +13,18 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
+    "start": "tsup --watch",
+    "build": "tsup",
     "commit": "cz",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "release": "yarn semantic-release",
     "semantic-release": "semantic-release",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint --fix",
     "chromatic": "npx chromatic --project-token=298b6b874d70"
-  },
-  "release": {
-    "branches": [
-      "main",
-      "next"
-    ]
   },
   "peerDependencies": {
     "react": ">=16"
@@ -38,79 +33,53 @@
     "type": "git",
     "url": "git+https://github.com/next-cart-dev/N-C-components-library.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "publishConfig": {
-    "@next-cart-dev:registry": "https://npm.pkg.github.com/"
-  },
-  "name": "@next-cart-dev/n-c-components-library",
-  "author": {
-    "name": "Next-Cart Dev Team"
-  },
-  "module": "dist/mylib.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/mylib.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/mylib.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@babel/core": "^7.18.5",
+    "@babel/core": "^7.18.9",
     "@semantic-release/github": "^8.0.2",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@size-limit/preset-small-lib": "^7.0.8",
+    "@stitches/react": "^1.2.8",
+    "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
-    "@storybook/addons": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.9",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.7.0",
     "cz-conventional-changelog": "3.3.0",
+    "esbuild-plugin-svgr": "^1.0.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
+    "reakit": "^1.3.11",
     "semantic-release": "^19.0.3",
     "size-limit": "^7.0.8",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.4.0",
+    "storybook-svgr-react-component": "^1.0.1",
+    "tsup": "^6.2.0",
     "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-common-types": "^0.3.0",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "react-bootstrap": "^1.6.1",
-    "react-id-generator": "^3.0.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "bugs": {
-    "url": "https://github.com/next-cart-dev/N-C-components-library/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/next-cart-dev/N-C-components-library#readme",
-  "_id": "@next-cart-dev/n-c-components-library@0.0.0-development"
+  "dependencies": {}
 }
