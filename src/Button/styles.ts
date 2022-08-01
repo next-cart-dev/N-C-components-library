@@ -48,13 +48,16 @@ export const Button = styled("button", {
     },
     size: {
       small: {
-        padding: "6px $md"
+        height: "28px",
+        padding: "0 $md"
       },
       normal: {
-        padding: "11px 18px"
+        height: "38px",
+        padding: "0 18px"
       },
       large: {
-        padding: "18px $md"
+        height: "48px",
+        padding: "0 $md"
       }
     }
   }
