@@ -1,0 +1,71 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { TextField } from "./index.tsx"
+
+<Meta title="TextField" component={TextField} />
+
+# TextField
+
+<Story name="Primary">
+  <div>
+    <span>Default</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+    />
+  </div>
+  <div>
+    <span>Full width</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+      width="100%"
+    />
+  </div>
+  <div>
+    <span>Disabled</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+      disabled
+    />
+  </div>
+  <div>
+    <span>With icon</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+      endIcon
+      disabled
+    />
+  </div>
+  <div>
+    <span>Success</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+      variant="success"
+    />
+  </div>
+  <div>
+    <span>Danger</span>
+    <TextField
+      label="Nome"
+      id="text-field"
+      name="text-field"
+      placeholder="Insira o seu nome"
+      variant="danger"
+      error="Preencha o campo"
+    />
+  </div>
+</Story>
