@@ -1,4 +1,5 @@
 import * as S from './styles'
+import React from 'react'
 import { Props } from './types'
 
 export const Color = ({ labelName, labelColor, bg }: Props) => {
