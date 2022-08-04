@@ -6,8 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -15,6 +14,7 @@
   "scripts": {
     "start": "tsup --watch",
     "build": "tsup",
+    "prepublish": "yarn build",
     "commit": "cz",
     "size": "size-limit",
     "storybook": "start-storybook -p 6006",
