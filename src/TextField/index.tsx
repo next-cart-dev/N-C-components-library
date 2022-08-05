@@ -7,10 +7,6 @@ import { FormGroup } from "../FormGroup"
 import { FormHelperText } from "../FormHelperText"
 import { FormLabel } from "../FormLabel"
 
-// CORRIGIR ESTILOS/VARIANTES
-// IMPLEMENTAR FULL WIDTH
-// IMPLEMENTAR ÍCONES
-
 export const TextField = ({
   id,
   name,
@@ -23,12 +19,12 @@ export const TextField = ({
   onBlur,
   defaultValue,
   error,
-  variant,
-  width
+  inputSize = "default",
+  variant
 }: Props) => {
   return (
     <FormGroup>
-      <FormLabel htmlFor={id} disabled={disabled}>
+      <FormLabel htmlFor={id} mode={disabled ? "disabled" : variant}>
         {label}
       </FormLabel>
       <S.Input
@@ -39,7 +35,7 @@ export const TextField = ({
         onChange={onChange}
         onBlur={onBlur}
         variant={variant}
-        width={width}
+        inputSize={inputSize}
         defaultValue={defaultValue}
         placeholder={placeholder}
         disabled={disabled}
