@@ -59,7 +59,6 @@
     "chromatic": "^6.7.0",
     "cz-conventional-changelog": "3.3.0",
     "esbuild-jest": "^0.5.0",
-    "esbuild-plugin-svgr": "^1.0.1",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.3.0",
