@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import { Checkbox } from './index.tsx';
+<Meta
+title="Checkbox"
+component={Checkbox}
+/>
+
+# Checkbox
+
+<Story name="Checkbox">
+  <div style={{ display: 'flex', gap:30 }}>
+    <div>
+      <span>checkbox</span>
+      <Checkbox label='label' checkedType='checkbox' />
+    </div>
+    <div>
+      <span>trace</span>
+      <Checkbox label="label"  checkedType='trace'/>
+    </div>
+    <div>
+      <span>disabled</span>
+      <Checkbox label="label"  disabled />
+    </div>
+  </div>
+</Story>

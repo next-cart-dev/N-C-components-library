@@ -1,0 +1,21 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import { Switch } from './index.tsx';
+
+<Meta title="Switch" component={Switch} />
+
+# Switch
+
+<Story name="Switch">
+  <div style={{ display: 'flex', gap: 15, backgroundColor: 'white' }}>
+    <div>
+      <Switch id='exemplo' label='primary' variant='primary'/>
+    </div>
+    <div>
+      <Switch id="exemplo2" label="neutral" variant="neutral" />
+    </div>
+    <div>
+      <Switch id="exemplo3" disabled={true} label="disabled" variant="neutral"/>
+    </div>
+  </div>
+</Story>
