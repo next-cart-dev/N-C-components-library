@@ -7,7 +7,10 @@ export default defineConfig({
   entry: ["src/index.tsx"],
   sourcemap: true,
   clean: true,
+  bundle: true,
   dts: true,
   minify: true,
-  format: ["cjs", "esm"]
+  external: ["react"],
+  format: ["cjs", "esm"],
+  inject: ["src/react-shim.js"]
 })
