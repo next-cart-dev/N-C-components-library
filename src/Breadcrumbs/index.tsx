@@ -1,5 +1,5 @@
 import React from "react";
-import VectorSVG from "../Icon/assets/vector.svg";
+import { IconSvg } from "../Icon/svg";
 import * as S from './styles'
 import { Props } from "./types";
 
@@ -12,7 +12,7 @@ export const Breadcrumbs = ({ steps }: Props) => {
                 return (
                     <S.BreadcrumbsContainer key={i}>
                         {condition ? <S.Step variant={'primary'}>{e}</S.Step> : <S.Step variant={'secondary'}>{e}</S.Step>}
-                        {condition ? <VectorSVG /> : ''}
+                        {condition ? <IconSvg testid='svg' /> : ''}
                     </S.BreadcrumbsContainer>
                 )
             })}

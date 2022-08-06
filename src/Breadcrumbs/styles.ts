@@ -10,7 +10,7 @@ export const Step = styled('span', {
     variants: {
         variant: {
             primary: {
-                color: '$neutral500'
+                color: '#ACABAF'
             },
             secondary: {
                 color: '$primary500'
