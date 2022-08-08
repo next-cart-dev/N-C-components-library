@@ -3,7 +3,13 @@ import React from "react"
 import * as S from "./styles"
 import { Props } from "./types"
 
-export const Switch = ({ id, label, disabled, variant, onClick }: Props) => (
+export const Switch = ({
+  id,
+  label,
+  disabled,
+  variant = "neutral",
+  onClick
+}: Props) => (
   <div
     style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
   >

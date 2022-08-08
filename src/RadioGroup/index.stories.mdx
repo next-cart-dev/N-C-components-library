@@ -1,0 +1,21 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import { RadioGroup } from './index.tsx';
+
+<Meta title="RadioGroup" component={RadioGroup} />
+
+# Radio
+
+<Story name="RadioGroup">
+  <h1>Radio</h1>
+  <div style={{display:'flex'}}>
+    <div style={{ marginRight: '50px', border: '1px solid black', padding: '10px' }}>
+      <p>Position flex</p>
+      <RadioGroup defaultValue='1' radioItems={[{id: '1', value:'1', label:"Label"}, {id: '2', value:'2', label:"Label"}, {id: '3', value:'3', label:"Label"}]} />
+    </div>
+    <div style={{ marginRight: '50px', border: '1px solid black', padding: '10px'}}>
+      <p>Position block</p>
+      <RadioGroup defaultValue='1' position='block' radioItems={[{id: '4', label:"disabled", disabled: true}, {id: '5', value:'2', label:"Label"}, {id: '6', value:'3', label:"Label"}]} />
+    </div>
+  </div>
+</Story>

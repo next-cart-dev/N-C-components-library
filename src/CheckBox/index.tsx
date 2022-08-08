@@ -1,5 +1,7 @@
 import React from "react"
 
+import { CheckIcon, MinusIcon } from "@radix-ui/react-icons"
+
 import * as S from "./styles"
 import { Props } from "./types"
 
@@ -12,6 +14,7 @@ export const Checkbox = ({
 }: Props) => {
   return (
     <S.WrapperCheckBox>
+      {label && <S.Label htmlFor={id}>{label}</S.Label>}
       <S.StyledCheckBox
         id={id}
         data-testid={id}
@@ -19,11 +22,10 @@ export const Checkbox = ({
         onClick={onClick}
       >
         <S.StyledIndicator>
-          {checkedType === "checkbox" && <span>checkbox</span>}
-          {checkedType === "trace" && <span>trace</span>}
+          {checkedType === "checkbox" && <CheckIcon data-testid={"checked"} />}
+          {checkedType === "trace" && <MinusIcon data-testid={"traced"} />}
         </S.StyledIndicator>
       </S.StyledCheckBox>
-      {label && <S.Label htmlFor={id}>{label}</S.Label>}
     </S.WrapperCheckBox>
   )
 }

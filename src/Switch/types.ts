@@ -1,7 +1,7 @@
 export type Props = {
   /**
    * The checkbox style.
-   * @default `neutral`s
+   * @default 'neutral's
    */
   variant?: "primary" | "neutral"
   /**

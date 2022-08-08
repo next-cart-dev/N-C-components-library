@@ -1,3 +1,5 @@
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+
 import { styled } from "../stitches.config"
 
 export const WrapperCheckBox = styled("div", {
@@ -5,7 +7,7 @@ export const WrapperCheckBox = styled("div", {
   display: "flex"
 })
 
-export const StyledCheckBox = styled("button", {
+export const StyledCheckBox = styled(CheckboxPrimitive.Root, {
   backgroundColor: "$neutral200",
   width: "16px",
   height: "16px",
@@ -13,13 +15,17 @@ export const StyledCheckBox = styled("button", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  transition: "box-shadow 0.3s ease-in-out, #39296C 0.1s ease-in-out",
   cursor: "pointer",
+  "&:hover": {
+    boxShadow: "0 0 0 1px #39296C"
+  },
   "&:disabled": {
     cursor: "not-allowed"
   }
 })
 
-export const StyledIndicator = styled("span", {
+export const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   color: "$neutral200",
   backgroundColor: "$primary700",
   display: "flex",
@@ -36,5 +42,6 @@ export const StyledIndicator = styled("span", {
 export const Label = styled("label", {
   color: "$primary700",
   fontSize: "$14",
-  marginLeft: "10px"
+  marginRight: "15px",
+  fontWeight: "bold"
 })
