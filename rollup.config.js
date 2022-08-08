@@ -6,26 +6,30 @@ import typescript from "@rollup/plugin-typescript"
 import external from "rollup-plugin-peer-deps-external"
 import { terser } from "rollup-plugin-terser"
 
+const input = "src/index.tsx"
+
 const plugins = [
+  babel({
+    exclude: "node_modules/**",
+    presets: ["@babel/preset-react"]
+  }),
   external(),
   resolve(),
-  commonjs(),
-  babel({
-    babelHelpers: "runtime",
-    plugins: ["@babel/plugin-transform-runtime"]
-  }),
   typescript({
     tsconfig: "./tsconfig.json",
     outDir: "dist",
     declarationDir: "dist"
   }),
   image(),
+  commonjs({
+    include: ["node_modules/**"]
+  }),
   terser()
 ]
 
 export default [
   {
-    input: "src/index.tsx",
+    input,
     output: {
       file: "dist/index.js",
       format: "cjs",
@@ -34,10 +38,11 @@ export default [
     plugins
   },
   {
-    input: "src/index.tsx",
+    input,
     output: {
-      file: "dist/index.esm.js",
-      format: "esm",
+      file: "dist/index.es.js",
+      format: "es",
+      exports: "named",
       sourcemap: true
     },
     plugins
