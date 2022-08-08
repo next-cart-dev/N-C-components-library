@@ -1,5 +1,6 @@
 import React from "react"
 
+// TODO: Implementar size: fullWidth
 export type Props = {
   /**
    * The button text content.
@@ -7,7 +8,7 @@ export type Props = {
   children: React.ReactNode
   /**
    * The button variant style.
-   * @default 'primary's
+   * @default 'primary'
    */
   variant?: "primary" | "secondary"
   /**
@@ -20,7 +21,7 @@ export type Props = {
    */
   onClick?: () => void
   /**
-   * The button type. Use 'submit' if used inside forms.
+   * The button type. Use 'submit' if it's used inside forms.
    * @default 'button'
    */
   type?: "button" | "submit"
