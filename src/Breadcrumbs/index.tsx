@@ -12,7 +12,7 @@ export const Breadcrumbs = ({ steps }: Props) => {
                 return (
                     <S.BreadcrumbsContainer key={i}>
                         {condition ? <S.Step variant={'primary'}>{e}</S.Step> : <S.Step variant={'secondary'}>{e}</S.Step>}
-                        {condition ? <IconSvg testid='svg' /> : ''}
+                        {condition ? <IconSvg /> : ''}
                     </S.BreadcrumbsContainer>
                 )
             })}
