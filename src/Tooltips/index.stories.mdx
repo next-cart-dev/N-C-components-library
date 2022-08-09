@@ -1,0 +1,260 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import { Tooltip } from "."
+
+<Meta title="Tooltips" component={Tooltip} />
+
+# Tooltips
+
+<Story name="Tooltip">
+  <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+    <h2 style={{ color: "gray" }}>Tooltips Positions:</h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)"
+      }}
+    >
+      <Tooltip place="top" tip="Top">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Top Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip place="right" tip="Right">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Right Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip place="bottom" tip="Bottom">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Bottom Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip place="left" tip="left">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Left Tooltip
+        </div>
+      </Tooltip>
+    </div>
+    <h2 style={{ color: "gray" }}>Solid Effect:</h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)"
+      }}
+    >
+      <Tooltip tip="Solid" effect="solid">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Solid Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Solid" effect="solid">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Solid Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Solid" effect="solid">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Solid Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Solid" effect="solid">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Solid Tooltip
+        </div>
+      </Tooltip>
+    </div>
+    <h2 style={{ color: "gray" }}>Float Effect:</h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)"
+      }}
+    >
+      <Tooltip tip="Float" effect="float">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Float Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Float" effect="float">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Float Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Float" effect="float">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Float Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="Float" effect="float">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Float Tooltip
+        </div>
+      </Tooltip>
+    </div>
+    <h2 style={{ color: "gray" }}>Tooltip Types:</h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)",
+        gap: "4rem 0"
+      }}
+    >
+      <Tooltip tip="dark" type="dark">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Dark Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="success" type="success">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Success Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="warning" type="warning">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Warning Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="error" type="error">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Error Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="info" type="info">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Info Tooltip
+        </div>
+      </Tooltip>
+      <Tooltip tip="light" type="light">
+        <div
+          style={{
+            minWidth: "100px",
+            padding: "10px",
+            border: "1px solid black",
+            borderRadius: "6px"
+          }}
+        >
+          Light Tooltip
+        </div>
+      </Tooltip>
+    </div>
+  </div>
+</Story>
