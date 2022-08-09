@@ -6,6 +6,10 @@ export type Props = {
    */
   children: React.ReactNode
   /**
+   * The DropDown menu text content.
+   */
+  arialLabel?: string
+  /**
    * The DropDown variant style.
    * @default 'primary's
    */
@@ -26,12 +30,17 @@ export type Props = {
    */
   disabled?: boolean
   /**
-   * The element placed before the children. Don't use it now since we only have one icon.
+   * The element Arrow placed after the children.
    * @experimental
    */
-  startIcon?: React.ReactNode
+  withArrow?: boolean
   /**
-   * DropDown items contain label, value, disabled, id [DropDown]  .
+   * The element placed before the children.
+   * @experimental
+   */
+  withIcon?: boolean
+  /**
+   * DropDown items contain label, value, disabled, id, href, separator, onClick [DropDown]  .
    */
   dropDownItems: [DropDownItem]
 }
@@ -55,7 +64,11 @@ type DropDownItem = {
    */
   onClick?: () => void
   /**
-   * The DropDown href handler.
+   * The DropDown item href handler.
    */
   href?: string
+  /**
+   * The DropDown item separator.
+   */
+  separator?: boolean
 }

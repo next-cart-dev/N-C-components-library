@@ -10,15 +10,15 @@ import { DropDown } from './index.tsx';
   <div style={{ display: 'block'}}>
     <h2>Size Small</h2>
     <div>
-      <DropDown size="small" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+      <DropDown size="small" withIcon={true} variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
     </div>
     <h2>Size Normal</h2>
     <div>
-      <DropDown size="normal" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+      <DropDown size="normal" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo com link", link: true, href: "#"}]}>Primary</DropDown>
     </div>
       <h2>Size Large</h2>
     <div>
-      <DropDown size="large" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+      <DropDown size="large" withArrow={true} variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo com separator", separator: true}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
     </div>
   </div>
 </Story>
@@ -55,9 +55,10 @@ import { DropDown } from './index.tsx';
     <div>
       <DropDown
         size="large"
+        withIcon={true}
         variant="secondary"
         dropDownItems={[
-          { id: "exemplo", label: "exemplo" },
+          { id: "exemplo", label: "exemplo com separator", separator: true},
           { id: "exemplo2", label: "exemplo2" }
         ]}
       >
