@@ -2,6 +2,8 @@ import * as SwitchPrimitive from "@radix-ui/react-switch"
 import { styled } from "@stitches/react"
 
 export const SwitchStyled = styled(SwitchPrimitive.Switch, {
+  $$borderColor: "$colors$primary700",
+  $$disabledBorderColor: "$colors$text400",
   all: "unset",
   cursor: "pointer",
   width: "43px",
@@ -15,12 +17,12 @@ export const SwitchStyled = styled(SwitchPrimitive.Switch, {
     variant: {
       primary: {
         backgroundColor: /* "$neutral600" */ "#ABA6C2",
-        "&:focus": { boxShadow: `0 0 0 2px $primary700` },
+        "&:focus": { boxShadow: `0 0 0 2px $$borderColor` },
         '&[data-state="checked"]': { backgroundColor: "$primary700" }
       },
       neutral: {
-        backgroundColor: /* "$neutral600" */ "#DBDBDB",
-        "&:focus": { boxShadow: `0 0 0 2px primary700` },
+        backgroundColor: "$neutral600",
+        "&:focus": { boxShadow: `0 0 0 2px $$disabledBorderColor` },
         '&[data-state="checked"]': { backgroundColor: "$primary400" }
       }
     }

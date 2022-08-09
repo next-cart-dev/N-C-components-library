@@ -3,6 +3,8 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { styled } from "../stitches.config"
 
 export const StyledRadio = styled(RadioGroupPrimitive.Item, {
+  $$borderColor: "$colors$primary700",
+  $$disabledBorderColor: "$colors$text400",
   all: "unset",
   backgroundColor: "white",
   width: 16,
@@ -13,17 +15,17 @@ export const StyledRadio = styled(RadioGroupPrimitive.Item, {
   justifyContent: "center",
   margin: "4px",
   textAlign: "center",
-  boxShadow: "0 0 0 1px #39296C",
-  transition: "box-shadow 0.3s ease-in-out, #39296C 0.1s ease-in-out",
+  boxShadow: "0 0 0 1px $$borderColor",
+  transition: "box-shadow 0.3s ease-in-out, $$borderColor 0.1s ease-in-out",
   "&:hover": {
-    boxShadow: "0 0 0 2px #39296C"
+    boxShadow: "0 0 0 2px $$borderColor"
   },
   "&:focus-visible": {
-    boxShadow: "0 0 0 2px #39296C"
+    boxShadow: "0 0 0 2px $$borderColor"
   },
   "&:disabled": {
     cursor: "not-allowed",
-    boxShadow: "0 0 0 2px #D2D4DA"
+    boxShadow: "0 0 0 1px $$disabledBorderColor"
   }
 })
 
