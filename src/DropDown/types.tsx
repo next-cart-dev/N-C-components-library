@@ -13,12 +13,12 @@ export type Props = {
    * The DropDown variant style.
    * @default 'primary's
    */
-  variant: "primary" | "secondary"
+  variant?: "primary" | "secondary"
   /**
    * The DropDown size.
    * @default 'small'
    */
-  size: "small" | "normal" | "large"
+  size?: "small" | "normal" | "large"
   /**
    * The DropDown onClick handler.
    */
@@ -42,14 +42,14 @@ export type Props = {
   /**
    * DropDown items contain label, value, disabled, id, href, separator, onClick [DropDown]  .
    */
-  dropDownItems: [DropDownItem]
+  dropDownItems: Array<DropDownItem>
 }
 
 type DropDownItem = {
   /**
    * The radio id.
    */
-  id: string
+  id?: string
   /**
    * If `true`, the component is disabled.
    * @default false

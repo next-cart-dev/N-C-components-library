@@ -41,6 +41,11 @@ export const MenuButtonStyled = styled(MenuButton, {
         background: "$neutral200",
         color: "$text700"
       }
+    },
+    size: {
+      small: {},
+      normal: {},
+      large: {}
     }
   }
 })

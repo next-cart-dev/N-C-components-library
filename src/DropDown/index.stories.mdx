@@ -10,15 +10,15 @@ import { DropDown } from './index.tsx';
   <div style={{ display: 'block'}}>
     <h2>Size Small</h2>
     <div>
-      <DropDown size="small" withIcon={true} variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+      <DropDown arialLabel="exemplo" size="small"  variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
     </div>
     <h2>Size Normal</h2>
     <div>
-      <DropDown size="normal" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo com link", link: true, href: "#"}]}>Primary</DropDown>
+      <DropDown arialLabel="exemplo" size="normal" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo com link", link: true, href: "#"}]}>Primary</DropDown>
     </div>
       <h2>Size Large</h2>
     <div>
-      <DropDown size="large" withArrow={true} variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo com separator", separator: true}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+      <DropDown arialLabel="exemplo"size="large" withIcon={true} variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo com separator", separator: true}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
     </div>
   </div>
 </Story>
@@ -30,6 +30,7 @@ import { DropDown } from './index.tsx';
       <DropDown
         size="small"
         variant="secondary"
+        arialLabel="exemplo"
         dropDownItems={[
           { id: "exemplo", label: "exemplo" },
           { id: "exemplo2", label: "exemplo2" }
@@ -43,6 +44,7 @@ import { DropDown } from './index.tsx';
       <DropDown
         size="normal"
         variant="secondary"
+        arialLabel="exemplo"
         dropDownItems={[
           { id: "exemplo", label: "exemplo" },
           { id: "exemplo2", label: "exemplo2" }
@@ -55,6 +57,7 @@ import { DropDown } from './index.tsx';
     <div>
       <DropDown
         size="large"
+        arialLabel="exemplo"
         withIcon={true}
         variant="secondary"
         dropDownItems={[

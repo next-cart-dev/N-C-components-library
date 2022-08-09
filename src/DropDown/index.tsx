@@ -8,22 +8,25 @@ import { Props } from "./types"
 import { Icon } from "../Icon"
 
 export const DropDown = ({
-  variant,
+  variant = "primary",
   children,
-  size,
+  size = "normal",
+  id,
   arialLabel,
   withArrow = true,
-  withIcon,
+  withIcon = false,
   dropDownItems
 }: Props) => {
   const menu = useMenuState()
   return (
     <S.DropDownWrapper size={size}>
-      <S.MenuButtonStyled {...menu} variant={variant}>
-        {withIcon && <Icon size={size} variant={variant} />}
+      {/* Button menu */}
+      <S.MenuButtonStyled {...menu} variant={variant} size={size}>
+        {withIcon && <Icon size={size} variant={variant} id={id} />}
         {children}
         {withArrow && <Icon size={"small"} variant={variant} icon={"arrow"} />}
       </S.MenuButtonStyled>
+      {/* Items menu */}
       <S.MenuStyled {...menu} aria-label={arialLabel} size={size}>
         {dropDownItems.map((item, index) => (
           <div key={index}>
