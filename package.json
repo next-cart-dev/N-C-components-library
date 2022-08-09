@@ -99,5 +99,8 @@
       "path": "dist/index.js",
       "limit": "10 kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "reakit": "^1.3.11"
+  }
 }

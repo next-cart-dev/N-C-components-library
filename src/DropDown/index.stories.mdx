@@ -1,0 +1,69 @@
+import { Meta, Story } from '@storybook/addon-docs';
+
+import { DropDown } from './index.tsx';
+
+<Meta title="DropDown" component={DropDown} />
+
+# DropDown
+
+<Story name="Primary">
+  <div style={{ display: 'block'}}>
+    <h2>Size Small</h2>
+    <div>
+      <DropDown size="small" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+    </div>
+    <h2>Size Normal</h2>
+    <div>
+      <DropDown size="normal" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+    </div>
+      <h2>Size Large</h2>
+    <div>
+      <DropDown size="large" variant="primary" dropDownItems={[{id: "exemplo", label: "exemplo"}, {id: "exemplo2", label:"exemplo2"}]}>Primary</DropDown>
+    </div>
+  </div>
+</Story>
+
+<Story name="Secondary">
+  <div style={{ display: "block" }}>
+    <h2>Size Small</h2>
+    <div>
+      <DropDown
+        size="small"
+        variant="secondary"
+        dropDownItems={[
+          { id: "exemplo", label: "exemplo" },
+          { id: "exemplo2", label: "exemplo2" }
+        ]}
+      >
+        Secondary
+      </DropDown>
+    </div>
+    <h2>Size Normal</h2>
+    <div>
+      <DropDown
+        size="normal"
+        variant="secondary"
+        dropDownItems={[
+          { id: "exemplo", label: "exemplo" },
+          { id: "exemplo2", label: "exemplo2" }
+        ]}
+      >
+        Secondary
+      </DropDown>
+    </div>
+    <h2>Size Large</h2>
+    <div>
+      <DropDown
+        size="large"
+        variant="secondary"
+        dropDownItems={[
+          { id: "exemplo", label: "exemplo" },
+          { id: "exemplo2", label: "exemplo2" }
+        ]}
+      >
+        Secondary
+      </DropDown>
+    </div>
+  </div>
+</Story>
+
