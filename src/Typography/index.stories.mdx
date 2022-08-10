@@ -1,0 +1,31 @@
+import { Meta, Story, Source } from "@storybook/addon-docs"
+
+import { Box } from "../Box"
+import { Typography } from "./index.tsx"
+
+<Meta title="Typography" component={Typography} />
+
+# Typography
+
+<Story name="Typography">
+  <Box css={{ display: "flex" }}>
+    <Typography variant="h1">h1 - NextCart</Typography>
+  </Box>
+  <Box>
+    <Typography variant="h2">h2 - NextCart</Typography>
+  </Box>
+  <Box>
+    <Typography variant="body1">body1 - NextCart</Typography>
+  </Box>
+  <Box>
+    <Typography variant="body2">body2 - NextCart</Typography>
+  </Box>
+  <Box>
+    <Typography variant="body3">body3 - NextCart</Typography>
+  </Box>
+  <Box>
+    <Typography variant="h1" component="div" css={{ color: "$primary600" }}>
+      div - NextCart
+    </Typography>
+  </Box>
+</Story>
