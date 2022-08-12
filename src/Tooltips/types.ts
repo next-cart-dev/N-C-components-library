@@ -6,11 +6,11 @@ type Type = 'dark' | 'success' | 'warning' | 'error' | 'info' | 'light';
 
 export type Props = {
     /**
-     * Effect of tooltip, by default it is solid. It is not mandatory 
+     * Effect of tooltip, by default it is solid.
      */
     effect?: Effect
     /**
-     * Placement of tooltip. by default it is top. It is not mandatory 
+     * Placement of tooltip. by default it is top.
      */
     place?: Place
     /**
@@ -18,11 +18,19 @@ export type Props = {
      */
     tip: string
     /**
-     * The element that will be overridden for the tooltip
+     * The element that will be overridden by the tooltip
      */
     children: React.ReactNode
     /**
-     * The type of tooltip. It is not mandatory 
+     * The type of tooltip. by default it is dark
      */
     type?: Type
+    /**
+     * The component need to receive a unique id
+     */
+    id: string
+    /**
+     * Tooltip border
+     */
+    border?: boolean
 }
