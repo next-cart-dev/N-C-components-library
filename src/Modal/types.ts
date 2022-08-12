@@ -16,5 +16,5 @@ export type Props = {
     /**
      * Property that will change the open with useState
      */
-    setOpen(b: boolean): Promise<boolean>
+    onOpenChange: any
 }

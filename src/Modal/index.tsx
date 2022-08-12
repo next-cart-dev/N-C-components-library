@@ -3,7 +3,6 @@ import * as Dialog from '@radix-ui/react-dialog';
 import * as S from './styles';
 import { Props } from "./types";
 
-
 function Content({ children, ...props }: any) {
     return (
         <Dialog.Portal>
@@ -14,9 +13,9 @@ function Content({ children, ...props }: any) {
 }
 const DialogContent = Content
 
-export const Modal = ({ trigger, children, open, setOpen }: Props) => {
+export const Modal = ({ trigger, children, open, onOpenChange }: Props) => {
     return (
-        <Dialog.Root open={open} onOpenChange={setOpen}>
+        <Dialog.Root open={open} onOpenChange={onOpenChange}>
             <Dialog.Trigger asChild children={trigger} />
             <DialogContent>
                 {children}

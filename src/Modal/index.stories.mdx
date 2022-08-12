@@ -1,26 +1,10 @@
 import { Meta, Story } from "@storybook/addon-docs"
-import { Modal } from "."
-import {Button} from '../Button'
-import * as S from './styles';
+import { ModalExample } from "./story"
 
-<Meta title="Modals" component={Modal} />
+<Meta title="Modals" component={ModalExample} />
 
 # Modal
 
 <Story name="Modal">
-  <div style={{
-    height: '600px',
-    width: '500px'
-  }}>
-    <Modal trigger={<Button>Click Me to open the modal</Button>}>
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-            <S.DialogTitle>Titulo Do Modal</S.DialogTitle>
-            <S.DialogDescription>Texto para acompanhar modal de exemplo</S.DialogDescription>
-        </div>
-        <div style={{display: 'flex', gap: '4rem', marginTop: '30px'}}>
-          <S.ModalButton variant='primary'>Button</S.ModalButton>
-          <S.ModalButton variant='secondary'>Button</S.ModalButton>
-        </div>
-    </Modal>
-  </div>
+    <ModalExample />
 </Story>
