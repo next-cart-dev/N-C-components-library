@@ -100,8 +100,5 @@
       "path": "dist/index.js",
       "limit": "10 kB"
     }
-  ],
-  "dependencies": {
-    "radix-ui": "^0.0.1"
-  }
+  ]
 }
