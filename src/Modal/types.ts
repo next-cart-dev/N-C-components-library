@@ -12,10 +12,10 @@ export type Props = {
   /**
    * Property from Dialog Root that will receive a state from useState
    */
-  open: boolean
+  open?: boolean
   /**
    * Property that will change the open with useState
    */
   // TODO: Se possível, tipar conforme onOpenChange do Radix -> (open: boolean): void
-  onOpenChange: any
+  onOpenChange?(open: boolean): void
 }
