@@ -18,4 +18,8 @@ export type Props = {
    */
   // TODO: Se possível, tipar conforme onOpenChange do Radix -> (open: boolean): void
   onOpenChange?(open: boolean): void
+  /**
+   * Modal title
+   */
+  title?: string
 }
