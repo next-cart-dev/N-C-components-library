@@ -8,7 +8,7 @@ export const Input = styled("input", {
   $$disabledBorderColor: "$colors$text400",
   $$dangerBorderColor: "$colors$danger500",
   $$successBorderColor: "$colors$tertiary500",
-  padding: "14px $md",
+  padding: "14px $16",
   fontSize: "$18",
   height: 48,
   background: "$neutral200",
