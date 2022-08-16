@@ -1,0 +1,45 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { Alert } from "./index.tsx"
+import { Box } from "../Box"
+
+<Meta title="Alert" component={Alert} />
+
+# Alert
+
+<Story name="Alert">
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert
+      title="Exemplo de alerta com título"
+      message="Exemplo de texto de alerta"
+    />
+  </Box>
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert message="Exemplo de texto de alerta" />
+  </Box>
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert title="Exemplo de alerta" message="Exemplo de texto de alerta" />
+  </Box>
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert
+      variant="warning"
+      title="Exemplo de alerta"
+      message="Exemplo de texto de alerta"
+    />
+  </Box>
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert
+      variant="success"
+      title="Exemplo de alerta"
+      message="Exemplo de texto de alerta"
+    />
+  </Box>
+  <Box css={{ marginBottom: "$16" }}>
+    <Alert
+      variant="danger"
+      title="Exemplo de alerta"
+      message="Exemplo de texto de alerta"
+      canCloseAlert
+    />
+  </Box>
+</Story>
