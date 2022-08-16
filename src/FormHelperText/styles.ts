@@ -4,7 +4,7 @@ export const FormHelperText = styled("p", {
   display: "flex",
   fontSize: "$12",
   marginTop: 6,
-  paddingLeft: "$xs",
+  paddingLeft: "$8",
   marginBottom: 0,
   color: "$text400",
   variants: {

@@ -1,7 +1,7 @@
 import { styled } from "../stitches.config"
 
 export const Typography = styled("div", {
-  margin: 0,
+  margin: "$0",
   color: "$text500",
   variants: {
     variant: {

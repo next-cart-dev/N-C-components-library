@@ -12,7 +12,7 @@ export const ColorContainer = styled("div", {
   height: "200px",
   borderRadius: "10px",
   display: "flex",
-  gap: "20px",
+  gap: "$24",
   flexDirection: "column",
   boxShadow: "$shadow$md1"
 })
@@ -20,7 +20,7 @@ export const ColorContainer = styled("div", {
 export const ColorName = styled("div", {
   display: "flex",
   alignItems: "left",
-  gap: "6px",
+  gap: "$8",
   flexDirection: "column"
 })
 
@@ -29,12 +29,12 @@ export const Span = styled("span", {
     variant: {
       primary: {
         color: "$text700",
-        fontSize: "18px"
+        fontSize: "$18"
       },
       secondary: {
         color: "$text400"
       }
     }
   },
-  marginLeft: "2rem"
+  marginLeft: "$32"
 })

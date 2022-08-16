@@ -10,6 +10,7 @@ export const Step = styled("span", {
   variants: {
     variant: {
       primary: {
+        // TODO: Substituir hex por token
         color: "#ACABAF"
       },
       secondary: {
