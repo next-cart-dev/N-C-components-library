@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog"
+import { IoClose } from 'react-icons/io5'
 
 import { styled, keyframes } from "../stitches.config"
 
@@ -39,6 +40,18 @@ export const DialogContent = styled(Dialog.Content, {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)"
+})
+
+export const CloseContent = styled('div', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: '100%',
+  padding: '4px 10px'
+})
+
+export const IoCloseIcon = styled(IoClose, {
+  cursor: 'pointer',
+  fontSize: '$22'
 })
 
 /**
