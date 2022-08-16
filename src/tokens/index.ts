@@ -125,17 +125,19 @@ export const lightTheme = {
       medium: "500"
     },
     space: {
-      none: "0px",
-      xxxs: "2px",
-      xxs: "4px",
-      xs: "8px",
-      sm: "12px",
-      md: "16px",
-      lg: "24px",
-      xl: "32px",
-      xxl: "48px",
-      xxxl: "64px",
-      xxxxl: "128px"
+      0: "0px",
+      2: "2px",
+      4: "4px",
+      8: "8px",
+      16: "16px",
+      24: "24px",
+      32: "32px",
+      40: "40px",
+      48: "48px",
+      56: "56px",
+      64: "64px",
+      72: "72px",
+      80: "80px"
     },
     letterSpacings: {
       "0.32": "0.32px",

@@ -9,7 +9,7 @@ export const Button = styled("button", {
   alignItems: "center",
   fontWeight: "$semibold",
   letterSpacing: "$0.4",
-  gap: "$md",
+  gap: "$16",
   "&:disabled": {
     cursor: "not-allowed"
   },

@@ -52,7 +52,7 @@ export const DialogTitle = styled(Dialog.Title, {
   letterSpacing: "$0.32",
   lineHeight: "$1",
   fontSize: "$28",
-  margin: "0"
+  margin: "$0"
 })
 
 export const DialogDescription = styled(Dialog.Description, {
@@ -74,5 +74,5 @@ export const ModalBody = styled("div", {
 export const ModalActions = styled("div", {
   display: "flex",
   gap: "6rem",
-  marginTop: "$xl"
+  marginTop: "$32"
 })
