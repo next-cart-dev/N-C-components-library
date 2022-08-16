@@ -1,12 +1,16 @@
 import { styled } from "../stitches.config"
 
+export const ADORNMENT_PADDING = 12
+export const INPUT_SIZE = 300
+
 export const Input = styled("input", {
   $$borderColor: "$colors$primary700",
   $$disabledBorderColor: "$colors$text400",
   $$dangerBorderColor: "$colors$danger500",
   $$successBorderColor: "$colors$tertiary500",
   padding: "14px $md",
-  fontSize: "$14",
+  fontSize: "$18",
+  height: 48,
   background: "$neutral200",
   color: "$text700",
   fontWeight: "$normal",
@@ -32,7 +36,7 @@ export const Input = styled("input", {
   variants: {
     inputSize: {
       default: {
-        width: "200px"
+        width: INPUT_SIZE
       },
       fullWidth: {
         width: "100%"
@@ -56,6 +60,27 @@ export const Input = styled("input", {
         "&::placeholder": {
           color: "$danger500"
         }
+      }
+    }
+  }
+})
+
+export const InputAdornment = styled("div", {
+  backgroundColor: "$primary500",
+  position: "absolute",
+  height: "100%",
+  padding: "12px 14px",
+  color: "$neutral100",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  variants: {
+    variant: {
+      success: {
+        backgroundColor: "$tertiary500"
+      },
+      danger: {
+        backgroundColor: "$danger500"
       }
     }
   }
