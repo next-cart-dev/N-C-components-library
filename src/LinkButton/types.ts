@@ -1,6 +1,6 @@
-import React from "react"
+import React, { ComponentPropsWithoutRef } from "react"
 
-export type Props = {
+export type Props = ComponentPropsWithoutRef<"button"> & {
     /**
      * The content of the LinkButton
      */
@@ -9,4 +9,4 @@ export type Props = {
      * Event that the LinkButton will receive
      */
     onClick?: () => void
-} 
+}

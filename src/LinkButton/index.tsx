@@ -3,10 +3,10 @@ import { Box } from "../Box"
 import { Props } from "./types"
 import * as S from "./styles"
 
-export const LinkButton = ({ children, onClick }: Props) => {
+export const LinkButton = ({ ...props }: Props) => {
     return (
         <Box>
-            <S.LinkButton onClick={onClick}>{children}</S.LinkButton>
+            <S.LinkButton {...props}>{props.children}</S.LinkButton>
         </Box>
     )
 }

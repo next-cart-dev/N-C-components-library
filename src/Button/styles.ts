@@ -9,7 +9,7 @@ export const Button = styled("button", {
   alignItems: "center",
   fontWeight: "$semibold",
   letterSpacing: "$0.4",
-  gap: "$md",
+  gap: "$space$16",
   borderRadius: "4px",
   "&:disabled": {
     cursor: "not-allowed"
@@ -52,16 +52,16 @@ export const Button = styled("button", {
     },
     size: {
       small: {
-        height: "$space$xl",
-        padding: "0 $md"
+        height: "$space$32",
+        padding: "0 $space$8"
       },
       normal: {
-        height: "40px",
-        padding: "0 18px"
+        height: "$space$40",
+        padding: "0 $space$16"
       },
       large: {
-        height: "$space$xxl",
-        padding: "0 $md"
+        height: "$space$48",
+        padding: "0 $space$24"
       }
     }
   }
