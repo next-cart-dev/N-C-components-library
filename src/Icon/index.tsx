@@ -1,13 +1,18 @@
 import React from "react"
 
-import BriefcaseSVG from "./assets/briefcase.svg"
+import { BsCurrencyDollar } from "react-icons/bs"
+
 import * as S from "./styles"
 import { Props } from "./types"
 
-export const Icon = ({ variant, size }: Props) => {
+const iconsMapping = {
+  currency: <BsCurrencyDollar />
+}
+
+export const Icon = ({ variant, size, name }: Props) => {
   return (
     <S.Icon size={size} variant={variant}>
-      <BriefcaseSVG />
+      {iconsMapping[name]}
     </S.Icon>
   )
 }

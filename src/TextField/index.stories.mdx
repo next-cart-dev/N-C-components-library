@@ -1,13 +1,14 @@
 import { Meta, Story } from "@storybook/addon-docs"
 
 import { Box } from "../Box"
+import { Icon } from "../Icon"
 import { TextField } from "./index.tsx"
 
 <Meta title="TextField" component={TextField} />
 
 # TextField
 
-<Story name="Primary">
+<Story name="TextField">
   <Box css={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr" }}>
     <div>
       <span>Default</span>
@@ -16,6 +17,14 @@ import { TextField } from "./index.tsx"
         id="text-field"
         name="text-field"
         placeholder="Insira o seu nome"
+        helperText="Texto auxiliar"
+      />
+      <span>Without label</span>
+      <TextField
+        id="text-field10"
+        name="text-field10"
+        placeholder="Insira o seu nome"
+        helperText="Texto auxiliar"
       />
     </div>
     <div>
@@ -30,35 +39,102 @@ import { TextField } from "./index.tsx"
       />
     </div>
     <div>
-      <span>Disabled</span>
-      <TextField
-        label="Nome"
-        id="text-field3"
-        name="text-field3"
-        placeholder="Insira o seu nome"
-        disabled
-      />
+      <span>Validation</span>
+      <Box>
+        <TextField
+          label="Nome"
+          id="text-field3"
+          name="text-field3"
+          placeholder="Insira o seu nome"
+          disabled
+        />
+        <TextField
+          label="Nome"
+          id="text-field4"
+          name="text-field4"
+          placeholder="Insira o seu nome"
+          variant="success"
+        />
+        <TextField
+          label="Nome"
+          id="text-field5"
+          name="text-field5"
+          placeholder="Insira o seu nome"
+          variant="danger"
+          helperText="Preencha o campo"
+        />
+      </Box>
     </div>
     <div>
-      <span>Success</span>
-      <TextField
-        label="Nome"
-        id="text-field4"
-        name="text-field4"
-        placeholder="Insira o seu nome"
-        variant="success"
-      />
-    </div>
-    <div>
-      <span>Danger</span>
-      <TextField
-        label="Nome"
-        id="text-field5"
-        name="text-field5"
-        placeholder="Insira o seu nome"
-        variant="danger"
-        error="Preencha o campo"
-      />
+      <span>With adornment</span>
+      <Box css={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+        <TextField
+          label="Nome"
+          id="text-field6"
+          name="text-field6"
+          placeholder="Digite o valor"
+          adornment={{
+            position: "left",
+            node: <Icon name="currency" size="large" />
+          }}
+        />
+        <TextField
+          label="Nome"
+          id="text-field7"
+          name="text-field7"
+          placeholder="Digite o valor"
+          adornment={{
+            position: "right",
+            node: <Icon name="currency" size="large" />
+          }}
+        />
+        <TextField
+          label="Nome"
+          id="text-field10"
+          name="text-field10"
+          placeholder="Insira o seu nome"
+          adornment={{ position: "left", node: "Left text" }}
+        />
+        <TextField
+          label="Nome"
+          id="text-field11"
+          name="text-field11"
+          placeholder="Insira o seu nome"
+          adornment={{ position: "right", node: "Right text" }}
+        />
+        <TextField
+          label="Nome"
+          id="text-field8"
+          name="text-field8"
+          placeholder="Insira o seu nome"
+          variant="success"
+          adornment={{ position: "left", node: "Left text" }}
+        />
+        <TextField
+          label="Nome"
+          id="text-field9"
+          name="text-field9"
+          placeholder="Insira o seu nome"
+          variant="danger"
+          adornment={{ position: "right", node: "Right text" }}
+        />
+        <TextField
+          label="Nome"
+          id="textfield"
+          name="textfield"
+          placeholder="Insira o seu nome"
+          variant="info"
+          adornment={{ position: "left", node: "Right text" }}
+        />
+        <TextField
+          label="Nome"
+          id="textfield2"
+          name="textfield2"
+          placeholder="Insira o seu nome"
+          variant="warning"
+          adornment={{ position: "right", node: "Right text" }}
+        />
+      </Box>
     </div>
   </Box>
 </Story>
