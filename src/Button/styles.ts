@@ -9,55 +9,59 @@ export const Button = styled("button", {
   alignItems: "center",
   fontWeight: "$semibold",
   letterSpacing: "$0.4",
-  gap: "$16",
+  gap: "$space$16",
+  borderRadius: "4px",
   "&:disabled": {
     cursor: "not-allowed"
   },
   variants: {
     variant: {
       primary: {
-        background: "$primary700",
+        background: "$primary500",
         color: "$neutral100",
         "&:hover": {
-          background: "$primary900"
+          background: "$secondary700"
         },
         "&:disabled": {
-          color: "$neutral400",
-          background: "$neutral200",
+          color: "$neutral700",
+          background: "$neutral500",
           "& svg path": {
-            fill: "$neutral400"
+            fill: "$neutral700"
           }
         }
       },
       secondary: {
-        background: "$background100",
-        color: "$secondary400",
-        border: "1px solid $secondary400",
+        background: "$neutral200",
+        color: "$primary500",
+        border: "1px solid $primary500",
         "&:hover": {
-          background: "$secondary100"
+          background: "$primary200",
+          "& svg path": {
+            fill: "$primary500"
+          }
         },
         "&:disabled": {
-          color: "$neutral400",
-          background: "$neutral100",
-          borderColor: "$neutral400",
+          color: "$neutral700",
+          background: "$neutral500",
+          borderColor: "$neutral700",
           "& svg path": {
-            fill: "$neutral400"
+            fill: "$neutral700"
           }
         }
       }
     },
     size: {
       small: {
-        height: "28px",
-        padding: "0 $md"
+        height: "$space$32",
+        padding: "0 $space$8"
       },
       normal: {
-        height: "38px",
-        padding: "0 18px"
+        height: "$space$40",
+        padding: "0 $space$16"
       },
       large: {
-        height: "48px",
-        padding: "0 $md"
+        height: "$space$48",
+        padding: "0 $space$24"
       }
     }
   }
