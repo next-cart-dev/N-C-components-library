@@ -3,18 +3,6 @@ import { styled } from "../stitches.config"
 export const Icon = styled("span", {
   display: "inherit",
   variants: {
-    variant: {
-      primary: {
-        "& svg": {
-          fill: "$neutral100"
-        }
-      },
-      secondary: {
-        "& svg": {
-          fill: "$secondary400"
-        }
-      }
-    },
     size: {
       small: {
         "& svg": {

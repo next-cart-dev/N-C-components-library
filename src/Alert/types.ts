@@ -1,10 +1,10 @@
-import { ComponentPropsWithoutRef } from "react"
+import { ComponentPropsWithoutRef, ReactNode } from "react"
 
 export type Props = ComponentPropsWithoutRef<"div"> & {
   id?: string
-  variant: "info" | "success" | "danger" | "warning"
+  variant?: "info" | "success" | "danger" | "warning"
   message: string
   title?: string
-  icon?: string
+  icon?: ReactNode
   canCloseAlert?: boolean
 }

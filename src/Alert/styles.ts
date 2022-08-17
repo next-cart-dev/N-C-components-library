@@ -30,12 +30,14 @@ export const Alert = styled("div", {
 
 export const AlertTitle = styled("span", {
   fontSize: "$18",
-  fontWeight: "bold"
+  fontWeight: "bold",
+  letterSpacing: 1
 })
 
 export const AlertMessage = styled("span", {
   fontSize: "$16",
-  fontWeight: "$normal"
+  fontWeight: "$normal",
+  letterSpacing: 1.25
 })
 
 export const TextSection = styled("div", {

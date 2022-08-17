@@ -1,5 +1,7 @@
+type IconNames = "currency" | "defaultX"
+
 export type Props = {
-  variant: "primary" | "secondary"
   size: "small" | "normal" | "large"
-  name: "currency"
+  name: IconNames
+  color: string
 }
