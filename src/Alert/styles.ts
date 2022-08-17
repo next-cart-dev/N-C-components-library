@@ -6,6 +6,7 @@ export const Alert = styled("div", {
   display: "flex",
   flexFlow: "row",
   alignItems: "center",
+  borderRadius: 4,
   variants: {
     variant: {
       info: {
