@@ -3,8 +3,6 @@ import React from "react"
 import * as S from "./styles"
 import { Props } from "./types"
 
-import { Icon } from "../Icon"
-
 export const Button = ({
   children,
   variant = "primary",
@@ -25,9 +23,9 @@ export const Button = ({
       size={size}
       disabled={disabled}
     >
-      {startIcon && <Icon variant={variant} size={size} />}
+      {startIcon && startIcon}
       {children}
-      {endIcon && <Icon variant={variant} size={size} />}
+      {endIcon && endIcon}
     </S.Button>
   )
 }

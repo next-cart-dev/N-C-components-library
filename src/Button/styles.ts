@@ -5,11 +5,12 @@ export const Button = styled("button", {
   cursor: "pointer",
   fontSize: "$18",
   display: "flex",
+  height: "48px",
   justifyContent: "center",
   alignItems: "center",
   fontWeight: "$semibold",
   letterSpacing: "$0.4",
-  gap: "$space$16",
+  gap: "$16",
   borderRadius: "4px",
   "&:disabled": {
     cursor: "not-allowed"
@@ -53,15 +54,15 @@ export const Button = styled("button", {
     size: {
       small: {
         height: "$space$32",
-        padding: "0 $space$8"
+        padding: "0 $8"
       },
       normal: {
         height: "$space$40",
-        padding: "0 $space$16"
+        padding: "0 $16"
       },
       large: {
         height: "$space$48",
-        padding: "0 $space$24"
+        padding: "0 $24"
       }
     }
   }

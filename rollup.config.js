@@ -11,19 +11,17 @@ const input = "src/index.tsx"
 const plugins = [
   babel({
     exclude: "node_modules/**",
-    presets: ["@babel/preset-react"]
+    presets: ["@babel/preset-react"],
+    babelHelpers: "runtime",
+    plugins: ["@babel/plugin-transform-runtime"]
   }),
   external(),
-  resolve(),
-  typescript({
-    tsconfig: "./tsconfig.json",
-    outDir: "dist",
-    declarationDir: "dist"
-  }),
-  image(),
   commonjs({
     include: ["node_modules/**"]
   }),
+  resolve(),
+  typescript(),
+  image(),
   terser()
 ]
 
