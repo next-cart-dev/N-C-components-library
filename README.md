@@ -21,21 +21,3 @@ Make sure you don't have `react` and `react-dom` listed in dev dependencies to d
 `yarn test` - Run all tests
 
 `yarn storybook` - Run the local storybook on port 6006.
-
-To upload a new version of the code just run the command
-
-```sh
-yarn commit
-```
-
-answer the following steps:
-
-1. Choose what kind of change you made to the code.
-
-2. Enter the simplified change scope of the commit.
-
-3. Enter the detailed scope of commit changes.
-
-4. Is it a commit with absolute changes? example from v1.0 to v2.0
-
-5. Does this change resolve a github issue?
