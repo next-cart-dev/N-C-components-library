@@ -1,7 +1,7 @@
 import { styled } from "../stitches.config"
 
 export const FormLabel = styled("label", {
-  marginBottom: "$8",
+  marginBottom: "$xs",
   fontSize: "$14",
   letterSpacing: "$0.5",
   color: "$primary500",

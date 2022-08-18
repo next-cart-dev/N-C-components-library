@@ -6,7 +6,7 @@ import { Box } from "../Box"
 
 export const FormGroup = ({ children, ...props }: Props) => {
   return (
-    <Box css={{ marginBottom: "$16" }} {...props}>
+    <Box css={{ marginBottom: "$md" }} {...props}>
       {children}
     </Box>
   )
