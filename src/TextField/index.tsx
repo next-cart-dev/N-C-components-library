@@ -48,7 +48,7 @@ export const TextField = ({
   return (
     <FormGroup>
       {label && (
-        <FormLabel htmlFor={id} mode={disabled ? "disabled" : variant}>
+        <FormLabel htmlFor={id} variant={disabled ? "disabled" : variant}>
           {label}
         </FormLabel>
       )}

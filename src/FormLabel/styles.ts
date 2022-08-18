@@ -1,13 +1,13 @@
 import { styled } from "../stitches.config"
 
 export const FormLabel = styled("label", {
-  marginBottom: "$xs",
+  marginBottom: "$8",
   fontSize: "$14",
   letterSpacing: "$0.5",
   color: "$primary500",
   display: "block",
   variants: {
-    mode: {
+    variant: {
       disabled: {
         color: "$text300"
       },
@@ -16,6 +16,12 @@ export const FormLabel = styled("label", {
       },
       success: {
         color: "$tertiary500"
+      },
+      warning: {
+        color: "$warning500"
+      },
+      info: {
+        color: "$info500"
       }
     }
   }

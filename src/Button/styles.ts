@@ -53,15 +53,12 @@ export const Button = styled("button", {
     },
     size: {
       small: {
-        height: "$space$32",
         padding: "0 $8"
       },
       normal: {
-        height: "$space$40",
         padding: "0 $16"
       },
       large: {
-        height: "$space$48",
         padding: "0 $24"
       }
     }
