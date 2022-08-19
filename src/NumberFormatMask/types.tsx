@@ -177,4 +177,10 @@ export type Props = {
      * @default false
      */
     allowPtBrCurrencyFormatter?: boolean;
+    /**
+     * Input Placeholder
+     * @options string
+     * @default null
+     */
+    placeholder?: string
 };

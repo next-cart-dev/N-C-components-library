@@ -6,11 +6,11 @@ import { Props } from "./types";
 export const InputMaskStory = ({ ...props }: Props) => {
     return (
         <Box style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}>
-            <NumberFormatMask {...props} format='+55 (##) #####-####' label={'Phone'} />
-            <NumberFormatMask {...props} format='###.###.###-##' label={'CPF'} />
-            <NumberFormatMask {...props} format='##/##/####' label={'Date'} />
-            <NumberFormatMask {...props} format='##.###.###/####-##' label={'CNPJ'} />
-            <NumberFormatMask {...props} allowPtBrCurrencyFormatter={true} label='Currency' />
+            <NumberFormatMask {...props} placeholder='+55 (##) #####-####' format='+55 (##) #####-####' label={'Phone'} />
+            <NumberFormatMask {...props} placeholder='###.###.###-##' format='###.###.###-##' label={'CPF'} />
+            <NumberFormatMask {...props} placeholder='##/##/####' format='##/##/####' label={'Date'} />
+            <NumberFormatMask {...props} placeholder='##.###.###/####-##' format='##.###.###/####-##' label={'CNPJ'} />
+            <NumberFormatMask {...props} placeholder='R$ #.###,##' allowPtBrCurrencyFormatter={true} label='Currency' />
         </Box>
     )
 }
