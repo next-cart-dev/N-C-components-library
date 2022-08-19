@@ -1,4 +1,8 @@
-type IconNames = "currency" | "defaultX"
+type IconNames =
+  | "currency"
+  | "defaultX"
+  | "BsChevronBarLeft"
+  | "BsFillCaretRightFill"
 
 export type Props = {
   size: "small" | "normal" | "large"
