@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.6.0-development",
+  "version": "0.7.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -85,6 +85,8 @@
     "jest-svg-transformer": "^1.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-icons": "^4.4.0",
     "react-tooltip": "^4.2.21",
     "rollup": "^2.77.2",
