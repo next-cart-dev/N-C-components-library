@@ -1,12 +1,12 @@
 import { styled } from "../../stitches.config"
 
 export const Alert = styled("div", {
-  width: 425,
+  width: "425px",
   padding: "$8 $16",
   display: "flex",
   flexFlow: "row",
   alignItems: "center",
-  borderRadius: 4,
+  borderRadius: "4px",
   variants: {
     variant: {
       info: {
@@ -32,13 +32,13 @@ export const Alert = styled("div", {
 export const AlertTitle = styled("span", {
   fontSize: "$18",
   fontWeight: "bold",
-  letterSpacing: 1
+  letterSpacing: "1px"
 })
 
 export const AlertMessage = styled("span", {
   fontSize: "$16",
   fontWeight: "$normal",
-  letterSpacing: 1.25
+  letterSpacing: "1.25px"
 })
 
 export const TextSection = styled("div", {
