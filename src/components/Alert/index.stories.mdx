@@ -22,11 +22,6 @@ export const Template = (args) => <Alert {...args} />
     variant: {
       options: ["info", "success", "danger", "warning"]
     },
-    canCloseAlert: {
-      table: {
-        disable: true
-      }
-    },
     icon: {
       table: {
         disable: true
@@ -44,7 +39,7 @@ export const Template = (args) => <Alert {...args} />
     message: "Exemplo de texto",
     title: "Exemplo de título",
     variant: "info",
-    canCloseAlert: false
+    role: "alert"
   }}
 >
   {Template.bind({})}
@@ -56,6 +51,7 @@ export const Template = (args) => <Alert {...args} />
       id="id-2"
       message="Texto de exemplo"
       variant="info"
+      role="status"
       icon={<Icon name="currency" size="normal" color="$info700" />}
     />
   </Box>
@@ -64,6 +60,7 @@ export const Template = (args) => <Alert {...args} />
       id="id-3"
       message="Texto de exemplo"
       variant="success"
+      role="status"
       icon={<Icon name="currency" size="normal" color="$success700" />}
     />
   </Box>
@@ -72,6 +69,7 @@ export const Template = (args) => <Alert {...args} />
       id="id-4"
       message="Texto de exemplo"
       variant="warning"
+      role="status"
       icon={<Icon name="currency" size="normal" color="$warning700" />}
     />
   </Box>
@@ -82,7 +80,7 @@ export const Template = (args) => <Alert {...args} />
       message="Texto de exemplo"
       variant="danger"
       icon={<Icon name="currency" size="normal" color="$danger700" />}
-      canCloseAlert
+      role="status"
     />
   </Box>
 </Story>

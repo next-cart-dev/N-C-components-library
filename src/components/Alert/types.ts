@@ -6,5 +6,4 @@ export type Props = ComponentPropsWithoutRef<"div"> & {
   message: string
   title?: string
   icon?: ReactNode
-  canCloseAlert?: boolean
 }

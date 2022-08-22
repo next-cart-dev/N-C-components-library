@@ -11,10 +11,17 @@ export const Alert = ({
   message,
   title,
   icon,
-  canCloseAlert,
+  role = "alert",
   variant = "info"
 }: Props) => {
   const [open, setOpen] = useState<boolean>(true)
+
+  const cssCloseButton = {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "auto",
+    cursor: "pointer"
+  }
 
   const setIconColor = (alertVariant: typeof variant) => {
     const colors = {
@@ -27,11 +34,25 @@ export const Alert = ({
     return colors[alertVariant]
   }
 
+  /*
+   * Use the role "alert" when the component is used as a toast
+   * to disable the onClick handler since the close functionality comes from "react-toastify"
+   */
+  const closeButton =
+    role === "alert" ? (
+      <Box css={cssCloseButton}>
+        <Icon name="defaultX" size="large" color={setIconColor(variant)} />
+      </Box>
+    ) : (
+      <Box css={cssCloseButton} onClick={() => setOpen(false)}>
+        <Icon name="defaultX" size="large" color={setIconColor(variant)} />
+      </Box>
+    )
+
   return (
     <S.Alert
       id={id}
       variant={variant}
-      role="alert"
       css={{ display: open ? "flex" : "none", alignItems: "center" }}
     >
       {icon && (
@@ -49,19 +70,7 @@ export const Alert = ({
         )}
         {message && <S.AlertMessage>{message}</S.AlertMessage>}
       </Box>
-      {canCloseAlert && (
-        <Box
-          css={{
-            display: "flex",
-            alignItems: "center",
-            marginLeft: "auto",
-            cursor: "pointer"
-          }}
-          onClick={() => setOpen(false)}
-        >
-          <Icon name="defaultX" size="large" color={setIconColor(variant)} />
-        </Box>
-      )}
+      {closeButton}
     </S.Alert>
   )
 }
