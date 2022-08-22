@@ -4,6 +4,7 @@ import * as S from "./styles"
 import { Props } from "./types"
 
 import { Box } from "../Box"
+
 export const Tooltip = ({
   effect = "solid",
   place = "top",
