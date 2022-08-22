@@ -4,7 +4,7 @@ export type Props = {
   /**
    * Element that will open the modal
    */
-  trigger: React.ReactNode
+  triggerElementRef: any
   /**
    * Modal children that receive a element
    */

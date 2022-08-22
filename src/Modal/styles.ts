@@ -1,5 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog"
-import { IoClose } from 'react-icons/io5'
+import { GrClose } from 'react-icons/all'
 
 import { styled, keyframes } from "../stitches.config"
 
@@ -39,17 +39,18 @@ export const DialogContent = styled(Dialog.Content, {
   position: "fixed",
   top: "50%",
   left: "50%",
-  transform: "translate(-50%, -50%)"
+  transform: "translate(-50%, -50%)",
+  padding: '20px'
 })
 
 export const CloseContent = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   width: '100%',
-  padding: '4px 10px'
+  padding: '10px 0'
 })
 
-export const IoCloseIcon = styled(IoClose, {
+export const IoCloseIcon = styled(GrClose, {
   cursor: 'pointer',
   fontSize: '$22'
 })
@@ -59,13 +60,10 @@ export const IoCloseIcon = styled(IoClose, {
  */
 
 export const DialogTitle = styled(Dialog.Title, {
-  color: "$primary800",
-  fontFamily: "$roboto",
-  fontWeight: "$normal",
-  letterSpacing: "$0.32",
-  lineHeight: "$1",
-  fontSize: "$28",
-  margin: "0"
+  fontWeight: '700',
+  fontSize: '22px',
+  letterSpacing: '0.32px',
+  margin: '0'
 })
 
 export const DialogDescription = styled(Dialog.Description, {
@@ -74,7 +72,8 @@ export const DialogDescription = styled(Dialog.Description, {
   fontWeight: "$normal",
   letterSpacing: "$0.5",
   lineHeight: "$4",
-  fontSize: "$18"
+  fontSize: "$18",
+  width: '500px'
 })
 
 export const ModalBody = styled("div", {
@@ -86,6 +85,9 @@ export const ModalBody = styled("div", {
 
 export const ModalActions = styled("div", {
   display: "flex",
-  gap: "6rem",
-  marginTop: "$xl"
+  marginTop: "10px",
+  justifyContent: 'right',
+  gap: '$sm',
+  width: '100%',
+  padding: '0 $md'
 })
