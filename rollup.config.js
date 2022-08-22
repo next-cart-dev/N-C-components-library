@@ -16,10 +16,10 @@ const plugins = [
     plugins: ["@babel/plugin-transform-runtime"]
   }),
   external(),
+  resolve(),
   commonjs({
     include: ["node_modules/**"]
   }),
-  resolve(),
   typescript(),
   image(),
   terser()
