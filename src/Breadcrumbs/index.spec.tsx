@@ -5,10 +5,12 @@ import { render, screen } from "@testing-library/react"
 import { Breadcrumbs } from "."
 
 describe("<Breadcrumbs />", () => {
-  it("should render the steps correctly", async () => {
+  it("should render the steps and icons correctly", async () => {
     const steps = ["breadcrumbs", "breadcrumbs"]
-    render(<Breadcrumbs steps={steps} />)
+    render(<Breadcrumbs steps={steps} icons={['icon', 'icon']} />)
     const items = await screen.findAllByText(/breadcrumbs/)
+    const icons = await screen.findAllByText(/icon/)
+    expect(icons).toHaveLength(2)
     expect(items).toHaveLength(2)
   })
 

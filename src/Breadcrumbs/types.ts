@@ -9,9 +9,9 @@ export type Props = {
   /**
    * The Breadcrumb URL (link)
    */
-  url: string
+  url?: string
   /**
    * The Breadcrumb icon. By default it's a empty string
    */
-  icons: Array<React.ReactNode>
+  icons?: Array<React.ReactNode>
 }
