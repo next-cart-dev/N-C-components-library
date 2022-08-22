@@ -1,7 +1,7 @@
 # .github/workflows/chromatic.yml
 
 # Workflow name
-name: 'Chromatic Publish'
+name: "Chromatic Publish"
 
 # Event for the workflow
 on:
@@ -17,7 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: yarn
-      - run: yarn add --dev react@17.0.2 react-dom@17.0.2
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
