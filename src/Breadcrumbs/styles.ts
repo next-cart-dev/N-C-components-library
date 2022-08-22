@@ -6,14 +6,17 @@ export const BreadcrumbsContainer = styled("div", {
   gap: "10px"
 })
 
-export const Step = styled("span", {
+export const Step = styled("a", {
   variants: {
     variant: {
       primary: {
-        color: "#ACABAF"
+        color: "$primary500",
+        cursor: 'default',
+        textDecoration: "none"
       },
       secondary: {
-        color: "$primary500"
+        color: "$primary500",
+        textDecoration: "underline"
       }
     }
   },

@@ -15,10 +15,20 @@ import { Breadcrumbs } from "./index.tsx"
       marginTop: "40px"
     }}
   >
-    <Breadcrumbs steps={["breadcrumbs", "breadcrumbs"]} />
-    <Breadcrumbs steps={["breadcrumbs", "breadcrumbs", "breadcrumbs"]} />
+    <Breadcrumbs
+      steps={["breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[,]}
+    />
+    <Breadcrumbs
+      steps={["breadcrumbs", "breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[,]}
+    />
     <Breadcrumbs
       steps={["breadcrumbs", "breadcrumbs", "breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[,]}
     />
     <Breadcrumbs
       steps={[
@@ -28,6 +38,8 @@ import { Breadcrumbs } from "./index.tsx"
         "breadcrumbs",
         "breadcrumbs"
       ]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[,]}
     />
     <Breadcrumbs
       steps={[
@@ -38,6 +50,8 @@ import { Breadcrumbs } from "./index.tsx"
         "breadcrumbs",
         "breadcrumbs"
       ]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[,]}
     />
   </div>
 </Story>

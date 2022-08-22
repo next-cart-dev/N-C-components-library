@@ -5,7 +5,7 @@ import { Props } from "./types"
 
 import { IconSvg } from "../Icon/svg"
 
-export const Breadcrumbs = ({ steps }: Props) => {
+export const Breadcrumbs = ({ steps, url, icons = [''] }: Props) => {
   return (
     <S.BreadcrumbsContainer>
       {steps.map((e: string, i: number, a: Array<string>) => {
@@ -13,10 +13,11 @@ export const Breadcrumbs = ({ steps }: Props) => {
 
         return (
           <S.BreadcrumbsContainer key={i}>
+            {icons[i]}
             {condition ? (
               <S.Step variant={"primary"}>{e}</S.Step>
             ) : (
-              <S.Step variant={"secondary"}>{e}</S.Step>
+              <S.Step href={url} variant={"secondary"}>{e}</S.Step>
             )}
             {condition ? <IconSvg /> : ""}
           </S.BreadcrumbsContainer>
