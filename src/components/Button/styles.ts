@@ -5,7 +5,6 @@ export const Button = styled("button", {
   cursor: "pointer",
   fontSize: "$18",
   display: "flex",
-  height: "48px",
   justifyContent: "center",
   alignItems: "center",
   fontWeight: "$semibold",
@@ -53,13 +52,17 @@ export const Button = styled("button", {
     },
     size: {
       small: {
-        padding: "0 $8"
+        padding: "$2 $16",
+        fontSize: "$16",
+        height: "$space$32"
       },
       normal: {
-        padding: "0 $16"
+        padding: "0 $16",
+        height: "$space$40",
       },
       large: {
-        padding: "0 $24"
+        padding: "0 $16",
+        height: "$space$48",
       }
     }
   }
