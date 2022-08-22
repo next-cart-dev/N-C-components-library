@@ -1,5 +1,6 @@
 export { styled, getCssText } from "./stitches.config"
 
+export { Alert } from "./components/Alert"
 export { Box } from "./components/Box"
 export { Button } from "./components/Button"
 export { Icon } from "./components/Icon"
