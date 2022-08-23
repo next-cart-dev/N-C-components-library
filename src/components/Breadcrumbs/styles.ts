@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react"
-import { AiFillStar } from "react-icons/all"
+import { AiFillStar } from "react-icons/ai"
 
 export const BreadcrumbsContainer = styled("div", {
   display: "flex",
@@ -8,11 +8,11 @@ export const BreadcrumbsContainer = styled("div", {
 })
 
 export const Step = styled("a", {
-  color: '$primary500',
+  color: "$primary500",
   variants: {
     variant: {
       primary: {
-        cursor: 'default',
+        cursor: "default",
         textDecoration: "none"
       },
       secondary: {
@@ -26,5 +26,5 @@ export const Step = styled("a", {
 })
 
 export const BreadcrumbIcon = styled(AiFillStar, {
-  color: '$primary500'
+  color: "$primary500"
 })
