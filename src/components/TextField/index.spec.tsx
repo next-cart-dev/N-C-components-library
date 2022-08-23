@@ -29,12 +29,30 @@ describe("<TextField />", () => {
         id="pwd"
         label="Senha"
         type="password"
-        error="Senha inválida"
+        helperText="Senha inválida"
+        variant="danger"
       />
     )
 
     const feedbackMessage = await screen.findByText("Senha inválida")
 
     expect(feedbackMessage).toBeVisible()
+  })
+
+  it("should display the text adornment correctly", async () => {
+    render(
+      <TextField
+        id="pwd"
+        type="password"
+        adornment={{
+          position: "left",
+          node: "Senha"
+        }}
+      />
+    )
+
+    const adornment = await screen.findByText("Senha")
+
+    expect(adornment).toBeVisible()
   })
 })
