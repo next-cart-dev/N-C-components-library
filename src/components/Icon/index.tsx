@@ -17,7 +17,7 @@ const iconsMapping = {
   BsFillCaretRightFill: <BsFillCaretRightFill />
 }
 
-export const Icon = ({ size, color = "$primary100", name }: Props) => {
+export const Icon = ({ size, color = "$neutral100", name }: Props) => {
   return (
     <S.Icon size={size} css={{ color }}>
       {iconsMapping[name]}
