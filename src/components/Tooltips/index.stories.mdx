@@ -1,0 +1,81 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import { Tooltip } from "."
+
+<Meta title="Tooltips" component={Tooltip} />
+
+# Tooltips
+
+<Story name="Tooltips">
+  <div style={{ display: "flex", flexDirection: "column", gap: "4rem" }}>
+    <div>
+      <h2 style={{ color: "black", fontWeight: "100" }}>Tooltips Positions:</h2>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)"
+        }}
+      >
+        <Tooltip id="1" place="top" tip="Top">
+          <div
+            style={{
+              minWidth: "100px",
+              padding: "10px",
+              border: "1px solid black",
+              borderRadius: "6px",
+              cursor: "default",
+              background: "#2e3958",
+              color: "white"
+            }}
+          >
+            Top Tooltip
+          </div>
+        </Tooltip>
+        <Tooltip id="2" place="right" tip="Right">
+          <div
+            style={{
+              minWidth: "100px",
+              padding: "10px",
+              border: "1px solid black",
+              borderRadius: "6px",
+              cursor: "default",
+              background: "#2e3958",
+              color: "white"
+            }}
+          >
+            Right Tooltip
+          </div>
+        </Tooltip>
+        <Tooltip id="3" place="bottom" tip="Bottom">
+          <div
+            style={{
+              minWidth: "100px",
+              padding: "10px",
+              border: "1px solid black",
+              borderRadius: "6px",
+              cursor: "default",
+              background: "#2e3958",
+              color: "white"
+            }}
+          >
+            Bottom Tooltip
+          </div>
+        </Tooltip>
+        <Tooltip id="4" place="left" tip="left">
+          <div
+            style={{
+              minWidth: "100px",
+              padding: "10px",
+              border: "1px solid black",
+              borderRadius: "6px",
+              cursor: "default",
+              background: "#2e3958",
+              color: "white"
+            }}
+          >
+            Left Tooltip
+          </div>
+        </Tooltip>
+      </div>
+    </div>
+  </div>
+</Story>

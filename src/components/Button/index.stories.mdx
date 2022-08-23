@@ -1,0 +1,338 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { Button } from "./index.tsx"
+import { Icon } from "../Icon"
+
+<Meta title="Button" component={Button} />
+
+# Button
+
+<Story name="Primary">
+  <div style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr" }}>
+    <div>
+      <span>Small</span>
+      <Button variant="primary" size="small">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal</span>
+      <Button variant="primary">Clique aqui</Button>
+    </div>
+    <div>
+      <span>Large</span>
+      <Button variant="primary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small disabled</span>
+      <Button variant="primary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal disabled</span>
+      <Button variant="primary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button variant="primary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon</span>
+      <Button
+        variant="primary"
+        size="small"
+        startIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start icon</span>
+      <Button
+        variant="primary"
+        size="normal"
+        startIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon</span>
+      <Button
+        variant="primary"
+        size="large"
+        startIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon disabled</span>
+      <Button
+        variant="primary"
+        size="small"
+        disabled
+        startIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start icon disabled</span>
+      <Button
+        variant="primary"
+        size="normal"
+        disabled
+        startIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon disabled</span>
+      <Button
+        variant="primary"
+        size="large"
+        disabled
+        startIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with end icon</span>
+      <Button
+        variant="primary"
+        size="small"
+        endIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with end icon</span>
+      <Button
+        variant="primary"
+        size="normal"
+        endIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with end icon</span>
+      <Button
+        variant="primary"
+        size="large"
+        endIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start/end icon</span>
+      <Button
+        variant="primary"
+        size="small"
+        startIcon={<Icon name="currency" size="small" />}
+        endIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start/end icon</span>
+      <Button
+        variant="primary"
+        size="normal"
+        startIcon={<Icon name="currency" size="normal" />}
+        endIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start/end icon</span>
+      <Button
+        variant="primary"
+        size="large"
+        startIcon={<Icon name="currency" size="large" />}
+        endIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+</Story>
+
+<Story name="Secondary">
+  <div style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr" }}>
+    <div>
+      <span>Small</span>
+      <Button variant="secondary" size="small">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal</span>
+      <Button variant="secondary">Clique aqui</Button>
+    </div>
+    <div>
+      <span>Large</span>
+      <Button variant="secondary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small disabled</span>
+      <Button variant="secondary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal disabled</span>
+      <Button variant="secondary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button variant="secondary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon</span>
+      <Button
+        variant="secondary"
+        size="small"
+        startIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start icon</span>
+      <Button
+        variant="secondary"
+        size="normal"
+        startIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon</span>
+      <Button
+        variant="secondary"
+        size="large"
+        startIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon disabled</span>
+      <Button
+        variant="secondary"
+        size="small"
+        disabled
+        startIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start icon disabled</span>
+      <Button
+        variant="secondary"
+        size="normal"
+        disabled
+        startIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon disabled</span>
+      <Button
+        variant="secondary"
+        size="large"
+        disabled
+        startIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with end icon</span>
+      <Button
+        variant="secondary"
+        size="small"
+        endIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with end icon</span>
+      <Button
+        variant="secondary"
+        size="normal"
+        endIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with end icon</span>
+      <Button
+        variant="secondary"
+        size="large"
+        endIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start/end icon</span>
+      <Button
+        variant="secondary"
+        size="small"
+        startIcon={<Icon name="currency" size="small" />}
+        endIcon={<Icon name="currency" size="small" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Normal with start/end icon</span>
+      <Button
+        variant="secondary"
+        size="normal"
+        startIcon={<Icon name="currency" size="normal" />}
+        endIcon={<Icon name="currency" size="normal" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start/end icon</span>
+      <Button
+        variant="secondary"
+        size="large"
+        startIcon={<Icon name="currency" size="large" />}
+        endIcon={<Icon name="currency" size="large" />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+</Story>
