@@ -1,7 +1,7 @@
 {
-  "name": "@next-cart-dev/n-c-components-library",
+  "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.2.0-development",
+  "version": "0.8.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,8 @@
     "semantic-release": "semantic-release",
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/plugin-transform-runtime": "^7.18.10",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@radix-ui/react-dialog": "^1.0.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -63,21 +66,27 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "chromatic": "^6.7.3",
-    "cz-conventional-changelog": "3.3.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild-jest": "^0.5.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.3.0",
+    "eslint-mdx": "^2.0.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-mdx": "^2.0.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "jest-svg-transformer": "^1.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-icons": "^4.4.0",
     "react-number-format": "^4.9.3",
     "react-tooltip": "^4.2.21",
@@ -95,8 +104,14 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   },
   "size-limit": [
     {
