@@ -64,11 +64,11 @@ export const Button = styled("button", {
       },
       normal: {
         padding: "0 $16",
-        height: "$space$40",
+        height: "$space$40"
       },
       large: {
         padding: "0 $16",
-        height: "$space$48",
+        height: "$space$48"
       }
     }
   }
