@@ -13,12 +13,12 @@ export const ModalExample = () => {
       <Modal
         open={open}
         onOpenChange={setOpen}
-        trigger={<Button>Click Me to open the modal</Button>}
+        triggerElementRef={<Button>Click Me to open the modal</Button>}
+        title='Título do modal'
       >
         <S.ModalBody>
-          <S.DialogTitle>Titulo Do Modal</S.DialogTitle>
-          <S.DialogDescription>
-            Texto para acompanhar modal de exemplo
+          <S.DialogDescription css={{ width: '500px' }}>
+            Pellentesque nulla lacus, dignissim quis orci at, maximus elementum quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum porta.
           </S.DialogDescription>
         </S.ModalBody>
         <S.ModalActions>
