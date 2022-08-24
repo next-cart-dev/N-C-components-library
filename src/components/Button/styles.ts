@@ -19,6 +19,9 @@ export const Button = styled("button", {
       primary: {
         background: "$primary500",
         color: "$neutral100",
+        "& svg path": {
+          fill: "$text200"
+        },
         "&:hover": {
           background: "$secondary700"
         },
@@ -33,6 +36,9 @@ export const Button = styled("button", {
       secondary: {
         background: "$neutral200",
         color: "$primary500",
+        "& svg path": {
+          fill: "$primary500"
+        },
         border: "1px solid $primary500",
         "&:hover": {
           background: "$primary200",

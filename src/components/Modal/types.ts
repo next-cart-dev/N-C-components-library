@@ -4,7 +4,7 @@ export type Props = {
   /**
    * Element that will open the modal
    */
-  trigger: React.ReactNode
+  triggerElementRef: any
   /**
    * Modal children that receive a element
    */
@@ -16,7 +16,6 @@ export type Props = {
   /**
    * Property that will change the open with useState
    */
-  // TODO: Se possível, tipar conforme onOpenChange do Radix -> (open: boolean): void
   onOpenChange?(open: boolean): void
   /**
    * Modal title
