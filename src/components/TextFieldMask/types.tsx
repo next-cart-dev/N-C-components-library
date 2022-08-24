@@ -182,7 +182,7 @@ export type Props = {
    */
   placeholder?: string
   /**
-   * 
+   *
    */
-  formatMaskToUse?: 'cpf' | 'cnpj' | 'date' | 'currency' | 'phone'
+  formatMaskToUse?: "cpf" | "cnpj" | "date" | "currency" | "mobile"
 }

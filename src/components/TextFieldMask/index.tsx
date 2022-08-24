@@ -28,44 +28,48 @@ export const TextFieldMask = ({
     return `${amount}`
   }
 
-  const masks = {
+  const defaultMaskMapping: any = {
     cpf: {
-      mask: '###.###.###-##',
-      placeholder: '___.___.___-__'
+      mask: "###.###.###-##",
+      placeholder: "___.___.___-__"
     },
     cnpj: {
-      mask: '##.###.###/####-##',
-      placeholder: '__.___.___/____-__'
+      mask: "##.###.###/####-##",
+      placeholder: "__.___.___/____-__"
     },
     date: {
-      mask: '##/##/####',
-      placeholder: '__/__/____'
+      mask: "##/##/####",
+      placeholder: "__/__/____"
     },
     currency: {
       mask: currencyFormatter,
-      placeholder: 'R$ 0,00'
+      placeholder: "R$ 0,00"
     },
-    phone: {
-      mask: '+55 (##) #####-####',
-      placeholder: '+55 (__) _____-____'
+    mobile: {
+      mask: "+55 (##) #####-####",
+      placeholder: "+55 (__) _____-____"
     }
   }
 
-  const formatMaskIdentify = (item: string): any => {
-    for (let m of Object.keys(masks)) {
+  const formatMaskIdentify = (item: string) => {
+    for (const m of Object.keys(defaultMaskMapping)) {
       if (m === formatMaskToUse) {
-        if (item === 'mask')
-          return masks[m].mask
-        return masks[m].placeholder
+        if (item === "mask") return defaultMaskMapping[m].mask
+        return defaultMaskMapping[m].placeholder
       }
     }
   }
+
   return (
     <Box>
       <NumberFormat
         {...props}
-        placeholder={!props.placeholder ? formatMaskIdentify('placeholder') : props.placeholder}
-        format={formatMaskToUse ? formatMaskIdentify('mask') : props.format}
+        placeholder={
+          !props.placeholder
+            ? formatMaskIdentify("placeholder")
+            : props.placeholder
+        }
+        format={formatMaskToUse ? formatMaskIdentify("mask") : props.format}
         type="text"
         label={label}
         customInput={TextField}
