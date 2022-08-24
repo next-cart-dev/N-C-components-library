@@ -1,6 +1,7 @@
 import { Meta, Story } from "@storybook/addon-docs"
 
 import { Breadcrumbs } from "./index.tsx"
+import * as S from "./styles"
 
 <Meta title="Breadcrumbs" component={Breadcrumbs} />
 
@@ -15,10 +16,25 @@ import { Breadcrumbs } from "./index.tsx"
       marginTop: "40px"
     }}
   >
-    <Breadcrumbs steps={["breadcrumbs", "breadcrumbs"]} />
-    <Breadcrumbs steps={["breadcrumbs", "breadcrumbs", "breadcrumbs"]} />
+    <Breadcrumbs
+      steps={["breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[<S.BreadcrumbIcon />, <S.BreadcrumbIcon />]}
+    />
+    <Breadcrumbs
+      steps={["breadcrumbs", "breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[<S.BreadcrumbIcon />, <S.BreadcrumbIcon />, <S.BreadcrumbIcon />]}
+    />
     <Breadcrumbs
       steps={["breadcrumbs", "breadcrumbs", "breadcrumbs", "breadcrumbs"]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />
+      ]}
     />
     <Breadcrumbs
       steps={[
@@ -27,6 +43,14 @@ import { Breadcrumbs } from "./index.tsx"
         "breadcrumbs",
         "breadcrumbs",
         "breadcrumbs"
+      ]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />
       ]}
     />
     <Breadcrumbs
@@ -37,6 +61,15 @@ import { Breadcrumbs } from "./index.tsx"
         "breadcrumbs",
         "breadcrumbs",
         "breadcrumbs"
+      ]}
+      url="http://localhost:6006/?path=/story/breadcrumbs--breadcrumbs-items"
+      icons={[
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />,
+        <S.BreadcrumbIcon />
       ]}
     />
   </div>
