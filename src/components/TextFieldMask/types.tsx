@@ -127,7 +127,6 @@ export type Props = {
    * @default none
    */
   onValueChange?: (values: NumberFormatValues, sourceInfo: SourceInfo) => void
-
   /**
    * Input type attribute.
    * @options One of ['text', 'tel', 'password']
@@ -177,15 +176,13 @@ export type Props = {
    */
   label?: string
   /**
-   * allow formatting a currency mask with pt-br format
-   * @options boolean
-   * @default false
-   */
-  allowPtBrCurrencyFormatter?: boolean
-  /**
    * Input Placeholder
    * @options string
    * @default null
    */
   placeholder?: string
+  /**
+   * 
+   */
+  formatMaskToUse?: 'cpf' | 'cnpj' | 'date' | 'currency' | 'phone'
 }
