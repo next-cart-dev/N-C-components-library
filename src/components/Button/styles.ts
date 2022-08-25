@@ -5,7 +5,6 @@ export const Button = styled("button", {
   cursor: "pointer",
   fontSize: "$18",
   display: "flex",
-  height: "48px",
   justifyContent: "center",
   alignItems: "center",
   fontWeight: "$semibold",
@@ -20,6 +19,9 @@ export const Button = styled("button", {
       primary: {
         background: "$primary500",
         color: "$neutral100",
+        "& svg path": {
+          fill: "$text200"
+        },
         "&:hover": {
           background: "$secondary700"
         },
@@ -34,6 +36,9 @@ export const Button = styled("button", {
       secondary: {
         background: "$neutral200",
         color: "$primary500",
+        "& svg path": {
+          fill: "$primary500"
+        },
         border: "1px solid $primary500",
         "&:hover": {
           background: "$primary200",
@@ -53,13 +58,17 @@ export const Button = styled("button", {
     },
     size: {
       small: {
-        padding: "0 $8"
+        padding: "$2 $16",
+        fontSize: "$16",
+        height: "$space$32"
       },
       normal: {
-        padding: "0 $16"
+        padding: "0 $16",
+        height: "$space$40"
       },
       large: {
-        padding: "0 $24"
+        padding: "0 $16",
+        height: "$space$48"
       }
     }
   }

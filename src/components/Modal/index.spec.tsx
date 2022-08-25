@@ -11,7 +11,7 @@ const TestComponent = () => {
       <Modal
         open={open}
         onOpenChange={setOpen}
-        trigger={<button data-testid="btn-modal">Click Me</button>}
+        triggerElementRef={<button data-testid="btn-modal">Click Me</button>}
       >
         <h1>helloworld</h1>
         <button
