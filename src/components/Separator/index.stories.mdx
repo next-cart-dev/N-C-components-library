@@ -1,0 +1,24 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import { Separator } from "./styles.ts"
+import { Box } from "../Box"
+import { Typography } from "../Typography"
+
+<Meta title="Separator" component={Separator} />
+
+# Separator
+
+<Story name="Separator">
+  <Box
+    css={{
+      padding: "$16",
+      border: "1px solid $primary500",
+      borderRadius: 8,
+      width: 300
+    }}
+  >
+    <Typography css={{ color: "$primary500" }}>NextCart</Typography>
+    <Separator variant="solid" css={{ margin: "$16 $0" }} />
+    <Typography css={{ color: "$primary500" }}>Design system</Typography>
+    <Separator variant="dashed" css={{ margin: "$16 $0" }} />
+  </Box>
+</Story>

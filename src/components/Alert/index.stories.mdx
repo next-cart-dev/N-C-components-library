@@ -1,0 +1,86 @@
+import { Meta, Story, ArgsTable } from "@storybook/addon-docs"
+
+import { Alert } from "./index.tsx"
+import { Box } from "../Box"
+import { Icon } from "../Icon"
+
+export const Template = (args) => <Alert {...args} />
+
+<Meta
+  title="Alert"
+  component={Alert}
+  argTypes={{
+    id: {
+      control: "text"
+    },
+    message: {
+      control: "text"
+    },
+    title: {
+      control: "text"
+    },
+    variant: {
+      options: ["info", "success", "danger", "warning"]
+    },
+    icon: {
+      table: {
+        disable: true
+      }
+    }
+  }}
+/>
+
+# Alert
+
+<Story
+  name="Alert without icon"
+  args={{
+    id: "id-1",
+    message: "Exemplo de texto",
+    title: "Exemplo de título",
+    variant: "info",
+    role: "alert"
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story name="Alert with icon">
+  <Box css={{ marginBottom: "$8" }}>
+    <Alert
+      id="id-2"
+      message="Texto de exemplo"
+      variant="info"
+      role="status"
+      icon={<Icon name="currency" size="normal" color="$info700" />}
+    />
+  </Box>
+  <Box css={{ marginBottom: "$8" }}>
+    <Alert
+      id="id-3"
+      message="Texto de exemplo"
+      variant="success"
+      role="status"
+      icon={<Icon name="currency" size="normal" color="$success700" />}
+    />
+  </Box>
+  <Box css={{ marginBottom: "$8" }}>
+    <Alert
+      id="id-4"
+      message="Texto de exemplo"
+      variant="warning"
+      role="status"
+      icon={<Icon name="currency" size="normal" color="$warning700" />}
+    />
+  </Box>
+  <Box css={{ marginBottom: "$8" }}>
+    <Alert
+      id="id-5"
+      title="Exemplo"
+      message="Texto de exemplo"
+      variant="danger"
+      icon={<Icon name="currency" size="normal" color="$danger700" />}
+      role="status"
+    />
+  </Box>
+</Story>
