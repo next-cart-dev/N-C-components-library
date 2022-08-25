@@ -2,15 +2,11 @@ import React from "react"
 
 import { render, screen } from "@testing-library/react"
 
-import { TextField } from "../TextField"
-
 import { TextFieldMask } from "."
 
-describe("<Mask />", () => {
-  it("should render input mask correctly", () => {
-    render(
-      <TextFieldMask label="test" type={"text"} customInput={TextField} />
-    )
+describe("<TextFieldMask />", () => {
+  it("should render input label correctly", () => {
+    render(<TextFieldMask label="test" type={"text"} />)
     const labelTest = screen.getByText("test")
     expect(labelTest).toBeVisible()
   })
@@ -21,9 +17,31 @@ describe("<Mask />", () => {
     expect(inputMaskFormat).toBeVisible()
   })
 
-  it("should format the currency correctly", () => {
+  it("should format currencies values correctly", () => {
     render(<TextFieldMask formatMaskToUse="currency" value={"200"} />)
     const inputMaskCurrencyFormatter = screen.getByDisplayValue("R$ 2,00")
+    expect(inputMaskCurrencyFormatter).toBeVisible()
+  })
+
+  it("should format cpf correctly", () => {
+    render(<TextFieldMask formatMaskToUse="cpf" value={"12345678901"} />)
+    const inputMaskCurrencyFormatter =
+      screen.getByDisplayValue("123.456.789-01")
+    expect(inputMaskCurrencyFormatter).toBeVisible()
+  })
+
+  it("should format cnpj correctly", () => {
+    render(<TextFieldMask formatMaskToUse="cnpj" value={"92281839000163"} />)
+    const inputMaskCurrencyFormatter =
+      screen.getByDisplayValue("92.281.839/0001-63")
+    expect(inputMaskCurrencyFormatter).toBeVisible()
+  })
+
+  it("should format mobile phone correctly", () => {
+    render(<TextFieldMask formatMaskToUse="mobile" value={"11988223355"} />)
+    const inputMaskCurrencyFormatter = screen.getByDisplayValue(
+      "+55 (11) 98822-3355"
+    )
     expect(inputMaskCurrencyFormatter).toBeVisible()
   })
 })

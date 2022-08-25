@@ -1,8 +1,8 @@
 import React from "react"
 
-import NumberFormat from "react-number-format"
+import NumberFormat, { FormatInputValueFunction } from "react-number-format"
 
-import { Props } from "./types"
+import { MaskFormat, MaskType, Props } from "./types"
 
 import { Box } from "../Box"
 import { TextField } from "../TextField"
@@ -17,18 +17,20 @@ export const TextFieldMask = ({
    * @param value
    * @returns the format mask
    */
-  const currencyFormatter = (value: any) => {
-    if (!Number(value)) return ""
+  const currencyFormatter: FormatInputValueFunction = (value: string) => {
+    const castedValueToNumber = Number(value)
+
+    if (!castedValueToNumber) return ""
 
     const amount = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL"
-    }).format(value / 100)
+    }).format(castedValueToNumber / 100)
 
     return `${amount}`
   }
 
-  const defaultMaskMapping: any = {
+  const defaultMaskMapping: Record<MaskType, MaskFormat> = {
     cpf: {
       mask: "###.###.###-##",
       placeholder: "___.___.___-__"
@@ -51,25 +53,20 @@ export const TextFieldMask = ({
     }
   }
 
-  const formatMaskIdentify = (item: string) => {
-    for (const m of Object.keys(defaultMaskMapping)) {
-      if (m === formatMaskToUse) {
-        if (item === "mask") return defaultMaskMapping[m].mask
-        return defaultMaskMapping[m].placeholder
-      }
-    }
-  }
-
   return (
     <Box>
       <NumberFormat
         {...props}
         placeholder={
-          !props.placeholder
-            ? formatMaskIdentify("placeholder")
+          formatMaskToUse
+            ? defaultMaskMapping[formatMaskToUse].placeholder
             : props.placeholder
         }
-        format={formatMaskToUse ? formatMaskIdentify("mask") : props.format}
+        format={
+          formatMaskToUse
+            ? defaultMaskMapping[formatMaskToUse].mask
+            : props.format
+        }
         type="text"
         label={label}
         customInput={TextField}
