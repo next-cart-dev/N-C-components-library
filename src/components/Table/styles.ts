@@ -26,7 +26,7 @@ export const TableHeadCell = styled("th", {
 export const TableBodyCell = styled("td", {
   padding: "13px 16px",
   textAlign: "left",
-  fontWeight: "400",
+  fontWeight: "$normal",
   fontSize: "$18",
   color: "$primary500",
   letterSpacing: "1.2px",
@@ -43,12 +43,12 @@ export const PaginationButton = styled("button", {
   variants: {
     variant: {
       active: {
-        fontWeight: "700"
+        fontWeight: "$semibold"
       }
     }
   },
   "&:hover": {
-    fontWeight: "700"
+    fontWeight: "$semibold"
   },
   "&:disabled": {
     opacity: "0.3"
