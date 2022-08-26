@@ -38,7 +38,9 @@ export const TablePagination = ({ table, totalCount }: Props) => {
         backgroundColor: "$primary500",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+        borderBottomLeftRadius: "4px",
+        borderBottomRightRadius: "4px"
       }}
     >
       <CountView />
