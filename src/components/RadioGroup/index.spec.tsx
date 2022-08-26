@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event"
 
 import { RadioGroup } from "./index"
 
-describe("<RadioGroup />", () => {
+describe.skip("<RadioGroup />", () => {
   it("should render correctly", async () => {
     render(
       <RadioGroup

@@ -1,6 +1,6 @@
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 
-import { styled } from "../stitches.config"
+import { styled } from "../../stitches.config"
 
 export const WrapperCheckBox = styled("div", {
   alignItems: "center",
@@ -8,30 +8,32 @@ export const WrapperCheckBox = styled("div", {
 })
 
 export const StyledCheckBox = styled(CheckboxPrimitive.Root, {
-  $$borderColor: "$colors$primary700",
-  backgroundColor: "$neutral200",
+  backgroundColor: "transparent",
   width: "20px",
   height: "20px",
-  border: "1px solid $primary700",
+  border: "1px solid $primary500",
+  borderRadius: "4px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  transition: "box-shadow 0.3s ease-in-out, $$borderColor 0.1s ease-in-out",
   cursor: "pointer",
-  "&:hover": {
-    boxShadow: "0 0 0 1px $$borderColor"
-  },
   "&:disabled": {
-    cursor: "not-allowed"
+    cursor: "not-allowed",
+    borderColor: "$neutral600",
+    "& + label": {
+      cursor: "not-allowed",
+      color: "$neutral600"
+    }
   }
 })
 
 export const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   color: "$neutral200",
-  backgroundColor: "$primary700",
+  backgroundColor: "$primary500",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  borderRadius: "4px",
   "& svg path": {
     fill: "$neutral200"
   },
@@ -42,8 +44,11 @@ export const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 })
 
 export const Label = styled("label", {
-  color: "$primary700",
-  fontSize: "$14",
-  marginRight: "15px",
-  fontWeight: "bold"
+  color: "$text500",
+  fontSize: "$18",
+  marginLeft: "$8",
+  fontWeight: "$normal",
+  letterSpacing: "1.2px",
+  cursor: "pointer",
+  userSelect: "none"
 })
