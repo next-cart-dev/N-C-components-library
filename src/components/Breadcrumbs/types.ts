@@ -1,6 +1,5 @@
 import React from "react"
 
- 
 export type Props = {
   /**
    * The values of the Breadcrumbs Component
