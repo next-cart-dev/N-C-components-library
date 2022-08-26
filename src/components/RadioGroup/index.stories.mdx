@@ -1,21 +1,39 @@
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story } from "@storybook/addon-docs"
 
-import { RadioGroup } from './index.tsx';
+import { RadioGroup } from "./index.tsx"
+import { Box } from "../Box"
+import { Typography } from "../Typography"
 
 <Meta title="RadioGroup" component={RadioGroup} />
 
 # Radio
 
 <Story name="RadioGroup">
-  <h1>Radio</h1>
-  <div style={{display:'flex'}}>
-    <div style={{ marginRight: '50px', border: '1px solid black', padding: '10px' }}>
-      <p>Position flex</p>
-      <RadioGroup defaultValue='1' radioItems={[{id: '1', value:'1', label:"Label"}, {id: '2', value:'2', label:"Label"}, {id: '3', value:'3', label:"Label"}]} />
-    </div>
-    <div style={{ marginRight: '50px', border: '1px solid black', padding: '10px'}}>
-      <p>Position block</p>
-      <RadioGroup defaultValue='1' position='block' radioItems={[{id: '4', label:"disabled", disabled: true}, {id: '5', value:'2', label:"Label"}, {id: '6', value:'3', label:"Label"}]} />
-    </div>
-  </div>
+  <Box css={{ marginBottom: "$16" }}>
+    <Typography css={{ marginBottom: "$8" }}>Vertical radio group</Typography>
+    <RadioGroup
+      name="radio-group-1"
+      defaultValue="value1"
+      options={[
+        { id: "1", label: "Option 1", value: "value1", disabled: false },
+        { id: "2", label: "Option 2", value: "value2", disabled: false },
+        { id: "3", label: "Option 3", value: "value3", disabled: true },
+        { id: "4", label: "Option 4", value: "value4", disabled: false }
+      ]}
+    />
+  </Box>
+  <Box>
+    <Typography css={{ marginBottom: "$8" }}>Horizontal radio group</Typography>
+    <RadioGroup
+      name="radio-group-2"
+      defaultValue="value1"
+      orientation="horizontal"
+      options={[
+        { id: "rg1", label: "Option 1", value: "value1", disabled: false },
+        { id: "rg2", label: "Option 2", value: "value2", disabled: true },
+        { id: "rg3", label: "Option 3", value: "value3", disabled: true },
+        { id: "rg4", label: "Option 4", value: "value4", disabled: false }
+      ]}
+    />
+  </Box>
 </Story>

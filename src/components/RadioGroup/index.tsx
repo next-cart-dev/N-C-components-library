@@ -3,32 +3,46 @@ import React from "react"
 import * as S from "./styles"
 import { Props } from "./types"
 
+import { Box } from "../Box"
+
 export const RadioGroup = ({
-  radioItems,
+  name,
+  orientation = "vertical",
+  loop = true,
   defaultValue,
-  position = "flex",
-  onValueChange
+  options
 }: Props) => {
   return (
-    <S.WrapperRadioGroup
+    <S.RadioGroup
+      name={name}
+      orientation={orientation}
       defaultValue={defaultValue}
-      position={position}
-      onValueChange={onValueChange}
+      loop={loop}
+      css={{
+        display: "flex",
+        flexFlow: orientation === "vertical" ? "column" : "row"
+      }}
     >
-      {radioItems.map((radio, index) => (
-        <span key={index}>
-          <S.StyledRadio
-            id={radio.id}
-            data-testid={radio.id}
-            disabled={radio.disabled}
-            value={radio.value}
-            key={index}
+      {options.map((option) => (
+        <Box
+          key={option.id}
+          css={{
+            display: "flex",
+            alignItems: "center",
+            ...(orientation === "vertical" && { marginBottom: "$16" }),
+            ...(orientation === "horizontal" && { marginRight: "$16" })
+          }}
+        >
+          <S.RadioGroupRadio
+            id={option.id}
+            value={option.value}
+            disabled={option.disabled}
           >
-            <S.StyledIndicator />
-          </S.StyledRadio>
-          {radio.label && <S.Label htmlFor={radio.id}>{radio.label}</S.Label>}
-        </span>
+            <S.RadioGroupIndicator />
+          </S.RadioGroupRadio>
+          <S.Label htmlFor={option.id}>{option.label}</S.Label>
+        </Box>
       ))}
-    </S.WrapperRadioGroup>
+    </S.RadioGroup>
   )
 }

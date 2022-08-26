@@ -1,39 +1,16 @@
-export type Props = {
-  /**
-   * defaultValue value radio.
-   */
-  defaultValue: string
-  /**
-   * radio items.
-   * @default 'block's'
-   */
-  position?: "block" | "flex"
-  /**
-   * radio group onValueChange.
-   */
-  onValueChange?: () => void
-  /**
-   * Radio items contain label, value, disabled, id [RadioItem]  .
-   */
-  radioItems: [RadioItem]
+type RadioButton = {
+  label: string
+  value: string
+  id: string
+  disabled?: boolean
 }
 
-type RadioItem = {
-  /**
-   * The radio id.
-   */
-  id: string
-  /**
-   * If `true`, the component is disabled.
-   * @default false
-   */
-  disabled?: boolean
-  /**
-   * Label for id radio.
-   */
-  label?: string
-  /**
-   * value for id radio.
-   */
-  value: string
+export type Props = {
+  defaultValue?: string
+  onValueChange: (value: string) => void
+  name: string
+  required?: boolean
+  orientation?: "horizontal" | "vertical" | undefined
+  loop?: boolean
+  options: RadioButton[]
 }
