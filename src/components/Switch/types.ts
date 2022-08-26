@@ -1,13 +1,8 @@
 export type Props = {
   /**
-   * The checkbox style.
-   * @default 'neutral's
+   * The component onChange handler.
    */
-  variant?: "primary" | "neutral"
-  /**
-   * The checkbox onClick handler.
-   */
-  onClick?: () => void
+  onCheckedChange?: (checked: boolean) => void
   /**
    * The checkbox id.
    */
@@ -22,4 +17,5 @@ export type Props = {
    *
    */
   label?: string
+  name: string
 }

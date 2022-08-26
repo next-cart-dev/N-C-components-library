@@ -1,50 +1,41 @@
 import * as SwitchPrimitive from "@radix-ui/react-switch"
-import { styled } from "@stitches/react"
 
-export const SwitchStyled = styled(SwitchPrimitive.Switch, {
-  $$borderColor: "$colors$primary700",
-  $$disabledBorderColor: "$colors$text400",
+import { styled } from "../../stitches.config"
+
+export const Switch = styled(SwitchPrimitive.Root, {
   all: "unset",
-  cursor: "pointer",
-  width: "43px",
-  height: "23px",
-  position: "relative",
+  width: 42,
+  height: 25,
+  backgroundColor: "$primary400",
   borderRadius: "9999px",
+  position: "relative",
+  cursor: "pointer",
+  '&[data-state="checked"]': { backgroundColor: "$primary700" },
   "&:disabled": {
-    cursor: "not-allowed"
-  },
-  variants: {
-    variant: {
-      primary: {
-        backgroundColor: /* "$neutral600" */ "#ABA6C2",
-        "&:focus": { boxShadow: `0 0 0 2px $$borderColor` },
-        '&[data-state="checked"]': { backgroundColor: "$primary700" }
-      },
-      neutral: {
-        backgroundColor: "$neutral600",
-        "&:focus": { boxShadow: `0 0 0 2px $$disabledBorderColor` },
-        '&[data-state="checked"]': { backgroundColor: "$primary400" }
-      }
+    backgroundColor: "$neutral600",
+    cursor: "not-allowed",
+    "& + label": {
+      cursor: "not-allowed"
     }
   }
 })
 
-export const SwitchThumbStyled = styled(SwitchPrimitive.SwitchThumb, {
+export const Thumb = styled(SwitchPrimitive.Thumb, {
   display: "block",
-  width: "17px",
-  height: "17px",
+  width: 21,
+  height: 21,
+  backgroundColor: "white",
   borderRadius: "9999px",
   transition: "transform 100ms",
-  transform: "translateX(1px)",
-  marginLeft: "3px",
+  transform: "translateX(2px)",
   willChange: "transform",
-  backgroundColor: "$neutral200",
   '&[data-state="checked"]': { transform: "translateX(19px)" }
 })
 
 export const Label = styled("label", {
-  color: "$primary900",
-  fontWeight: "$semibold",
-  letterSpacing: "$0.4",
-  fontSize: "$16"
+  fontSize: "$18",
+  letterSpacing: "1.2px",
+  marginLeft: "$8",
+  cursor: "pointer",
+  userSelect: "none"
 })
