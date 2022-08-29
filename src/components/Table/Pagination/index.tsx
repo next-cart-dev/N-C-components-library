@@ -3,6 +3,7 @@ import React from "react"
 import { Table } from "@tanstack/react-table"
 
 import { Box } from "../../Box"
+import { Icon } from "../../Icon"
 import { Typography } from "../../Typography"
 import * as S from "../styles"
 
@@ -44,13 +45,13 @@ export const TablePagination = ({ table, totalCount }: Props) => {
       }}
     >
       <CountView />
-      <Box>
+      <Box css={{ display: "flex", flexFlow: "row" }}>
         <S.PaginationButton
           type="button"
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          {"<"}
+          <Icon name="BsFillCaretLeftFill" size="normal" color="$text500" />
         </S.PaginationButton>
         {Array.from(Array(table.getPageCount()).keys()).map((page) => (
           <S.PaginationButton
@@ -66,7 +67,7 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          {">"}
+          <Icon name="BsFillCaretRightFill" size="normal" color="$text500" />
         </S.PaginationButton>
       </Box>
     </Box>

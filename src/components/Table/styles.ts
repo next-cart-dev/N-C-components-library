@@ -36,6 +36,9 @@ export const TableBodyCell = styled("td", {
 
 export const PaginationButton = styled("button", {
   all: "unset",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   padding: "$8 10px",
   color: "$text200",
   cursor: "pointer",
