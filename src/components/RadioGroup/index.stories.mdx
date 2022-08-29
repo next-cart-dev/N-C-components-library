@@ -1,0 +1,39 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { RadioGroup } from "./index.tsx"
+import { Box } from "../Box"
+import { Typography } from "../Typography"
+
+<Meta title="RadioGroup" component={RadioGroup} />
+
+# Radio
+
+<Story name="RadioGroup">
+  <Box css={{ marginBottom: "$16" }}>
+    <Typography css={{ marginBottom: "$8" }}>Vertical radio group</Typography>
+    <RadioGroup
+      name="radio-group-1"
+      defaultValue="value1"
+      options={[
+        { id: "1", label: "Option 1", value: "value1", disabled: false },
+        { id: "2", label: "Option 2", value: "value2", disabled: false },
+        { id: "3", label: "Option 3", value: "value3", disabled: true },
+        { id: "4", label: "Option 4", value: "value4", disabled: false }
+      ]}
+    />
+  </Box>
+  <Box>
+    <Typography css={{ marginBottom: "$8" }}>Horizontal radio group</Typography>
+    <RadioGroup
+      name="radio-group-2"
+      defaultValue="value1"
+      orientation="horizontal"
+      options={[
+        { id: "rg1", label: "Option 1", value: "value1", disabled: false },
+        { id: "rg2", label: "Option 2", value: "value2", disabled: true },
+        { id: "rg3", label: "Option 3", value: "value3", disabled: true },
+        { id: "rg4", label: "Option 4", value: "value4", disabled: false }
+      ]}
+    />
+  </Box>
+</Story>
