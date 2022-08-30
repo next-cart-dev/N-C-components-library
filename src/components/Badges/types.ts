@@ -10,13 +10,13 @@ export type Props = {
    * @options 'badge' or 'tag'
    * @default 'badge'
    */
-  type: "badge" | "tag"
+  type?: "badge" | "tag"
   /**
    * badges end icon
    */
-  endIcon: React.ReactNode
+  endIcon?: React.ReactNode
   /**
    * badges start icon
    */
-  startIcon: React.ReactNode
+  startIcon?: React.ReactNode
 }
