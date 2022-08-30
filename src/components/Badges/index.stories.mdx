@@ -1,0 +1,35 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import { Badges } from "."
+import { Box } from "../Box"
+import { AiFillStar } from "react-icons/ai"
+
+<Meta title="BadgesTags" component={Badges} />
+
+# Badges/Tags
+
+<Story name="components">
+  <h1 style={{ color: "#444444" }}>Badges</h1>
+  <Box
+    css={{
+      display: "flex",
+      gap: "30px"
+    }}
+  >
+    <Badges label="Badge" />
+    <Badges label="Badge" startIcon={<AiFillStar />} />
+    <Badges label="Badge" endIcon={<AiFillStar />} />
+    <Badges label="Badge" startIcon={<AiFillStar />} endIcon={<AiFillStar />} />
+  </Box>
+  <h1 style={{ color: "#444444" }}>Tags</h1>
+  <Box
+    css={{
+      display: "flex",
+      gap: "30px"
+    }}
+  >
+    <Badges label="Tag" type="tag" />
+    <Badges label="Tag" type="tag" />
+    <Badges label="Tag" type="tag" />
+    <Badges label="Tag" type="tag" />
+  </Box>
+</Story>
