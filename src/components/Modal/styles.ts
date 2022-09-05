@@ -40,7 +40,8 @@ export const DialogContent = styled(Dialog.Content, {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  padding: "$24"
+  padding: "$24",
+  borderRadius: "4px"
 })
 
 export const CloseContent = styled("div", {
