@@ -95,6 +95,7 @@
     "react-icons": "^4.4.0",
     "react-number-format": "^4.9.3",
     "react-select": "^5.4.0",
+    "react-select-event": "^5.5.1",
     "react-tooltip": "^4.2.21",
     "rollup": "^2.79.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
