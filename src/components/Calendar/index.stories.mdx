@@ -1,0 +1,14 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { SingleCalendar } from "./SingleCalendar"
+
+import { StorySingle, StorySingleTwoMonths } from "./SingleCalendar/story.tsx"
+
+<Meta title="Calendar" component={SingleCalendar} />
+
+# Calendar
+
+<Story name="Single">
+  <StorySingle />
+  <StorySingleTwoMonths />
+</Story>
