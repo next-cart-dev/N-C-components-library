@@ -28,7 +28,15 @@ export function Table({ data, columns }: Props) {
           {table.getHeaderGroups().map((headerGroup) => (
             <S.TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <S.TableHeadCell key={header.id}>
+                <S.TableHeadCell
+                  key={header.id}
+                  css={{
+                    ...(header.index === 0 && { borderTopLeftRadius: "4px" }),
+                    ...(header.index === headerGroup.headers.length - 1 && {
+                      borderTopRightRadius: "4px"
+                    })
+                  }}
+                >
                   {header.isPlaceholder
                     ? null
                     : flexRender(

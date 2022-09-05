@@ -1,0 +1,17 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { Switch } from "./index.tsx"
+import { Box } from "../Box"
+
+<Meta title="Switch" component={Switch} />
+
+# Switch
+
+<Story name="Switch">
+  <Box css={{ marginBottom: "$16" }}>
+    <Switch id="switch-1" name="switch-1" label="Switch" />
+  </Box>
+  <Box>
+    <Switch id="switch-2" name="switch-2" label="Switch disabled" disabled />
+  </Box>
+</Story>

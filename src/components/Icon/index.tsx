@@ -4,7 +4,8 @@ import {
   BsCurrencyDollar,
   BsX,
   BsChevronBarLeft,
-  BsFillCaretRightFill
+  BsFillCaretRightFill,
+  BsFillCaretLeftFill
 } from "react-icons/bs"
 
 import * as S from "./styles"
@@ -14,12 +15,13 @@ const iconsMapping = {
   currency: <BsCurrencyDollar />,
   defaultX: <BsX />,
   BsChevronBarLeft: <BsChevronBarLeft />,
-  BsFillCaretRightFill: <BsFillCaretRightFill />
+  BsFillCaretRightFill: <BsFillCaretRightFill />,
+  BsFillCaretLeftFill: <BsFillCaretLeftFill />
 }
 
-export const Icon = ({ size, color = "$neutral100", name }: Props) => {
+export const Icon = ({ size, color = "$neutral100", name, css }: Props) => {
   return (
-    <S.Icon size={size} css={{ color }}>
+    <S.Icon size={size} css={css} color={color}>
       {iconsMapping[name]}
     </S.Icon>
   )

@@ -16,16 +16,20 @@ function Content({ children, ...props }: DialogContentProps) {
 }
 const DialogContent = Content
 
-
-export const Modal = ({ triggerElementRef, children, open, onOpenChange, title }: Props) => {
-
+export const Modal = ({
+  triggerElementRef,
+  children,
+  open,
+  onOpenChange,
+  title
+}: Props) => {
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>{triggerElementRef}</Dialog.Trigger>
       <DialogContent>
         <S.CloseContent>
           <S.DialogTitle>{title}</S.DialogTitle>
-          <Dialog.Close asChild data-testid='close-btn'>
+          <Dialog.Close asChild data-testid="close-btn">
             <S.IoCloseIcon />
           </Dialog.Close>
         </S.CloseContent>
