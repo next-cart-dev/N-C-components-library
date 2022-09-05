@@ -8,36 +8,31 @@ const flex = {
   justifyContent: "center"
 }
 
-export const Badges = styled("div", {
+export const Badge = styled("div", {
   padding: "$4 $8",
   width: "fit-content",
   borderRadius: "4px",
   backgroundColor: "$primary500",
   color: "white",
-  ...flex,
-  gap: "$4"
+  gap: "$4",
+  ...flex
 })
 
-export const Tags = styled("div", {
+export const Tag = styled("div", {
   padding: "$4 $8",
   borderRadius: "4px",
   backgroundColor: "$primary300",
   color: "$text500",
   width: "fit-content",
-  ...flex,
   position: "relative",
-  cursor: "default"
+  cursor: "default",
+  ...flex
 })
 
 export const CloseIcon = styled(GrClose, {
   cursor: "pointer",
   position: "absolute",
   right: "$4",
-  opacity: "0",
   backgroundColor: "$primary300",
-  height: "100%",
-  transition: "all 0.2s",
-  "&:hover": {
-    opacity: "1"
-  }
+  height: "100%"
 })

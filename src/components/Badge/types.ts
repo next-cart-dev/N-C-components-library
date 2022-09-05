@@ -1,10 +1,6 @@
-import React from "react"
+import React, { ComponentPropsWithoutRef } from "react"
 
-export type Props = {
-  /**
-   * Badges Label
-   */
-  label: string
+export type Props = ComponentPropsWithoutRef<"div"> & {
   /**
    * Badges Types
    * @options 'badge' or 'tag'
