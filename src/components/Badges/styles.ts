@@ -33,6 +33,11 @@ export const CloseIcon = styled(GrClose, {
   cursor: "pointer",
   position: "absolute",
   right: "$4",
+  opacity: "0",
   backgroundColor: "$primary300",
-  height: "100%"
+  height: "100%",
+  transition: "all 0.2s",
+  "&:hover": {
+    opacity: "1"
+  }
 })
