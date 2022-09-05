@@ -10,9 +10,16 @@ import Select, {
 import { SelectStyled } from "./styles"
 import { Props } from "./types"
 
-import { Box } from "../Box"
-
-export const SelectInput = ({ options, isMulti, placeholder = "" }: Props) => {
+export const SelectInput = ({
+  options,
+  isMulti,
+  placeholder = "",
+  ...props
+}: Props) => {
+  const optionsValues = options.map((option) => ({
+    value: option,
+    label: option
+  }))
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
     return (
       <components.DropdownIndicator {...props}>
@@ -26,14 +33,18 @@ export const SelectInput = ({ options, isMulti, placeholder = "" }: Props) => {
       <components.Placeholder {...props}>{placeholder}</components.Placeholder>
     )
   }
+
   return (
-    <Box data-testid="select-testid">
+    <>
       <Select
-        options={options}
+        {...props}
+        options={optionsValues}
         styles={SelectStyled}
         components={{ Placeholder, DropdownIndicator }}
         isMulti={isMulti ? true : false}
+        data-testid="select-testid"
+        aria-label="select input"
       />
-    </Box>
+    </>
   )
 }

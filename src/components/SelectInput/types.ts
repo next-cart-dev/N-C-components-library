@@ -1,17 +1,14 @@
-import { Options } from "react-select"
+import { CommonProps, GroupBase } from "react-select"
+type Option = string
+type isMulti = boolean
 
-type Option = {
-  value: string
-  label: string
-}
-
-export type Props = {
+export type Props = Partial<CommonProps<Option, isMulti, GroupBase<Option>>> & {
   /**
    * Select Options
    * @options An array of object with value and label. ex [{value: 'red', label: 'Red'}]
    * @default ''
    */
-  options: Options<Option>
+  options: Array<string>
   /**
    * Set if the select will be multi
    * @options true or false
