@@ -22,20 +22,52 @@ export const DropDownStory = ({
     <DropDown TriggerElementRef={<Button>{buttonValue}</Button>} align={align}>
       <DropDownElements.Label>Label</DropDownElements.Label>
       <DropDownElements.Group>
-        <DropDownElements.Item>Item 1</DropDownElements.Item>
-        <DropDownElements.Item>Item 2</DropDownElements.Item>
-        <DropDownElements.Item>Item 3</DropDownElements.Item>
-        <DropDownElements.Item>Item 4</DropDownElements.Item>
+        <DropDownElements.Item
+          onClick={() => alert("Here you can receive an event!")}
+        >
+          Item 1
+        </DropDownElements.Item>
+        <DropDownElements.Item
+          onClick={() => alert("Here you can receive an event!")}
+        >
+          Item 2
+        </DropDownElements.Item>
+        <DropDownElements.Item
+          onClick={() => alert("Here you can receive an event!")}
+        >
+          Item 3
+        </DropDownElements.Item>
+        <DropDownElements.Item
+          onClick={() => alert("Here you can receive an event!")}
+        >
+          Item 4
+        </DropDownElements.Item>
         <DropDownElements.Item disabled>Disabled Item</DropDownElements.Item>
       </DropDownElements.Group>
       <DropDownElements.Sub>
         <DropDownElements.SubTrigger>Sub Menu</DropDownElements.SubTrigger>
         <DropDownElements.SubContent sideOffset={2} alignOffset={-5}>
-          <DropDownElements.Item>Sub Item 1</DropDownElements.Item>
-          <DropDownElements.Item>Sub Item 2</DropDownElements.Item>
-          <DropDownElements.Item>Sub Item 3</DropDownElements.Item>
+          <DropDownElements.Item
+            onClick={() => alert("Here you can receive an event!")}
+          >
+            Sub Item 1
+          </DropDownElements.Item>
+          <DropDownElements.Item
+            onClick={() => alert("Here you can receive an event!")}
+          >
+            Sub Item 2
+          </DropDownElements.Item>
+          <DropDownElements.Item
+            onClick={() => alert("Here you can receive an event!")}
+          >
+            Sub Item 3
+          </DropDownElements.Item>
           <DropDownElements.Separator />
-          <DropDownElements.Item>Sub Item 4</DropDownElements.Item>
+          <DropDownElements.Item
+            onClick={() => alert("Here you can receive an event!")}
+          >
+            Sub Item 4
+          </DropDownElements.Item>
         </DropDownElements.SubContent>
       </DropDownElements.Sub>
       <DropDownElements.Separator />
