@@ -17,20 +17,21 @@ export const Badge = ({
   return (
     <Box>
       {type === "tag" ? (
-        <S.Tag
-          onMouseEnter={() => setShowCloseIcon(!showCloseIcon)}
-          onMouseLeave={() => setShowCloseIcon(!showCloseIcon)}
-          css={{ ...(closeTag && { display: "none" }) }}
-          data-testid={`tag-${id}`}
-        >
-          {children}
-          {showCloseIcon && (
-            <S.CloseIcon
-              onClick={() => setCloseTag(!closeTag)}
-              data-testid={`tag-${id}-delete-button`}
-            />
-          )}
-        </S.Tag>
+        !closeTag && (
+          <S.Tag
+            onMouseEnter={() => setShowCloseIcon(true)}
+            onMouseLeave={() => setShowCloseIcon(false)}
+            data-testid={`tag-${id}`}
+          >
+            {children}
+            {showCloseIcon && (
+              <S.CloseIcon
+                onClick={() => setCloseTag(true)}
+                data-testid={`tag-${id}-delete-button`}
+              />
+            )}
+          </S.Tag>
+        )
       ) : (
         <S.Badge>
           {startIcon}
