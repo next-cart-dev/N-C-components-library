@@ -95,6 +95,10 @@ export const DropdownMenuSubContent = styled(DropdownMenu.SubContent, {
 })
 
 export const DropdownMenuSubTrigger = styled(DropdownMenu.SubTrigger, {
+  '&[data-state="open"]': {
+    backgroundColor: "$primary300",
+    color: "$primary500"
+  },
   ...StyledItem
 })
 
