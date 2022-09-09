@@ -1,0 +1,146 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import { Box } from "../Box"
+import { Card } from "."
+import { AiFillStar } from "react-icons/ai"
+import { BsPersonSquare, BsFillCalendar2MinusFill } from "react-icons/bs"
+import { FaWheelchair } from "react-icons/fa"
+import { MdAccessibility } from "react-icons/md"
+
+<Meta title="Cards" component={Card} />
+
+# Card
+
+<Story name="Card">
+  <Box
+    css={{
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+      gap: "20px"
+    }}
+  >
+    <Card>
+      <Box
+        css={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
+        <AiFillStar size="60px" color="#2f3a59" />
+        <span
+          style={{ color: "#4A368C", fontSize: "20px", marginBottom: "20px" }}
+        >
+          Serviço
+        </span>
+      </Box>
+    </Card>
+    <Card variant="secondary">
+      <Box
+        css={{
+          display: "flex",
+          justifyContent: "left",
+          alignItems: "flex-start",
+          width: "100%",
+          padding: "20px",
+          flexDirection: "column",
+          gap: "10px"
+        }}
+      >
+        <Box
+          css={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px"
+          }}
+        >
+          <FaWheelchair size="50px" color="#2f3a59" />
+          <span
+            style={{ color: "#2F3A59", fontSize: "30px", fontWeight: "900" }}
+          >
+            000
+          </span>
+        </Box>
+        <Box
+          css={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "4px"
+          }}
+        >
+          <BsFillCalendar2MinusFill size="16px" color="#2f3a59" />
+          <span style={{ fontSize: "13px", color: "#2F3A59" }}>14:22</span>
+          <span
+            style={{
+              backgroundColor: "#C4DAF0",
+              minWidth: "70px",
+              borderRadius: "4px",
+              color: "#1274A9",
+              padding: "3px",
+              fontSize: "14px",
+              marginLeft: "10px"
+            }}
+          >
+            0 minutos
+          </span>
+        </Box>
+      </Box>
+    </Card>
+    <Card variant="secondary">
+      <Box
+        css={{
+          display: "flex",
+          justifyContent: "left",
+          alignItems: "flex-start",
+          width: "100%",
+          padding: "20px",
+          flexDirection: "column",
+          gap: "10px"
+        }}
+      >
+        <Box
+          css={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px"
+          }}
+        >
+          <MdAccessibility size="50px" color="#2f3a59" />
+          <span
+            style={{ color: "#2F3A59", fontSize: "30px", fontWeight: "900" }}
+          >
+            000
+          </span>
+        </Box>
+        <Box
+          css={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "4px"
+          }}
+        >
+          <BsFillCalendar2MinusFill size="16px" color="#2f3a59" />
+          <span style={{ fontSize: "13px", color: "#2F3A59" }}>14:22</span>
+          <span
+            style={{
+              backgroundColor: "#C4DAF0",
+              minWidth: "70px",
+              borderRadius: "4px",
+              color: "#1274A9",
+              padding: "3px",
+              fontSize: "14px",
+              marginLeft: "10px"
+            }}
+          >
+            0 minutos
+          </span>
+        </Box>
+      </Box>
+    </Card>
+    <Card variant="tertiary">
+      <BsPersonSquare size="30px" color="#2f3a59" />
+      <span style={{ marginLeft: "20px" }}>
+        José Felipe de Castro | 130.286.490-47
+      </span>
+    </Card>
+  </Box>
+</Story>
