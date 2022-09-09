@@ -3,18 +3,26 @@ import React from "react"
 import { render, screen } from "@testing-library/react"
 import selectEvent from "react-select-event"
 
-import { SelectInput } from "."
+import { Select } from "."
 
 const SelectTest = () => {
   return (
     <form data-testid="form">
       <label htmlFor="color">Color</label>
-      <SelectInput options={["red", "blue"]} name="color" inputId="color" />
+      <Select
+        options={[
+          { value: "red", label: "red" },
+          { value: "blue", label: "blue" }
+        ]}
+        id="1"
+        name="color"
+        inputId="color"
+      />
     </form>
   )
 }
 
-describe("<SelectInput />", () => {
+describe("<Select />", () => {
   it("should not have select values", async () => {
     render(<SelectTest />)
     expect(screen.getByTestId("form")).toHaveFormValues({ color: "" })

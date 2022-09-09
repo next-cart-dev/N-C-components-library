@@ -1,7 +1,7 @@
 import React from "react"
 
 import { BsCaretDownFill } from "react-icons/bs"
-import Select, {
+import ReactSelect, {
   components,
   DropdownIndicatorProps,
   PlaceholderProps
@@ -10,16 +10,13 @@ import Select, {
 import { SelectStyled } from "./styles"
 import { Props } from "./types"
 
-export const SelectInput = ({
+export const Select = ({
   options,
   isMulti,
   placeholder = "",
+  id,
   ...props
 }: Props) => {
-  const optionsValues = options.map((option) => ({
-    value: option,
-    label: option
-  }))
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
     return (
       <components.DropdownIndicator {...props}>
@@ -36,14 +33,12 @@ export const SelectInput = ({
 
   return (
     <>
-      <Select
+      <ReactSelect
         {...props}
-        options={optionsValues}
+        options={options}
         styles={SelectStyled}
         components={{ Placeholder, DropdownIndicator }}
-        isMulti={isMulti ? true : false}
-        data-testid="select-testid"
-        aria-label="select input"
+        isMulti={isMulti}
       />
     </>
   )

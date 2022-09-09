@@ -1,5 +1,8 @@
 import { CommonProps, GroupBase, Props as SelectProps } from "react-select"
-type Option = string
+type Option = {
+  value: string
+  label: string
+}
 type isMulti = boolean
 
 export type Props = Partial<
@@ -10,7 +13,7 @@ export type Props = Partial<
    * @options An array of object with value and label. ex [{value: 'red', label: 'Red'}]
    * @default ''
    */
-  options: Array<string>
+  options: Array<Option>
   /**
    * Set if the select will be multi
    * @options true or false
