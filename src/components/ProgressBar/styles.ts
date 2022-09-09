@@ -1,6 +1,6 @@
 import { styled } from "../../stitches.config"
 
-export const PropgressContainer = styled("div", {
+export const ProgressContainer = styled("div", {
   display: "flex",
   alignItems: "center"
 })
@@ -42,7 +42,7 @@ export const Icon = styled("div", {
   }
 })
 
-export const Propgress = styled("div", {
+export const Progress = styled("div", {
   width: "100px",
   height: "$space$8",
   borderRadius: "$space$4",

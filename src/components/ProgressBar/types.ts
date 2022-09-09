@@ -1,19 +1,14 @@
 import { ReactNode } from "react"
 
+type Step = {
+  label: string
+  icon?: ReactNode
+  active?: boolean
+}
+
 export type Props = {
   /**
    * The bar progress values
-   * @options ['']
    */
-  steps: string[]
-  /**
-   * Icon that will be on the side of the step
-   * @example <ProgressBar icons={[<ReactIcon />, <ReactIcon />]} />
-   */
-  icons?: ReactNode[]
-  /**
-   * It will set if the step is abled
-   * @default false
-   */
-  abled: "abled"[]
+  steps: Step[]
 }
