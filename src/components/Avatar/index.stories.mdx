@@ -1,0 +1,26 @@
+import { Meta, Story } from "@storybook/addon-docs"
+
+import { Avatar } from "./index.tsx"
+import { Box } from "../Box"
+
+<Meta title="Avatar" component={Avatar} />
+
+# Avatar
+
+<Story name="Avatar">
+  <Box css={{ display: "flex", alignItems: "center"}}>
+    <Avatar
+      src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
+      alt="Guilherme de Souza">
+      GS
+    </Avatar>
+    <Box css={{ marginLeft: "$8" }}>
+      <Avatar
+        src="https:://image.com.br.invalid"
+        alt="Guilherme de Souza">
+        GS
+      </Avatar>
+    </Box>
+  </Box>
+</Story>
+
