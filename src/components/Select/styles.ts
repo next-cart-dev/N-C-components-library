@@ -23,5 +23,9 @@ export const SelectStyled: StylesConfig = {
     background: isFocused ? colors.primary400 : colors.neutral500,
     color: colors.text500
   }),
-  menu: (styles) => ({ ...styles, background: colors.neutral500 })
+  menu: (styles) => ({ ...styles, background: colors.neutral500 }),
+  multiValueRemove: (styles) => ({
+    ...styles,
+    "&:hover": { background: colors.primary500, color: colors.text200 }
+  })
 }
