@@ -1,21 +1,20 @@
 import React from "react"
 
 import ptBR from "date-fns/locale/pt-BR"
-import "react-day-picker/dist/style.css"
-import { DayPickerSingleProps } from "react-day-picker"
+import { DayPickerRangeProps } from "react-day-picker"
 
 import * as S from "../styles"
 import { components, modifiers, modifiersClassNames } from "../utils"
 
-export const SingleCalendar = ({
+export const RangeCalendar = ({
   selected,
   onSelect,
   ...props
-}: Omit<DayPickerSingleProps, "mode">) => {
+}: Omit<DayPickerRangeProps, "mode">) => {
   return (
     <S.Calendar
       {...props}
-      mode="single"
+      mode="range"
       modifiers={modifiers}
       modifiersClassNames={modifiersClassNames}
       components={components}

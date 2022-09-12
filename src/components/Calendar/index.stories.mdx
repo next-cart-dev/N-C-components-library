@@ -3,6 +3,7 @@ import { Meta, Story } from "@storybook/addon-docs"
 import { SingleCalendar } from "./SingleCalendar"
 
 import { StorySingle, StorySingleTwoMonths } from "./SingleCalendar/story.tsx"
+import { StoryRange, StoryRangeTwoMonths } from "./RangeCalendar/story.tsx"
 
 <Meta title="Calendar" component={SingleCalendar} />
 
@@ -10,5 +11,11 @@ import { StorySingle, StorySingleTwoMonths } from "./SingleCalendar/story.tsx"
 
 <Story name="Single">
   <StorySingle />
-  <StorySingleTwoMonths />
+  <StorySingleTwoMonths /> 
 </Story>
+
+<Story name="Range">
+  <StoryRange />
+  <StoryRangeTwoMonths />
+</Story>
+
