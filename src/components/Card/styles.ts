@@ -7,15 +7,15 @@ export const Card = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  "&:hover": {
+    backgroundColor: "$secondary200"
+  },
+  transition: "0.1s",
   variants: {
     variant: {
       primary: {
         height: "138px",
-        width: "158px",
-        transition: "0.2s",
-        "&:hover": {
-          backgroundColor: "$secondary200"
-        }
+        width: "158px"
       },
       secondary: {
         height: "120px",
