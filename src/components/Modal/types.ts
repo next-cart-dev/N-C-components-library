@@ -1,10 +1,10 @@
 import React from "react"
 
+import { CSS } from "@stitches/react"
+
+import { config } from "../../stitches.config"
+
 export type Props = {
-  /**
-   * Element that will open the modal
-   */
-  triggerElementRef: React.ReactNode
   /**
    * Modal children that receive a element
    */
@@ -18,7 +18,8 @@ export type Props = {
    */
   onOpenChange?(open: boolean): void
   /**
-   * Modal title
+   * The id of the modal
    */
-  title?: string
+  id: string
+  css?: CSS<typeof config>
 }

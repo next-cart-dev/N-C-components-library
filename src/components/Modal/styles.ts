@@ -1,3 +1,5 @@
+import { forwardRef } from "react"
+
 import * as Dialog from "@radix-ui/react-dialog"
 import { GrClose } from "react-icons/gr"
 
@@ -13,7 +15,7 @@ const overlayShow = keyframes({
   "100%": { opacity: 1 }
 })
 
-export const StyledOverlay = styled(Dialog.Overlay, {
+export const ModalOverlay = styled(Dialog.Overlay, {
   backgroundColor: "rgba(0, 0, 0, 0.44)",
   position: "fixed",
   inset: 0,
@@ -22,7 +24,7 @@ export const StyledOverlay = styled(Dialog.Overlay, {
   }
 })
 
-export const DialogContent = styled(Dialog.Content, {
+export const ModalContent = styled(Dialog.Content, {
   backgroundColor: "$background100",
   minWidth: "408px",
   minHeight: "223px",
@@ -44,48 +46,30 @@ export const DialogContent = styled(Dialog.Content, {
   borderRadius: "4px"
 })
 
-export const CloseContent = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-  width: "100%",
-  padding: "12px 0"
-})
-
-export const IoCloseIcon = styled(GrClose, {
+export const CloseIcon = styled(GrClose, {
   cursor: "pointer",
   fontSize: "$22"
 })
 
-/**
- * Optional Use
- */
-
-export const DialogTitle = styled(Dialog.Title, {
-  fontWeight: "$semibold",
-  fontSize: "$22",
-  letterSpacing: "$0.32",
-  margin: "0"
-})
-
-export const DialogDescription = styled(Dialog.Description, {
-  color: "#191B22",
-  fontFamily: "$roboto",
-  fontWeight: "$normal",
-  letterSpacing: "$0.5",
-  lineHeight: "$4",
-  fontSize: "$18"
+export const ModalHeader = styled("div", {
+  marginBottom: "$32",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "100%"
 })
 
 export const ModalBody = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  flexDirection: "column"
+  flexDirection: "column",
+  marginBottom: "$32"
 })
 
 export const ModalActions = styled("div", {
   display: "flex",
-  marginTop: "$8",
+  marginTop: "auto",
   justifyContent: "right",
   gap: "$16",
   width: "100%"

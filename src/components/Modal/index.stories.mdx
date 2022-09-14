@@ -1,10 +1,12 @@
 import { Meta, Story } from "@storybook/addon-docs"
-import { ModalExample } from "./story"
+import { StoryModalTitle, StoryModalWithoutTitle, StoryModalCustomTitle } from "./story.tsx"
 
-<Meta title="Modals" component={ModalExample} />
+<Meta title="Modal" component={StoryModalTitle} />
 
 # Modal
 
-<Story name="Modals">
-  <ModalExample />
+<Story name="Modal">
+  <StoryModalTitle />
+  <StoryModalWithoutTitle />
+  <StoryModalCustomTitle />
 </Story>

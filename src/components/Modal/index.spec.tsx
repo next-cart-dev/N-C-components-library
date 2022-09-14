@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { fireEvent, render, screen } from "@testing-library/react"
+import { fireEvent, render, screen, waitFor } from "@testing-library/react"
 
 import { Modal } from "."
 
@@ -8,55 +8,58 @@ const TestComponent = () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Modal
-        open={open}
-        onOpenChange={setOpen}
-        triggerElementRef={<button data-testid="btn-modal">Click Me</button>}
-      >
-        <h1>helloworld</h1>
-        <button
-          data-testid="btn-inner-modal"
-          onClick={() => setOpen(false)}
-        ></button>
-      </Modal>
+      <button onClick={() => setOpen(true)}>Abrir modal</button>
+      <Modal.Root id="modal-1" open={open} onOpenChange={setOpen}>
+        <Modal.Header>Título</Modal.Header>
+        <Modal.Body>Descrição modal</Modal.Body>
+        <Modal.Actions>
+          <button onClick={() => setOpen(false)}>Fechar</button>
+        </Modal.Actions>
+      </Modal.Root>
     </>
   )
 }
 
 describe("<Modal />", () => {
-  it("should open modal on btn click", () => {
+  it("should open modal on btn click", async () => {
     render(<TestComponent />)
 
-    const btnOpenModal = screen.getByTestId("btn-modal")
-    fireEvent.click(btnOpenModal)
+    const buttonOpenModal = await screen.findByText("Abrir modal")
 
-    expect(screen.getByText("helloworld")).toBeVisible()
+    fireEvent.click(buttonOpenModal)
+
+    expect(await screen.findByText("Descrição modal")).toBeVisible()
   })
 
-  it("should close modal on btn click", () => {
+  it("should close modal on btn click", async () => {
     render(<TestComponent />)
 
-    const btnOpenModal = screen.getByTestId("btn-modal")
-    fireEvent.click(btnOpenModal)
-    const content = screen.getByText("helloworld")
+    const buttonOpenModal = await screen.findByText("Abrir modal")
+    fireEvent.click(buttonOpenModal)
 
-    const btnInner = screen.getByTestId("btn-inner-modal")
-    fireEvent.click(btnInner)
+    const buttonInner = await screen.findByText("Fechar")
 
-    expect(content).not.toBeVisible()
+    fireEvent.click(buttonInner)
+
+    await waitFor(() => {})
+    const content = screen.queryByText("Descrição modal")
+
+    expect(content).not.toBeInTheDocument()
   })
 
-  it("should close modal on btn X click", () => {
+  it("should close modal on btn X click", async () => {
     render(<TestComponent />)
 
-    const btnOpenModal = screen.getByTestId("btn-modal")
-    fireEvent.click(btnOpenModal)
+    const buttonOpenModal = await screen.findByText("Abrir modal")
+    fireEvent.click(buttonOpenModal)
 
-    const content = screen.getByText("helloworld")
+    const buttonCloseIcon = await screen.findByTestId("modal-close-icon")
+    fireEvent.click(buttonCloseIcon)
 
-    const btnX = screen.getByTestId("close-btn")
-    fireEvent.click(btnX)
+    await waitFor(() => {})
 
-    expect(content).not.toBeVisible()
+    const content = screen.queryByText("Descrição modal")
+
+    expect(content).not.toBeInTheDocument()
   })
 })
