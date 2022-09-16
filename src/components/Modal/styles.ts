@@ -62,7 +62,8 @@ export const ModalBody = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  marginBottom: "$32"
+  marginBottom: "$32",
+  width: "100%"
 })
 
 export const ModalActions = styled("div", {

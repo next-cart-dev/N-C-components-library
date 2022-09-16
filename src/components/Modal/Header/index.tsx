@@ -10,7 +10,7 @@ import * as S from "../styles"
 export const ModalHeader = ({ children, css }: Props) => {
   let component
 
-  if (typeof children === "string") {
+  if (typeof children === "string" || Array.isArray(children)) {
     component = <Typography variant="h2">{children}</Typography>
   } else component = children
 

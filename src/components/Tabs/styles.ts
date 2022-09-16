@@ -23,6 +23,7 @@ export const TabsTrigger = styled(Tabs.Trigger, {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  cursor: "pointer !important",
   flex: "1",
   userSelect: "none",
   borderRight: "1px solid $primary500",
