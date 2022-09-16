@@ -1,38 +1,91 @@
 import React, { useState } from "react"
 
-import * as S from "./styles"
-
+import { Box } from "../Box"
+import { Breadcrumbs } from "../Breadcrumbs"
 import { Button } from "../Button"
+import { Typography } from "../Typography"
 
 import { Modal } from "."
 
-export const ModalExample = () => {
+export const StoryModalTitle = () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <Modal
-        open={open}
-        onOpenChange={setOpen}
-        triggerElementRef={<Button>Click Me to open the modal</Button>}
-        title="Título do modal"
-      >
-        <S.ModalBody>
-          <S.DialogDescription css={{ width: "500px" }}>
+      <Button onClick={() => setOpen(true)}>Abrir modal com título</Button>
+      <Modal.Root id="modal-1" open={open} onOpenChange={setOpen}>
+        <Modal.Header>Título</Modal.Header>
+        <Modal.Body>
+          <Typography css={{ width: "500px" }}>
             Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
             quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
             purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
             porta.
-          </S.DialogDescription>
-        </S.ModalBody>
-        <S.ModalActions>
+          </Typography>
+        </Modal.Body>
+        <Modal.Actions>
+          <Button variant="primary" onClick={() => setOpen(false)}>
+            Confirmar
+          </Button>
+        </Modal.Actions>
+      </Modal.Root>
+    </>
+  )
+}
+
+export const StoryModalWithoutTitle = () => {
+  const [open, setOpen] = useState(false)
+  return (
+    <Box css={{ marginTop: "$8" }}>
+      <Button onClick={() => setOpen(true)}>Abrir modal sem título</Button>
+      <Modal.Root id="modal-2" open={open} onOpenChange={setOpen}>
+        <Modal.Body>
+          <Typography css={{ width: "500px" }}>
+            Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
+            quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
+            purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
+            porta.
+          </Typography>
+        </Modal.Body>
+        <Modal.Actions>
           <Button variant="secondary" onClick={() => setOpen(false)}>
-            Button
+            Fechar
           </Button>
           <Button variant="primary" onClick={() => setOpen(false)}>
-            Button
+            Confirmar
           </Button>
-        </S.ModalActions>
-      </Modal>
-    </>
+        </Modal.Actions>
+      </Modal.Root>
+    </Box>
+  )
+}
+
+export const StoryModalCustomTitle = () => {
+  const [open, setOpen] = useState(false)
+  return (
+    <Box css={{ marginTop: "$8" }}>
+      <Button onClick={() => setOpen(true)}>
+        Abrir modal com título personalizado
+      </Button>
+      <Modal.Root id="modal-3" open={open} onOpenChange={setOpen}>
+        <Modal.Header>
+          <Breadcrumbs
+            steps={["Certidão", "332.35", "01 - Instrumento Particular"]}
+          />
+        </Modal.Header>
+        <Modal.Body>
+          <Typography css={{ width: "500px" }}>
+            Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
+            quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
+            purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
+            porta.
+          </Typography>
+        </Modal.Body>
+        <Modal.Actions>
+          <Button variant="primary" onClick={() => setOpen(false)}>
+            Confirmar
+          </Button>
+        </Modal.Actions>
+      </Modal.Root>
+    </Box>
   )
 }
