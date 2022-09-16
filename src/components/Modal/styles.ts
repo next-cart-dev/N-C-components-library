@@ -1,5 +1,3 @@
-import { forwardRef } from "react"
-
 import * as Dialog from "@radix-ui/react-dialog"
 import { GrClose } from "react-icons/gr"
 
