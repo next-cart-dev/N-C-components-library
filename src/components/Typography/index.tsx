@@ -15,10 +15,12 @@ export const Typography = ({
   children,
   variant = "body1",
   component,
-  css
+  css,
+  ...props
 }: Props) => {
   return (
     <S.Typography
+      {...props}
       variant={variant}
       as={component || defaultVariantMapping[variant]}
       css={css}
