@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import { BsX } from "react-icons/bs"
+
 import * as S from "./styles"
 import { Props } from "./types"
 
@@ -41,11 +43,11 @@ export const Alert = ({
   const closeButton =
     role === "alert" ? (
       <Box css={cssCloseButton}>
-        <Icon name="defaultX" size="large" color={setIconColor(variant)} />
+        <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
       </Box>
     ) : (
       <Box css={cssCloseButton} onClick={() => setOpen(false)}>
-        <Icon name="defaultX" size="large" color={setIconColor(variant)} />
+        <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
       </Box>
     )
 

@@ -3,6 +3,7 @@ import React from "react"
 import ptBR from "date-fns/locale/pt-BR"
 import "react-day-picker/dist/style.css"
 import { DayModifiers, DayPickerSingleProps } from "react-day-picker"
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs"
 
 import { Icon } from "../../Icon"
 import * as S from "../styles"
@@ -18,11 +19,11 @@ const modifiersClassNames: Record<string, string> = {
 }
 
 const IconLeft = () => (
-  <Icon name="BsFillCaretLeftFill" size="small" color="$text500" />
+  <Icon size="small" icon={<BsFillCaretLeftFill />} color="$text500" />
 )
 
 const IconRight = () => (
-  <Icon name="BsFillCaretRightFill" size="small" color="$text500" />
+  <Icon size="small" icon={<BsFillCaretRightFill />} color="$text500" />
 )
 
 const components = {

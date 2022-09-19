@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/addon-docs"
+import { BsCurrencyDollar } from "react-icons/bs"
 
 import { Box } from "../Box"
 import { Icon } from "../Icon"
@@ -75,7 +76,7 @@ import { TextField } from "./index.tsx"
           placeholder="Digite o valor"
           adornment={{
             position: "left",
-            node: <Icon name="currency" size="large" />
+            node: <Icon size="large" icon={<BsCurrencyDollar />} />
           }}
         />
         <TextField
@@ -85,7 +86,7 @@ import { TextField } from "./index.tsx"
           placeholder="Digite o valor"
           adornment={{
             position: "right",
-            node: <Icon name="currency" size="large" />
+            node: <Icon size="large" icon={<BsCurrencyDollar />} />
           }}
         />
         <TextField
