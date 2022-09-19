@@ -47,6 +47,4 @@ export const TabsTrigger = styled(Tabs.Trigger, {
   "&:focus": { position: "relative" }
 })
 
-export const TabsContent = styled(Tabs.Content, {
-  padding: "$8"
-})
+export const TabsContent = styled(Tabs.Content, {})
