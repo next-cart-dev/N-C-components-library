@@ -14,7 +14,8 @@ export const Alert = ({
   title,
   icon,
   role = "alert",
-  variant = "info"
+  variant = "info",
+  css
 }: Props) => {
   const [open, setOpen] = useState<boolean>(true)
 
@@ -40,22 +41,31 @@ export const Alert = ({
    * Use the role "alert" when the component is used as a toast
    * to disable the onClick handler since the close functionality comes from "react-toastify"
    */
-  const closeButton =
-    role === "alert" ? (
-      <Box css={cssCloseButton}>
-        <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
-      </Box>
-    ) : (
-      <Box css={cssCloseButton} onClick={() => setOpen(false)}>
-        <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
-      </Box>
-    )
+  const handleCloseButtonRendering = (role: React.AriaRole) => {
+    if (role === "alert") {
+      return (
+        <Box css={cssCloseButton}>
+          <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
+        </Box>
+      )
+    }
+
+    if (role === "alertdialog") {
+      return (
+        <Box css={cssCloseButton} onClick={() => setOpen(false)}>
+          <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
+        </Box>
+      )
+    }
+
+    return null
+  }
 
   return (
     <S.Alert
       id={id}
       variant={variant}
-      css={{ display: open ? "flex" : "none", alignItems: "center" }}
+      css={{ ...css, display: open ? "flex" : "none", alignItems: "center" }}
     >
       {icon && (
         <Box
@@ -72,7 +82,7 @@ export const Alert = ({
         )}
         {message && <S.AlertMessage>{message}</S.AlertMessage>}
       </Box>
-      {closeButton}
+      {handleCloseButtonRendering(role)}
     </S.Alert>
   )
 }
