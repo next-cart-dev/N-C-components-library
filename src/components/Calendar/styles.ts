@@ -31,15 +31,21 @@ export const Calendar = styled(DayPicker, {
     height: "32px",
     width: "32px"
   },
-  ".rdp-button:hover:not([disabled])": {
-    backgroundColor: "$primary200",
-    borderRadius: "8px",
-    color: "$primary500"
+  ".rdp-button:hover": {
+    backgroundColor: "$primary500 !important",
+    color: "$text200",
+    outline: "none",
+    borderRadius: "8px"
   },
-  ".rdp-day_selected:not([disabled]), .c-coPatf .rdp-day_selected:focus:not([disabled]), .c-coPatf .rdp-day_selected:active:not([disabled]), .c-coPatf .rdp-day_selected:hover:not([disabled])":
-    {
-      color: "$text200 !important"
+  ".rdp-day_selected": {
+    color: "$text200",
+    "&.saturday": {
+      color: "$text200"
     },
+    "&.sunday": {
+      color: "$text200"
+    }
+  },
   ".rdp-day_selected:not([disabled]), .rdp-day_selected:focus:not([disabled]), .rdp-day_selected:active:not([disabled]), .rdp-day_selected:hover:not([disabled])":
     {
       backgroundColor: "$primary500",
@@ -57,4 +63,27 @@ export const Calendar = styled(DayPicker, {
     borderRadius: "0px !important",
     color: "$primary500 !important"
   }
+})
+
+export const RangeSelectionButton = styled("button", {
+  all: "unset",
+  padding: "$8",
+  fontSize: "$14",
+  color: "$text400",
+  cursor: "pointer",
+  width: "90%",
+  "&:hover": {
+    backgroundColor: "$neutral500",
+    color: "$primary500",
+    borderRight: "2px solid $primary500"
+  },
+  '&[data-state="active"]': {
+    backgroundColor: "$neutral500",
+    color: "$primary500",
+    borderRight: "2px solid $primary500"
+  }
+})
+
+export const RangeCalendarRoot = styled("div", {
+  display: "flex"
 })
