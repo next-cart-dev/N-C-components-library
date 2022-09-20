@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Table } from "@tanstack/react-table"
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs"
 
 import { Box } from "../../Box"
 import { Icon } from "../../Icon"
@@ -51,7 +52,7 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          <Icon name="BsFillCaretLeftFill" size="normal" color="$text500" />
+          <Icon size="normal" icon={<BsFillCaretLeftFill />} color="$text500" />
         </S.PaginationButton>
         {Array.from(Array(table.getPageCount()).keys()).map((page) => (
           <S.PaginationButton
@@ -67,7 +68,11 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          <Icon name="BsFillCaretRightFill" size="normal" color="$text500" />
+          <Icon
+            size="normal"
+            icon={<BsFillCaretRightFill />}
+            color="$text500"
+          />
         </S.PaginationButton>
       </Box>
     </Box>
