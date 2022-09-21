@@ -104,7 +104,11 @@ import { TextField } from "./index.tsx"
           id="text-field11"
           name="text-field11"
           placeholder="Insira o seu nome"
-          adornment={{ position: "right", node: "Right text" }}
+          adornment={{
+            position: "right",
+            node: "Enviar",
+            onClick: () => alert("Evento de clique")
+          }}
         />
         <TextField
           label="Nome"
