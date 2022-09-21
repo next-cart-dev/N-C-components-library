@@ -20,7 +20,7 @@ export const Select = ({
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
     return (
       <components.DropdownIndicator {...props}>
-        <BsCaretDownFill />
+        <BsCaretDownFill color="white" />
       </components.DropdownIndicator>
     )
   }
@@ -39,6 +39,7 @@ export const Select = ({
         styles={SelectStyled}
         components={{ Placeholder, DropdownIndicator }}
         isMulti={isMulti}
+        isClearable
       />
     </>
   )
