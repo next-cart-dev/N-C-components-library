@@ -17,6 +17,7 @@ export const ModalOverlay = styled(Dialog.Overlay, {
   backgroundColor: "rgba(0, 0, 0, 0.44)",
   position: "fixed",
   inset: 0,
+  zIndex: "2",
   "@media (prefers-reduced-motion: no-preference)": {
     animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
   }
@@ -24,12 +25,13 @@ export const ModalOverlay = styled(Dialog.Overlay, {
 
 export const ModalContent = styled(Dialog.Content, {
   backgroundColor: "$background100",
-  minWidth: "408px",
-  minHeight: "223px",
+  height: "100vh",
+  width: "100vw",
   border: "1px solid $background500",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  zIndex: "3",
   flexDirection: "column",
   boxShadow:
     "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
@@ -41,7 +43,11 @@ export const ModalContent = styled(Dialog.Content, {
   left: "50%",
   transform: "translate(-50%, -50%)",
   padding: "$24",
-  borderRadius: "4px"
+  borderRadius: "4px",
+  "@media (min-width: 768px)": {
+    height: "fit-content",
+    width: "650px"
+  }
 })
 
 export const CloseIcon = styled(GrClose, {

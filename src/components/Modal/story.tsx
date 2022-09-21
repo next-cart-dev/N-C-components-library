@@ -15,7 +15,7 @@ export const StoryModalTitle = () => {
       <Modal.Root id="modal-1" open={open} onOpenChange={setOpen}>
         <Modal.Header>Título</Modal.Header>
         <Modal.Body>
-          <Typography css={{ width: "500px" }}>
+          <Typography>
             Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
             quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
             purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
@@ -39,7 +39,7 @@ export const StoryModalWithoutTitle = () => {
       <Button onClick={() => setOpen(true)}>Abrir modal sem título</Button>
       <Modal.Root id="modal-2" open={open} onOpenChange={setOpen}>
         <Modal.Body>
-          <Typography css={{ width: "500px" }}>
+          <Typography>
             Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
             quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
             purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
@@ -66,14 +66,21 @@ export const StoryModalCustomTitle = () => {
       <Button onClick={() => setOpen(true)}>
         Abrir modal com título personalizado
       </Button>
-      <Modal.Root id="modal-3" open={open} onOpenChange={setOpen}>
+      <Modal.Root
+        id="modal-3"
+        open={open}
+        onOpenChange={setOpen}
+        css={{
+          "@media(min-width: 768px)": { width: "650px" }
+        }}
+      >
         <Modal.Header>
           <Breadcrumbs
             steps={["Certidão", "332.35", "01 - Instrumento Particular"]}
           />
         </Modal.Header>
         <Modal.Body>
-          <Typography css={{ width: "500px" }}>
+          <Typography>
             Pellentesque nulla lacus, dignissim quis orci at, maximus elementum
             quam. Praesent in imperdiet quam, vel tincidunt nisi. Suspendisse eu
             purus mi. Aenean ultrices nibh ac justo viverra, ac ultricies ipsum
