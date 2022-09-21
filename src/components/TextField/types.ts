@@ -24,10 +24,11 @@ export type Props = ComponentPropsWithoutRef<"input"> & {
    */
   type: "text" | "email" | "password"
   /**
-   * The input adornment, you can define the position and pass a string or icon to display it.
+   * The input adornment, you can define the position, an onClick event and pass a string or icon to display it.
    */
   adornment?: {
     position: "right" | "left"
     node: React.ReactNode
+    onClick?: () => void
   }
 }

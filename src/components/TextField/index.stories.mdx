@@ -1,5 +1,6 @@
 import { Meta, Story } from "@storybook/addon-docs"
 import { BsCurrencyDollar } from "react-icons/bs"
+import { AiFillEye } from "react-icons/ai"
 
 import { Box } from "../Box"
 import { Icon } from "../Icon"
@@ -76,17 +77,19 @@ import { TextField } from "./index.tsx"
           placeholder="Digite o valor"
           adornment={{
             position: "left",
-            node: <Icon size="large" icon={<BsCurrencyDollar />} />
+            node: <Icon size="large" icon={<AiFillEye />} />
           }}
         />
         <TextField
           label="Nome"
           id="text-field7"
           name="text-field7"
+          type="password"
           placeholder="Digite o valor"
           adornment={{
             position: "right",
-            node: <Icon size="large" icon={<BsCurrencyDollar />} />
+            node: <Icon size="large" icon={<AiFillEye />} />,
+            onClick: () => alert("Evento de clique")
           }}
         />
         <TextField

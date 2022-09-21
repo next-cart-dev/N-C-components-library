@@ -45,6 +45,10 @@ export const TextField = ({
     display: "inline-flex"
   }
 
+  const adornmentCSS = {
+    ...(adornment?.onClick && { cursor: "pointer" })
+  }
+
   return (
     <FormGroup>
       {label && (
@@ -54,7 +58,12 @@ export const TextField = ({
       )}
       <Box css={containerCSS}>
         {adornment?.position === "left" && (
-          <S.InputAdornment variant={variant} ref={adornmentRef}>
+          <S.InputAdornment
+            onClick={adornment?.onClick}
+            variant={variant}
+            ref={adornmentRef}
+            css={adornmentCSS}
+          >
             {adornment.node}
           </S.InputAdornment>
         )}
@@ -74,9 +83,10 @@ export const TextField = ({
         />
         {adornment?.position === "right" && (
           <S.InputAdornment
+            onClick={adornment?.onClick}
             variant={variant}
             ref={adornmentRef}
-            css={{ right: 0 }}
+            css={{ ...adornmentCSS, right: 0 }}
           >
             {adornment.node}
           </S.InputAdornment>
