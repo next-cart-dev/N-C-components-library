@@ -1,6 +1,5 @@
 import React from "react"
 
-// TODO: Implementar size: fullWidth
 export type Props = {
   /**
    * The button text content.
@@ -15,7 +14,7 @@ export type Props = {
    * The button size.
    * @default 'small'
    */
-  size?: "small" | "normal" | "large"
+  size?: "small" | "normal" | "large" | "fullWidth"
   /**
    * The button onClick handler.
    */

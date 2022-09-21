@@ -9,7 +9,9 @@ import { Icon } from "../Icon"
 # Button
 
 <Story name="Primary">
-  <div style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr" }}>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
     <div>
       <span>Small</span>
       <Button variant="primary" size="small">
@@ -23,6 +25,12 @@ import { Icon } from "../Icon"
     <div>
       <span>Large</span>
       <Button variant="primary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width</span>
+      <Button variant="primary" size="fullWidth">
         Clique aqui
       </Button>
     </div>
@@ -45,6 +53,12 @@ import { Icon } from "../Icon"
       </Button>
     </div>
     <div>
+      <span>Large disabled</span>
+      <Button variant="primary" size="fullWidth" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
       <span>Small with start icon</span>
       <Button
         variant="primary"
@@ -69,6 +83,16 @@ import { Icon } from "../Icon"
       <Button
         variant="primary"
         size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon</span>
+      <Button
+        variant="primary"
+        size="fullWidth"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
         Clique aqui
@@ -108,6 +132,17 @@ import { Icon } from "../Icon"
       </Button>
     </div>
     <div>
+      <span>Full width with start icon disabled</span>
+      <Button
+        variant="primary"
+        size="fullWidth"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
       <span>Small with end icon</span>
       <Button
         variant="primary"
@@ -132,6 +167,16 @@ import { Icon } from "../Icon"
       <Button
         variant="primary"
         size="large"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with end icon</span>
+      <Button
+        variant="primary"
+        size="fullWidth"
         endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
         Clique aqui
@@ -170,11 +215,24 @@ import { Icon } from "../Icon"
         Clique aqui
       </Button>
     </div>
+    <div>
+      <span>Full width with start/end icon</span>
+      <Button
+        variant="primary"
+        size="fullWidth"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
   </div>
 </Story>
 
 <Story name="Secondary">
-  <div style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr" }}>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
     <div>
       <span>Small</span>
       <Button variant="secondary" size="small">
@@ -188,6 +246,12 @@ import { Icon } from "../Icon"
     <div>
       <span>Large</span>
       <Button variant="secondary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width</span>
+      <Button variant="secondary" size="fullWidth">
         Clique aqui
       </Button>
     </div>
@@ -210,6 +274,12 @@ import { Icon } from "../Icon"
       </Button>
     </div>
     <div>
+      <span>Full width disabled</span>
+      <Button variant="secondary" size="fullWidth" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
       <span>Small with start icon</span>
       <Button
         variant="secondary"
@@ -234,6 +304,16 @@ import { Icon } from "../Icon"
       <Button
         variant="secondary"
         size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon</span>
+      <Button
+        variant="secondary"
+        size="fullWidth"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
         Clique aqui
@@ -273,6 +353,17 @@ import { Icon } from "../Icon"
       </Button>
     </div>
     <div>
+      <span>Full width with start icon disabled</span>
+      <Button
+        variant="secondary"
+        size="fullWidth"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
       <span>Small with end icon</span>
       <Button
         variant="secondary"
@@ -297,7 +388,17 @@ import { Icon } from "../Icon"
       <Button
         variant="secondary"
         size="large"
-        endIcon={<Icon size="normal" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with end icon</span>
+      <Button
+        variant="secondary"
+        size="fullWidth"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
         Clique aqui
       </Button>
@@ -329,6 +430,17 @@ import { Icon } from "../Icon"
       <Button
         variant="secondary"
         size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start/end icon</span>
+      <Button
+        variant="secondary"
+        size="fullWidth"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
         endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >

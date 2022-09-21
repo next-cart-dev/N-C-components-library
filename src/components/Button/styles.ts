@@ -69,6 +69,10 @@ export const Button = styled("button", {
       large: {
         padding: "0 $16",
         height: "$space$48"
+      },
+      fullWidth: {
+        height: "$space$48",
+        width: "100%"
       }
     }
   }
