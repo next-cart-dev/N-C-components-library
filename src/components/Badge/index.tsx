@@ -10,7 +10,9 @@ export const Badge = ({
   type = "badge",
   startIcon,
   endIcon,
-  id
+  id,
+  css,
+  variant
 }: Props) => {
   const [showCloseIcon, setShowCloseIcon] = useState(false)
   const [closeTag, setCloseTag] = useState(false)
@@ -19,6 +21,7 @@ export const Badge = ({
       {type === "tag" ? (
         !closeTag && (
           <S.Tag
+            css={{ ...css }}
             onMouseEnter={() => setShowCloseIcon(true)}
             onMouseLeave={() => setShowCloseIcon(false)}
             data-testid={`tag-${id}`}
@@ -33,7 +36,7 @@ export const Badge = ({
           </S.Tag>
         )
       ) : (
-        <S.Badge>
+        <S.Badge variant={variant} css={css}>
           {startIcon}
           {children}
           {endIcon}
