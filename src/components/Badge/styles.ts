@@ -13,8 +13,34 @@ export const Badge = styled("div", {
   width: "fit-content",
   borderRadius: "4px",
   backgroundColor: "$primary500",
+  variants: {
+    variant: {
+      success: {
+        backgroundColor: "$success200",
+        color: "$success700"
+      },
+      info: {
+        backgroundColor: "$info200",
+        color: "$info700"
+      },
+      danger: {
+        backgroundColor: "$danger200",
+        color: "$danger700"
+      },
+      warning: {
+        backgroundColor: "$warning200",
+        color: "$warning700"
+      }
+    }
+  },
   color: "white",
   gap: "$4",
+  fontSize: "$14",
+  ...flex
+})
+
+export const IconContainer = styled("div", {
+  color: "white",
   ...flex
 })
 
