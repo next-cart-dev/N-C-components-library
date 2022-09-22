@@ -3,11 +3,13 @@ import React from "react"
 import * as S from "./styles"
 import { Props } from "./types"
 
-export const Avatar = ({ children, src, alt, delay }: Props) => {
+export const Avatar = ({ css, children, src, alt, delay }: Props) => {
   return (
-    <S.Avatar>
+    <S.Avatar css={css}>
       <S.Image src={src} alt={alt} />
-      <S.Fallback delayMs={delay}>{children}</S.Fallback>
+      <S.Fallback css={{ fontSize: css?.fontSize }} delayMs={delay}>
+        {children}
+      </S.Fallback>
     </S.Avatar>
   )
 }
