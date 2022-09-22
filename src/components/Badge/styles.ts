@@ -39,6 +39,11 @@ export const Badge = styled("div", {
   ...flex
 })
 
+export const IconContainer = styled("div", {
+  color: "white",
+  ...flex
+})
+
 export const Tag = styled("div", {
   padding: "$4 $8",
   borderRadius: "4px",
