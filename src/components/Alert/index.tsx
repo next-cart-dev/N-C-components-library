@@ -45,7 +45,11 @@ export const Alert = ({
     if (role === "alert") {
       return (
         <Box css={cssCloseButton}>
-          <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
+          <Icon
+            size="large"
+            icon={<BsX />}
+            css={{ color: setIconColor(variant) }}
+          />
         </Box>
       )
     }
@@ -53,7 +57,11 @@ export const Alert = ({
     if (role === "alertdialog") {
       return (
         <Box css={cssCloseButton} onClick={() => setOpen(false)}>
-          <Icon size="large" icon={<BsX />} color={setIconColor(variant)} />
+          <Icon
+            size="large"
+            icon={<BsX />}
+            css={{ color: setIconColor(variant) }}
+          />
         </Box>
       )
     }

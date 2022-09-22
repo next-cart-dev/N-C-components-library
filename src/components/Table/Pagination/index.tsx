@@ -52,7 +52,11 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          <Icon size="normal" icon={<BsFillCaretLeftFill />} color="$text500" />
+          <Icon
+            size="normal"
+            icon={<BsFillCaretLeftFill />}
+            css={{ color: "$text500" }}
+          />
         </S.PaginationButton>
         {Array.from(Array(table.getPageCount()).keys()).map((page) => (
           <S.PaginationButton
@@ -71,7 +75,7 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           <Icon
             size="normal"
             icon={<BsFillCaretRightFill />}
-            color="$text500"
+            css={{ color: "$text500" }}
           />
         </S.PaginationButton>
       </Box>
