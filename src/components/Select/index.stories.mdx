@@ -6,22 +6,26 @@ import { Box } from "../Box"
 
 <Story name="Select">
   <Box css={{ display: "flex", gap: "20px" }}>
-    <Select
-      options={[
-        { value: "red", label: "Red" },
-        { value: "blue", label: "Blue" },
-        { value: "black", label: "Black" }
-      ]}
-      placeholder="Select..."
-    />
-    <Select
-      options={[
-        { value: "red", label: "Red" },
-        { value: "blue", label: "Blue" },
-        { value: "black", label: "Black" }
-      ]}
-      isMulti
-      placeholder="Select..."
-    />
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        placeholder="Select..."
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        placeholder="Select..."
+      />
+    </Box>
   </Box>
 </Story>

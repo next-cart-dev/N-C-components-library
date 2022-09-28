@@ -10,7 +10,7 @@ export const SelectStyled: StylesConfig = {
     borderRadius: "4px",
     borderColor: colors.primary500
   }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "300px" }),
+  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
   dropdownIndicator: (styles) => ({
     ...styles,
     background: colors.primary500,
