@@ -10,7 +10,7 @@ export const Icon = styled("span", {
           height: "12px"
         }
       },
-      normal: {
+      medium: {
         "& svg": {
           width: "16px",
           height: "16px"

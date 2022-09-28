@@ -30,12 +30,12 @@ describe("<Button />", () => {
     expect(button.className).toMatch(/variant-secondary/)
   })
 
-  it("should render the button with the size as normal by default", async () => {
+  it("should render the button with the size as medium by default", async () => {
     render(<Button variant="secondary">Acessar</Button>)
 
     const button = await screen.findByText("Acessar")
 
-    expect(button.className).toMatch(/size-normal/)
+    expect(button.className).toMatch(/size-medium/)
   })
 
   it("should render the button with the size as small", async () => {
