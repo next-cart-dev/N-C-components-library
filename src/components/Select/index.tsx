@@ -32,15 +32,13 @@ export const Select = ({
   }
 
   return (
-    <>
-      <ReactSelect
-        {...props}
-        options={options}
-        styles={SelectStyled}
-        components={{ Placeholder, DropdownIndicator }}
-        isMulti={isMulti}
-        isClearable
-      />
-    </>
+    <ReactSelect
+      {...props}
+      options={options}
+      styles={SelectStyled}
+      components={{ Placeholder, DropdownIndicator }}
+      isMulti={isMulti}
+      isClearable
+    />
   )
 }
