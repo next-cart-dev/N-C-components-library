@@ -62,7 +62,7 @@ export const Button = styled("button", {
         fontSize: "$16",
         height: "$space$32"
       },
-      normal: {
+      medium: {
         padding: "0 $16",
         height: "$space$40"
       },

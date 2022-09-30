@@ -1,6 +1,8 @@
-import React from "react"
+import React, { ComponentPropsWithoutRef } from "react"
 
-export type Props = {
+import { Size } from "../../types"
+
+export type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   /**
    * The button text content.
    */
@@ -14,7 +16,7 @@ export type Props = {
    * The button size.
    * @default 'small'
    */
-  size?: "small" | "normal" | "large" | "fullWidth"
+  size?: Size | "fullWidth"
   /**
    * The button onClick handler.
    */

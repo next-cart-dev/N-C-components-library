@@ -53,9 +53,9 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           disabled={!table.getCanPreviousPage()}
         >
           <Icon
-            size="normal"
+            size="medium"
             icon={<BsFillCaretLeftFill />}
-            css={{ color: "$text500" }}
+            css={{ color: "$text200" }}
           />
         </S.PaginationButton>
         {Array.from(Array(table.getPageCount()).keys()).map((page) => (
@@ -73,9 +73,9 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           disabled={!table.getCanNextPage()}
         >
           <Icon
-            size="normal"
+            size="medium"
             icon={<BsFillCaretRightFill />}
-            css={{ color: "$text500" }}
+            css={{ color: "$text200" }}
           />
         </S.PaginationButton>
       </Box>

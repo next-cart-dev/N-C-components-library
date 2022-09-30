@@ -1,7 +1,7 @@
 import React from "react"
 
 import * as S from "./styles"
-import { Props } from "./types"
+import { ButtonProps } from "./types"
 
 export const Button = ({
   children,
@@ -12,10 +12,13 @@ export const Button = ({
   disabled = false,
   startIcon,
   endIcon,
-  size = "normal"
-}: Props) => {
+  size = "medium",
+  ...props
+}: ButtonProps) => {
   return (
     <S.Button
+      {...props}
+      role="button"
       variant={variant}
       onClick={onClick}
       type={type}

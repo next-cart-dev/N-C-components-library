@@ -37,13 +37,9 @@ export const Badge = ({
         )
       ) : (
         <S.Badge variant={variant} css={css}>
-          <S.IconContainer>
-            {startIcon}
-          </S.IconContainer>
+          <S.IconContainer>{startIcon}</S.IconContainer>
           {children}
-          <S.IconContainer>
-            {endIcon}
-          </S.IconContainer>
+          <S.IconContainer>{endIcon}</S.IconContainer>
         </S.Badge>
       )}
     </Box>
