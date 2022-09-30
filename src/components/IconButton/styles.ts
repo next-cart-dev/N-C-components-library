@@ -2,6 +2,7 @@ import { styled } from "../../stitches.config"
 import { Button } from "../Button"
 
 export const IconButton = styled(Button, {
+  boxSizing: "border-box",
   variants: {
     size: {
       small: {
