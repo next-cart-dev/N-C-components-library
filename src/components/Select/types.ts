@@ -26,4 +26,10 @@ export type Props = Partial<
    * @default ''
    */
   placeholder?: string
+  /**
+   * Set whether the select can be cleared
+   * @options true or false
+   * @default true
+   */
+  isClearable?: boolean
 }
