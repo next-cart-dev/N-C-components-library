@@ -73,7 +73,7 @@
     "@typescript-eslint/parser": "^5.36.1",
     "babel-loader": "^8.2.5",
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "chromatic": "^6.7.3",
+    "chromatic": "^6.10.1",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "date-fns": "^2.29.2",
