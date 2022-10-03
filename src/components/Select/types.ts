@@ -1,4 +1,5 @@
 import { CommonProps, GroupBase, Props as SelectProps } from "react-select"
+import { StateManagerProps } from "react-select/dist/declarations/src/useStateManager"
 type Option = {
   value: string
   label: string
@@ -6,7 +7,9 @@ type Option = {
 type isMulti = boolean
 
 export type Props = Partial<
-  CommonProps<Option, isMulti, GroupBase<Option>> & SelectProps
+  CommonProps<Option, isMulti, GroupBase<Option>> &
+    SelectProps &
+    StateManagerProps
 > & {
   /**
    * Select Options
