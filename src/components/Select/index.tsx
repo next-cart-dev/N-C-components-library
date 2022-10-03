@@ -10,17 +10,20 @@ import ReactSelect, {
 import { SelectStyled } from "./styles"
 import { Props } from "./types"
 
+import { Icon } from "../Icon"
+
 export const Select = ({
   options,
   isMulti,
   placeholder = "",
+  isClearable = true,
   id,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
     return (
       <components.DropdownIndicator {...props}>
-        <BsCaretDownFill color="white" />
+        <Icon size="large" icon={<BsCaretDownFill color="white" />} />
       </components.DropdownIndicator>
     )
   }
@@ -38,7 +41,7 @@ export const Select = ({
       styles={SelectStyled}
       components={{ Placeholder, DropdownIndicator }}
       isMulti={isMulti}
-      isClearable
+      isClearable={isClearable}
     />
   )
 }

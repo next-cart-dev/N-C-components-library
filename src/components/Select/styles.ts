@@ -8,16 +8,25 @@ export const SelectStyled: StylesConfig = {
   control: (styles) => ({
     ...styles,
     borderRadius: "4px",
-    borderColor: colors.primary500
+    borderColor: colors.primary500,
+    height: "48px"
   }),
   container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
   dropdownIndicator: (styles) => ({
     ...styles,
     background: colors.primary500,
     borderRadius: "0 2px 2px 0",
-    padding: "11px"
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    padding: "0 10px",
+    alignItems: "center"
   }),
   indicatorSeparator: () => ({ display: "none" }),
+  clearIndicator: (styles) => ({
+    ...styles,
+    padding: "2px"
+  }),
   option: (styles, { isFocused }) => ({
     ...styles,
     background: isFocused ? colors.primary400 : colors.neutral500,
