@@ -11,12 +11,12 @@ export type ButtonProps = ComponentPropsWithoutRef<"button"> & {
    * The button variant style.
    * @default 'primary'
    */
-  variant?: "primary" | "secondary"
+  variant?: "primary" | "secondary" | "tertiary" | "quartiary"
   /**
    * The button size.
    * @default 'small'
    */
-  size?: Size | "fullWidth"
+  size?: Size | "fullWidth" | "mobile"
   /**
    * The button onClick handler.
    */

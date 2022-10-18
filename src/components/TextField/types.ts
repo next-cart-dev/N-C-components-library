@@ -13,11 +13,11 @@ export type Props = ComponentPropsWithoutRef<"input"> & {
    * The input size.
    * @default 'default'
    */
-  inputSize?: "default" | "fullWidth"
+  inputSize?: "default" | "fullWidth" | "mobile"
   /**
    * The input variant.
    */
-  variant?: "success" | "danger"
+  variant?: "success" | "danger" | "mobile"
   /**
    * The input type.
    * @default 'text'

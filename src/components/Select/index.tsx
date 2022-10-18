@@ -7,7 +7,7 @@ import ReactSelect, {
   PlaceholderProps
 } from "react-select"
 
-import { SelectStyled } from "./styles"
+import { SelectStyled, MobileSelectStyled } from "./styles"
 import { Props } from "./types"
 
 import { Icon } from "../Icon"
@@ -18,6 +18,7 @@ export const Select = ({
   placeholder = "",
   isClearable = true,
   id,
+  mobile = false,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
@@ -38,7 +39,7 @@ export const Select = ({
     <ReactSelect
       {...props}
       options={options}
-      styles={SelectStyled}
+      styles={mobile ? { ...MobileSelectStyled } : { ...SelectStyled }}
       components={{ Placeholder, DropdownIndicator }}
       isMulti={isMulti}
       isClearable={isClearable}

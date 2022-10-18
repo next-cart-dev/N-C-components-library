@@ -6,6 +6,8 @@ import {
   SourceInfo
 } from "react-number-format"
 
+import { Props as TextFieldProps } from "../TextField/types"
+
 export type MaskType = "cpf" | "cnpj" | "date" | "currency" | "mobile"
 
 export type MaskFormat = {
@@ -13,7 +15,7 @@ export type MaskFormat = {
   placeholder: string
 }
 
-export type Props = {
+export type Props = TextFieldProps & {
   /**
    * Add a prefix before the number.
    * @options String (ex : $)
@@ -79,4 +81,8 @@ export type Props = {
    *
    */
   formatMaskToUse?: MaskType
+  /**
+   *
+   */
+  placeholderToUse?: MaskType
 }

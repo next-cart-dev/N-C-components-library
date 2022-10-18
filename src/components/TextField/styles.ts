@@ -42,6 +42,10 @@ export const Input = styled("input", {
       },
       fullWidth: {
         width: "100%"
+      },
+      mobile: {
+        height: "32px",
+        width: "100%"
       }
     },
     variant: {
@@ -92,6 +96,19 @@ export const Input = styled("input", {
         "&::placeholder": {
           color: "$warning500"
         }
+      },
+      mobile: {
+        boxShadow: "0 0 0 1px $colors$secondary500",
+        "&:hover": {
+          background: "$primary200"
+        },
+        "&:focus-visible": {
+          boxShadow: "0 0 0 2px $colors$secondary500"
+        },
+        "&::placeholder": {
+          color: "$colors$text400"
+        },
+        fontSize: "15px"
       }
     }
   }
@@ -119,6 +136,18 @@ export const InputAdornment = styled("div", {
       },
       info: {
         backgroundColor: "$info500"
+      },
+      mobile: {
+        boxShadow: "0 0 0 1px $colors$secondary500",
+        "&:hover": {
+          background: "$primary200"
+        },
+        "&:focus-visible": {
+          boxShadow: "0 0 0 2px $colors$secondary500"
+        },
+        "&::placeholder": {
+          color: "$colors$text400"
+        }
       }
     }
   }
