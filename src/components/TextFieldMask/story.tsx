@@ -9,11 +9,36 @@ import { TextFieldMask } from "."
 export const InputMaskStory = ({ ...props }: Props) => {
   return (
     <Box style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
-      <TextFieldMask {...props} formatMaskToUse="mobile" label={"Phone"} />
-      <TextFieldMask {...props} formatMaskToUse="cpf" label={"CPF"} />
-      <TextFieldMask {...props} formatMaskToUse="date" label={"Date"} />
-      <TextFieldMask {...props} formatMaskToUse="cnpj" label={"CNPJ"} />
-      <TextFieldMask {...props} formatMaskToUse="currency" label="Currency" />
+      <TextFieldMask
+        {...props}
+        placeholderToUse="mobile"
+        formatMaskToUse="mobile"
+        label={"Phone"}
+      />
+      <TextFieldMask
+        {...props}
+        placeholderToUse="cpf"
+        formatMaskToUse="cpf"
+        label={"CPF"}
+      />
+      <TextFieldMask
+        {...props}
+        placeholderToUse="date"
+        formatMaskToUse="date"
+        label={"Date"}
+      />
+      <TextFieldMask
+        {...props}
+        placeholderToUse="cnpj"
+        formatMaskToUse="cnpj"
+        label={"CNPJ"}
+      />
+      <TextFieldMask
+        {...props}
+        placeholderToUse="currency"
+        formatMaskToUse="currency"
+        label="Currency"
+      />
     </Box>
   )
 }

@@ -10,6 +10,7 @@ import { TextField } from "../TextField"
 export const TextFieldMask = ({
   label = "",
   formatMaskToUse,
+  placeholderToUse,
   ...props
 }: Props) => {
   /**
@@ -58,8 +59,8 @@ export const TextFieldMask = ({
       <NumberFormat
         {...props}
         placeholder={
-          formatMaskToUse
-            ? defaultMaskMapping[formatMaskToUse].placeholder
+          placeholderToUse
+            ? defaultMaskMapping[placeholderToUse].placeholder
             : props.placeholder
         }
         format={

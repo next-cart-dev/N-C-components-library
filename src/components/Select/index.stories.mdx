@@ -5,8 +5,9 @@ import { Box } from "../Box"
 <Meta title="SelectComponent" component={Select} />
 
 <Story name="Select">
-  <Box css={{ display: "flex", gap: "20px" }}>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
     <Box css={{ width: "300px" }}>
+      <span>Normal</span>
       <Select
         options={[
           { value: "red", label: "Red" },
@@ -17,6 +18,7 @@ import { Box } from "../Box"
       />
     </Box>
     <Box css={{ width: "300px" }}>
+      <span>Normal isMulti</span>
       <Select
         options={[
           { value: "red", label: "Red" },
@@ -25,6 +27,31 @@ import { Box } from "../Box"
         ]}
         isMulti
         placeholder="Select..."
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <span>Mobile</span>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        placeholder="Select..."
+        mobile
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <span>Mobile isMulti</span>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        placeholder="Select..."
+        mobile
+        isMulti
       />
     </Box>
   </Box>

@@ -40,7 +40,10 @@ export const TextField = ({
   }
 
   const containerCSS = {
-    width: inputSize === "fullWidth" ? "100%" : S.INPUT_SIZE,
+    width:
+      inputSize === "mobile" || inputSize === "fullWidth"
+        ? "100%"
+        : S.INPUT_SIZE,
     position: "relative",
     display: "inline-flex"
   }

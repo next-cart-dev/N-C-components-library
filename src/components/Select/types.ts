@@ -35,4 +35,5 @@ export type Props = Partial<
    * @default true
    */
   isClearable?: boolean
+  mobile: boolean
 }
