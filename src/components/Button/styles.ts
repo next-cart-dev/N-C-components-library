@@ -59,11 +59,11 @@ export const Button = styled("button", {
         background: "$secondary500",
         color: "$text200",
         "& svg path": {
-          fill: "$secondary500"
+          fill: "$text200"
         },
         "&:hover": {
           "& svg path": {
-            fill: "$secondary500"
+            fill: "$text200"
           }
         },
         "&:disabled": {
