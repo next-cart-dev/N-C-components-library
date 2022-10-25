@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.9.16-development",
+  "version": "0.9.17-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
