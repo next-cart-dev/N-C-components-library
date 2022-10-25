@@ -10,7 +10,7 @@ export const Input = styled("input", {
   $$successBorderColor: "$colors$tertiary500",
   $$infoBorderColor: "$colors$info500",
   $$warningBorderColor: "$colors$warning500",
-  padding: "14px $16",
+  padding: "0 $16",
   fontSize: "$18",
   height: "48px",
   background: "$neutral200",
@@ -41,10 +41,6 @@ export const Input = styled("input", {
         width: INPUT_SIZE
       },
       fullWidth: {
-        width: "100%"
-      },
-      mobile: {
-        height: "32px",
         width: "100%"
       }
     },
