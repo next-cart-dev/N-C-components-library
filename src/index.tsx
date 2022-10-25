@@ -3,7 +3,8 @@ export {
   getCssText,
   createTheme,
   keyframes,
-  theme
+  theme,
+  config
 } from "./stitches.config"
 
 export { Alert } from "./components/Alert"
