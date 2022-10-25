@@ -7,7 +7,7 @@ If you want to fix a bug or develop a new component, you must set up the followi
 1. Run `yarn` to install dev dependencies.
 2. Run `yarn storybook` to view all the components on Storybook.
 
-## Building the components
+## Building the components locally
 
 Make sure you don't have `react` and `react-dom` listed in dev dependencies to do a clean build(`rm -rf node_modules && yarn`).
 

@@ -1,4 +1,4 @@
-export { styled, getCssText } from "./stitches.config"
+export { styled, getCssText, createTheme, keyframes } from "./stitches.config"
 
 export { Alert } from "./components/Alert"
 export { Avatar } from "./components/Avatar"

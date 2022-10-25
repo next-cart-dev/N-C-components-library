@@ -54,48 +54,6 @@ export const Button = styled("button", {
             fill: "$neutral700"
           }
         }
-      },
-      tertiary: {
-        background: "$secondary500",
-        color: "$text200",
-        "& svg path": {
-          fill: "$secondary500"
-        },
-        "&:hover": {
-          "& svg path": {
-            fill: "$secondary500"
-          }
-        },
-        "&:disabled": {
-          color: "$neutral700",
-          background: "$neutral500",
-          borderColor: "$neutral700",
-          "& svg path": {
-            fill: "$neutral700"
-          }
-        }
-      },
-      quartiary: {
-        background: "$neutral200",
-        color: "$secondary500",
-        "& svg path": {
-          fill: "$secondary500"
-        },
-        border: "1px solid $secondary500",
-        "&:hover": {
-          background: "$primary200",
-          "& svg path": {
-            fill: "$secondary500"
-          }
-        },
-        "&:disabled": {
-          color: "$neutral700",
-          background: "$neutral500",
-          borderColor: "$neutral700",
-          "& svg path": {
-            fill: "$neutral700"
-          }
-        }
       }
     },
     size: {
@@ -114,10 +72,6 @@ export const Button = styled("button", {
       },
       fullWidth: {
         height: "$space$48",
-        width: "100%"
-      },
-      mobile: {
-        height: "32px",
         width: "100%"
       }
     }
