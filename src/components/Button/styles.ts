@@ -10,6 +10,7 @@ export const Button = styled("button", {
   fontWeight: "$semibold",
   letterSpacing: "$0.4",
   gap: "$16",
+  boxSizing: "border-box",
   borderRadius: "4px",
   "&:disabled": {
     cursor: "not-allowed"
