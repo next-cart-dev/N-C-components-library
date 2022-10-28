@@ -13,7 +13,6 @@ export const StepsContainer = styled("div", {
 })
 
 export const Step = styled("span", {
-  fontSize: "$space$16",
   fontWeight: "$medium",
   textTransform: "capitalize",
   variants: {
@@ -24,12 +23,19 @@ export const Step = styled("span", {
       secondary: {
         color: "$neutral600"
       }
+    },
+    size: {
+      small: {
+        fontSize: "$14"
+      },
+      normal: {
+        fontSize: "$space$16"
+      }
     }
   }
 })
 
 export const Icon = styled("div", {
-  fontSize: "40px",
   variants: {
     variant: {
       primary: {
@@ -38,15 +44,22 @@ export const Icon = styled("div", {
       secondary: {
         color: "$neutral600"
       }
+    },
+    size: {
+      small: {
+        fontSize: "30px"
+      },
+      normal: {
+        fontSize: "40px"
+      }
     }
   }
 })
 
 export const Progress = styled("div", {
-  width: "100px",
   height: "$space$8",
   borderRadius: "$space$4",
-  margin: "0 $space$24",
+  margin: "0 $space$8",
   variants: {
     variant: {
       primary: {
@@ -54,6 +67,14 @@ export const Progress = styled("div", {
       },
       secondary: {
         backgroundColor: "$neutral600"
+      }
+    },
+    size: {
+      small: {
+        width: "38px"
+      },
+      normal: {
+        width: "100px"
       }
     }
   }

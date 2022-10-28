@@ -11,4 +11,5 @@ export type Props = {
    * The bar progress values
    */
   steps: Step[]
+  size?: "small" | "normal"
 }
