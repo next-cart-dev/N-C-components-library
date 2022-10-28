@@ -1,14 +1,12 @@
 import { Meta, Story } from "@storybook/addon-docs"
 import { Table } from "./index.tsx"
 import { Box } from "../Box"
-import { columnsExample, data } from "./story.ts"
+import { columnsExample, data } from "./story.tsx"
 
 <Meta title="Table" component={Table} />
 
 # Table
 
 <Story name="Table">
-  <Box css={{ width: 800 }}>
-    <Table columns={columnsExample} data={data} />
-  </Box>
+  <Table columns={columnsExample} data={data} />
 </Story>

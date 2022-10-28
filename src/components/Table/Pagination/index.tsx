@@ -26,7 +26,16 @@ export const TablePagination = ({ table, totalCount }: Props) => {
 
     return (
       <Typography
-        css={{ letterSpacing: "1.2px", fontSize: "$18", color: "$text200" }}
+        css={{
+          letterSpacing: "1.2px",
+          fontSize: "$16",
+          color: "$text200",
+          marginBottom: "$16",
+          "@media (min-width: 768px)": {
+            marginBottom: "0",
+            fontSize: "$18"
+          }
+        }}
       >
         Resultado: {paginatedCount} de {totalCount}
       </Typography>
@@ -34,17 +43,7 @@ export const TablePagination = ({ table, totalCount }: Props) => {
   }
 
   return (
-    <Box
-      css={{
-        padding: "$16",
-        backgroundColor: "$primary500",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderBottomLeftRadius: "4px",
-        borderBottomRightRadius: "4px"
-      }}
-    >
+    <S.Pagination>
       <CountView />
       <Box css={{ display: "flex", flexFlow: "row" }}>
         <S.PaginationButton
@@ -79,6 +78,6 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           />
         </S.PaginationButton>
       </Box>
-    </Box>
+    </S.Pagination>
   )
 }

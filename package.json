@@ -34,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.18.10",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.1.0",
+    "@faker-js/faker": "^7.6.0",
     "@radix-ui/react-avatar": "^1.0.0",
     "@radix-ui/react-checkbox": "^1.0.0",
     "@radix-ui/react-dialog": "^1.0.0",
