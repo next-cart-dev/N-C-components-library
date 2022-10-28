@@ -10,7 +10,8 @@ export const Switch = ({
   label,
   disabled,
   name,
-  onCheckedChange
+  onCheckedChange,
+  checked
 }: Props) => (
   <Box css={{ display: "flex", alignItems: "center" }}>
     <S.Switch
@@ -18,6 +19,7 @@ export const Switch = ({
       disabled={disabled}
       name={name}
       onCheckedChange={onCheckedChange}
+      checked={checked}
     >
       <S.Thumb />
     </S.Switch>
