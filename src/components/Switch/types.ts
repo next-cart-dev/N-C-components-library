@@ -18,4 +18,5 @@ export type Props = {
    */
   label?: string
   name: string
+  checked?: boolean
 }
