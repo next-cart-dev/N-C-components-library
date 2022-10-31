@@ -10,6 +10,7 @@ import ReactSelect, {
 import { SelectStyled } from "./styles"
 import { Props } from "./types"
 
+import { Box } from "../Box"
 import { Icon } from "../Icon"
 
 export const Select = ({
@@ -18,6 +19,8 @@ export const Select = ({
   placeholder = "",
   isClearable = true,
   id,
+  label,
+  name,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
@@ -33,15 +36,23 @@ export const Select = ({
       <components.Placeholder {...props}>{placeholder}</components.Placeholder>
     )
   }
-
+  const labelCSS = label && { marginBottom: "8px" }
   return (
-    <ReactSelect
-      {...props}
-      options={options}
-      styles={SelectStyled}
-      components={{ Placeholder, DropdownIndicator }}
-      isMulti={isMulti}
-      isClearable={isClearable}
-    />
+    <Box>
+      <Box css={{ ...labelCSS }}>
+        <Box as="label" htmlFor={name} css={{ color: "$primary500" }}>
+          {label}
+        </Box>
+      </Box>
+      <ReactSelect
+        {...props}
+        options={options}
+        styles={SelectStyled}
+        components={{ Placeholder, DropdownIndicator }}
+        isMulti={isMulti}
+        isClearable={isClearable}
+        name={name}
+      />
+    </Box>
   )
 }
