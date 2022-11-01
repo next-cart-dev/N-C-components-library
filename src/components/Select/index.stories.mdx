@@ -7,18 +7,19 @@ import { Box } from "../Box"
 <Story name="Select">
   <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
     <Box css={{ width: "300px" }}>
-      <span>Normal</span>
       <Select
         options={[
           { value: "red", label: "Red" },
           { value: "blue", label: "Blue" },
           { value: "black", label: "Black" }
         ]}
+        label="Single"
+        id="Single"
+        name="Single"
         placeholder="Select..."
       />
     </Box>
     <Box css={{ width: "300px" }}>
-      <span>Normal isMulti</span>
       <Select
         options={[
           { value: "red", label: "Red" },
@@ -26,32 +27,10 @@ import { Box } from "../Box"
           { value: "black", label: "Black" }
         ]}
         isMulti
+        label="isMulti"
+        id="isMulti"
+        name="isMulti"
         placeholder="Select..."
-      />
-    </Box>
-    <Box css={{ width: "300px" }}>
-      <span>Mobile</span>
-      <Select
-        options={[
-          { value: "red", label: "Red" },
-          { value: "blue", label: "Blue" },
-          { value: "black", label: "Black" }
-        ]}
-        placeholder="Select..."
-        mobile
-      />
-    </Box>
-    <Box css={{ width: "300px" }}>
-      <span>Mobile isMulti</span>
-      <Select
-        options={[
-          { value: "red", label: "Red" },
-          { value: "blue", label: "Blue" },
-          { value: "black", label: "Black" }
-        ]}
-        placeholder="Select..."
-        mobile
-        isMulti
       />
     </Box>
   </Box>

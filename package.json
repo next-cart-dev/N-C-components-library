@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.9.17-development",
+  "version": "0.9.18-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -53,7 +53,7 @@
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@stitches/react": "^1.2.8",
-    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",

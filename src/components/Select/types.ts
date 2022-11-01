@@ -37,4 +37,8 @@ export type Props = Partial<
    * @default true
    */
   isClearable?: boolean
+  /**
+   * Select Label
+   */
+  label?: string
 }
