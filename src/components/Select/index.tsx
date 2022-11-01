@@ -20,6 +20,7 @@ export const Select = ({
   isClearable = true,
   id,
   label,
+  inputId,
   name,
   ...props
 }: Props) => {
@@ -40,7 +41,7 @@ export const Select = ({
   return (
     <Box>
       <Box css={{ ...labelCSS }}>
-        <Box as="label" htmlFor={name} css={{ color: "$primary500" }}>
+        <Box as="label" htmlFor={id} css={{ color: "$primary500" }}>
           {label}
         </Box>
       </Box>
@@ -52,6 +53,9 @@ export const Select = ({
         isMulti={isMulti}
         isClearable={isClearable}
         name={name}
+        id={id}
+        inputId={inputId}
+        aria-label={label}
       />
     </Box>
   )
