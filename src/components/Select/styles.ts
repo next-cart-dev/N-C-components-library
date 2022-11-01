@@ -1,8 +1,8 @@
 import { StylesConfig } from "react-select"
 
-import { lightTheme } from "../../tokens"
+import { config } from "../../stitches.config"
 
-const colors = lightTheme.theme.colors
+const colors = config.theme.colors
 
 export const SelectStyled: StylesConfig = {
   control: (styles) => ({
