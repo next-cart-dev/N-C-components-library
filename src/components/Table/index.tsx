@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 
 import {
   flexRender,
@@ -17,18 +17,25 @@ import { Props } from "./types"
 import { Box } from "../Box"
 import { Icon } from "../Icon"
 
-export function Table({ data, columns, pageSize = 10 }: Props) {
+export function Table({ data, columns, pagination }: Props) {
   const [sorting, setSorting] = useState<SortingState>([])
+  const internalPagination = useMemo(
+    () => ({ pageIndex: pagination.pageIndex, pageSize: pagination.pageSize }),
+    [pagination.pageIndex, pagination.pageSize]
+  )
   const table = useReactTable({
     data,
     columns,
     state: {
-      sorting
+      sorting,
+      pagination: internalPagination
     },
+    pageCount: pagination.pageCount,
     onSortingChange: setSorting,
+    onPaginationChange: pagination.setPagination,
+    manualPagination: true,
     getSortedRowModel: getSortedRowModel(),
     getCoreRowModel: getCoreRowModel(),
-    initialState: { pagination: { pageSize } },
     getPaginationRowModel: getPaginationRowModel()
   })
 

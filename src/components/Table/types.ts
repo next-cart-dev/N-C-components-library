@@ -1,5 +1,12 @@
+import { OnChangeFn, PaginationState } from "@tanstack/react-table"
+
 export type Props = {
   data: any[]
   columns: any[]
-  pageSize?: number
+  pagination: {
+    pageSize: number
+    pageIndex: number
+    pageCount: number
+    setPagination: OnChangeFn<PaginationState>
+  }
 }

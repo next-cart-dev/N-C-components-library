@@ -3,6 +3,9 @@ import React from "react"
 import { faker } from "@faker-js/faker"
 import { createColumnHelper } from "@tanstack/react-table"
 
+import { useTablePagination } from "./utils"
+
+import { Table } from "../.."
 import { Badge } from "../Badge"
 
 export type Column = {
@@ -47,10 +50,30 @@ export const columnsExample = [
   })
 ]
 
-export const data = Array.from(Array(50).keys()).map((item) => ({
+export const data = Array.from(Array(50).keys()).map(() => ({
   column1: faker.name.fullName(),
   column2: "455-333-123/20",
   column3: faker.date.birthdate().toDateString(),
   column4: faker.helpers.arrayElement(["Ativo", "Bloqueado"]),
   column5: faker.helpers.arrayElement(["São Paulo", "Rio de Janeiro"])
 }))
+
+export const StoryDefault = () => {
+  const { pageIndex, setPagination, pageSize } = useTablePagination({
+    pageSize: 20,
+    pageIndex: 0
+  })
+
+  return (
+    <Table
+      data={data}
+      columns={columnsExample}
+      pagination={{
+        pageIndex,
+        pageSize,
+        pageCount: data.length,
+        setPagination
+      }}
+    />
+  )
+}

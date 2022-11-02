@@ -17,11 +17,11 @@ export const TablePagination = ({ table, totalCount }: Props) => {
   const currentPage = table.getState().pagination.pageIndex + 1
 
   const CountView = () => {
-    const paginatedCount = `${table.getPaginationRowModel().rows[0].index + 1} -
+    const paginatedCount = `${table.getPaginationRowModel().rows[0].index} -
     ${
       table.getPaginationRowModel().rows[
         table.getPaginationRowModel().rows.length - 1
-      ].index + 1
+      ].index
     }`
 
     return (
@@ -61,9 +61,9 @@ export const TablePagination = ({ table, totalCount }: Props) => {
           <S.PaginationButton
             key={page}
             onClick={() => table.setPageIndex(page)}
-            variant={currentPage === page + 1 ? "active" : undefined}
+            variant={currentPage === page ? "active" : undefined}
           >
-            {page + 1}
+            {page}
           </S.PaginationButton>
         ))}
         <S.PaginationButton

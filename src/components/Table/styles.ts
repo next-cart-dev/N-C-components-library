@@ -13,7 +13,7 @@ export const TableHead = styled("div", {
 
 export const TableBody = styled("div", {
   display: "grid",
-  height: "300px"
+  maxHeight: "300px"
 })
 
 export const TableRow = styled("div", {
