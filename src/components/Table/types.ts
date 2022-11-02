@@ -7,6 +7,7 @@ export type Props = {
     pageSize: number
     pageIndex: number
     pageCount: number
+    itemCount: number
     setPagination: OnChangeFn<PaginationState>
   }
 }

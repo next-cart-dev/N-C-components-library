@@ -50,7 +50,7 @@ export const columnsExample = [
   })
 ]
 
-export const data = Array.from(Array(50).keys()).map(() => ({
+export const data = Array.from(Array(3).keys()).map(() => ({
   column1: faker.name.fullName(),
   column2: "455-333-123/20",
   column3: faker.date.birthdate().toDateString(),
@@ -60,7 +60,7 @@ export const data = Array.from(Array(50).keys()).map(() => ({
 
 export const StoryDefault = () => {
   const { pageIndex, setPagination, pageSize } = useTablePagination({
-    pageSize: 20,
+    pageSize: 3,
     pageIndex: 0
   })
 
@@ -71,7 +71,8 @@ export const StoryDefault = () => {
       pagination={{
         pageIndex,
         pageSize,
-        pageCount: data.length,
+        pageCount: 1,
+        itemCount: 3,
         setPagination
       }}
     />

@@ -125,7 +125,7 @@ export function Table({ data, columns, pagination }: Props) {
           ))}
         </S.TableBody>
       </S.Table>
-      <TablePagination table={table} totalCount={data.length} />
+      <TablePagination table={table} totalCount={pagination.itemCount} />
     </Box>
   )
 }
