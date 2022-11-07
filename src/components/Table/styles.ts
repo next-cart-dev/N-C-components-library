@@ -13,7 +13,7 @@ export const TableHead = styled("div", {
 
 export const TableBody = styled("div", {
   display: "grid",
-  maxHeight: "300px"
+  maxHeight: "350px"
 })
 
 export const TableRow = styled("div", {
@@ -94,6 +94,6 @@ export const Pagination = styled("div", {
   borderBottomRightRadius: "4px",
   "@media (min-width: 768px)": {
     flexFlow: "row",
-    justifyContent: "space-between"
+    justifyContent: "flex-end"
   }
 })
