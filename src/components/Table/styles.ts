@@ -20,7 +20,7 @@ export const TableRow = styled("div", {
   display: "flex",
   fontSize: "$16",
   color: "$text700",
-  width: "100%",
+  minWidth: "100%",
   "@media (min-width: 768px)": {
     fontSize: "$18"
   }
