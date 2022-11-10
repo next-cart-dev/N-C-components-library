@@ -41,4 +41,5 @@ export type Props = Partial<
    * Select Label
    */
   label?: string
+  inputRef?: any
 }
