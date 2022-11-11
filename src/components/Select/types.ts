@@ -42,4 +42,11 @@ export type Props = Partial<
    */
   label?: string
   inputRef?: any
+  /**
+   * The default value of the component
+   */
+  defaultValue?: {
+    label: string
+    value: string
+  }
 }
