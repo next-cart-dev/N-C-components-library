@@ -21,6 +21,7 @@ export const Select = ({
   id,
   label,
   inputId,
+  inputRef,
   name,
   ...props
 }: Props) => {
@@ -37,7 +38,9 @@ export const Select = ({
       <components.Placeholder {...props}>{placeholder}</components.Placeholder>
     )
   }
+
   const labelCSS = label && { marginBottom: "8px" }
+
   return (
     <Box>
       <Box css={{ ...labelCSS }}>
@@ -54,6 +57,7 @@ export const Select = ({
         isClearable={isClearable}
         name={name}
         id={id}
+        ref={inputRef}
         inputId={inputId}
         aria-label={label}
       />
