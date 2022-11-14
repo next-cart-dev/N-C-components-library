@@ -39,12 +39,20 @@ export const Select = ({
     )
   }
 
-  const labelCSS = label && { marginBottom: "8px" }
+  const labelGAP = label && { marginBottom: "8px" }
+
+  const labelCSS = {
+    marginBottom: "$8",
+    fontSize: "$14",
+    letterSpacing: "$0.5",
+    color: "$primary500",
+    display: "block"
+  }
 
   return (
     <Box>
-      <Box css={{ ...labelCSS }}>
-        <Box as="label" htmlFor={id} css={{ color: "$primary500" }}>
+      <Box css={{ ...labelGAP }}>
+        <Box as="label" htmlFor={id} css={labelCSS}>
           {label}
         </Box>
       </Box>
