@@ -23,6 +23,7 @@ export const Select = ({
   inputId,
   inputRef,
   name,
+  defaultValue,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
@@ -50,6 +51,7 @@ export const Select = ({
       </Box>
       <ReactSelect
         {...props}
+        defaultValue={defaultValue}
         options={options}
         styles={SelectStyled}
         components={{ Placeholder, DropdownIndicator }}
