@@ -22,6 +22,9 @@ export const FormLabel = styled("label", {
       },
       info: {
         color: "$info500"
+      },
+      mobile: {
+        color: "$secondary500"
       }
     }
   }

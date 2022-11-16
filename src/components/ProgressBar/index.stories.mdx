@@ -12,7 +12,7 @@ import { Box } from "../Box"
 
 <Meta title="ProgressBar" component={ProgressBar} />
 
-<Story name="Progress">
+<Story name="Normal">
   <Box css={{ display: "flex", flexDirection: "column", gap: "20px" }}>
     <ProgressBar
       steps={[
@@ -65,6 +65,77 @@ import { Box } from "../Box"
       ]}
     />
     <ProgressBar
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare />, active: true },
+        { label: "serviços", icon: <RiBookletLine />, active: true },
+        { label: "confirmação", icon: <BsFillCartCheckFill />, active: true },
+        { label: "pagamento", icon: <IoBriefcase />, active: true },
+        { label: "recibo", icon: <BsReceipt />, active: true }
+      ]}
+    />
+  </Box>
+</Story>
+
+<Story name="Small">
+  <Box css={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <ProgressBar
+      size="small"
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare /> },
+        { label: "serviços", icon: <RiBookletLine /> },
+        { label: "confirmação", icon: <BsFillCartCheckFill /> },
+        { label: "pagamento", icon: <IoBriefcase /> },
+        { label: "recibo", icon: <BsReceipt /> }
+      ]}
+    />
+    <ProgressBar
+      size="small"
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare />, active: true },
+        { label: "serviços", icon: <RiBookletLine /> },
+        { label: "confirmação", icon: <BsFillCartCheckFill /> },
+        { label: "pagamento", icon: <IoBriefcase /> },
+        { label: "recibo", icon: <BsReceipt /> }
+      ]}
+    />
+    <ProgressBar
+      size="small"
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare />, active: true },
+        { label: "serviços", icon: <RiBookletLine />, active: true },
+        { label: "confirmação", icon: <BsFillCartCheckFill /> },
+        { label: "pagamento", icon: <IoBriefcase /> },
+        { label: "recibo", icon: <BsReceipt /> }
+      ]}
+    />
+    <ProgressBar
+      size="small"
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare />, active: true },
+        { label: "serviços", icon: <RiBookletLine />, active: true },
+        { label: "confirmação", icon: <BsFillCartCheckFill />, active: true },
+        { label: "pagamento", icon: <IoBriefcase /> },
+        { label: "recibo", icon: <BsReceipt /> }
+      ]}
+    />
+    <ProgressBar
+      size="small"
+      steps={[
+        { label: "senha", icon: <BsFillKeyFill />, active: true },
+        { label: "identificação", icon: <BsPersonSquare />, active: true },
+        { label: "serviços", icon: <RiBookletLine />, active: true },
+        { label: "confirmação", icon: <BsFillCartCheckFill />, active: true },
+        { label: "pagamento", icon: <IoBriefcase />, active: true },
+        { label: "recibo", icon: <BsReceipt /> }
+      ]}
+    />
+    <ProgressBar
+      size="small"
       steps={[
         { label: "senha", icon: <BsFillKeyFill />, active: true },
         { label: "identificação", icon: <BsPersonSquare />, active: true },

@@ -13,6 +13,9 @@ export const FormHelperText = styled("p", {
       },
       success: {
         color: "$tertiary500"
+      },
+      mobile: {
+        color: "$secondary500"
       }
     }
   }

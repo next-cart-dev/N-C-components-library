@@ -10,7 +10,7 @@ export const Input = styled("input", {
   $$successBorderColor: "$colors$tertiary500",
   $$infoBorderColor: "$colors$info500",
   $$warningBorderColor: "$colors$warning500",
-  padding: "14px $16",
+  padding: "0 $16",
   fontSize: "$18",
   height: "48px",
   background: "$neutral200",
@@ -92,6 +92,19 @@ export const Input = styled("input", {
         "&::placeholder": {
           color: "$warning500"
         }
+      },
+      mobile: {
+        boxShadow: "0 0 0 1px $colors$secondary500",
+        "&:hover": {
+          background: "$primary200"
+        },
+        "&:focus-visible": {
+          boxShadow: "0 0 0 2px $colors$secondary500"
+        },
+        "&::placeholder": {
+          color: "$colors$text400"
+        },
+        fontSize: "15px"
       }
     }
   }
@@ -119,6 +132,18 @@ export const InputAdornment = styled("div", {
       },
       info: {
         backgroundColor: "$info500"
+      },
+      mobile: {
+        boxShadow: "0 0 0 1px $colors$secondary500",
+        "&:hover": {
+          background: "$primary200"
+        },
+        "&:focus-visible": {
+          boxShadow: "0 0 0 2px $colors$secondary500"
+        },
+        "&::placeholder": {
+          color: "$colors$text400"
+        }
       }
     }
   }

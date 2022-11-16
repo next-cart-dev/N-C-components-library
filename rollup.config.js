@@ -1,4 +1,5 @@
 import babel from "@rollup/plugin-babel"
+import dts from "rollup-plugin-dts"
 import commonjs from "@rollup/plugin-commonjs"
 import css from "rollup-plugin-import-css"
 import image from "@rollup/plugin-image"
@@ -46,5 +47,13 @@ export default [
       sourcemap: true
     },
     plugins
+  },
+  {
+    input: 'src/index.tsx',
+    output: {
+      file: "dist/index.d.ts",
+      format: "es"
+    },
+    plugins: [dts()]
   }
 ]

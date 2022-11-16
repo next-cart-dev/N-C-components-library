@@ -2,10 +2,10 @@ import { Meta, Story } from "@storybook/addon-docs"
 import { Select } from "."
 import { Box } from "../Box"
 
-<Meta title="SelectComponent" component={Select} />
+<Meta title="Select" component={Select} />
 
 <Story name="Select">
-  <Box css={{ display: "flex", gap: "20px" }}>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
     <Box css={{ width: "300px" }}>
       <Select
         options={[
@@ -13,6 +13,9 @@ import { Box } from "../Box"
           { value: "blue", label: "Blue" },
           { value: "black", label: "Black" }
         ]}
+        label="Single"
+        id="Single"
+        name="Single"
         placeholder="Select..."
       />
     </Box>
@@ -24,6 +27,9 @@ import { Box } from "../Box"
           { value: "black", label: "Black" }
         ]}
         isMulti
+        label="isMulti"
+        id="isMulti"
+        name="isMulti"
         placeholder="Select..."
       />
     </Box>

@@ -1,9 +1,11 @@
 import { CommonProps, GroupBase, Props as SelectProps } from "react-select"
 import { StateManagerProps } from "react-select/dist/declarations/src/useStateManager"
+
 type Option = {
   value: string
   label: string
 }
+
 type isMulti = boolean
 
 export type Props = Partial<
@@ -35,4 +37,16 @@ export type Props = Partial<
    * @default true
    */
   isClearable?: boolean
+  /**
+   * Select Label
+   */
+  label?: string
+  inputRef?: any
+  /**
+   * The default value of the component
+   */
+  defaultValue?: {
+    label: string
+    value: string
+  }
 }

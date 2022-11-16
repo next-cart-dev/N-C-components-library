@@ -8,7 +8,6 @@ import { Select } from "."
 const SelectTest = () => {
   return (
     <form data-testid="form">
-      <label htmlFor="color">Color</label>
       <Select
         options={[
           { value: "red", label: "red" },
@@ -17,6 +16,7 @@ const SelectTest = () => {
         id="1"
         name="color"
         inputId="color"
+        label="Color"
       />
     </form>
   )

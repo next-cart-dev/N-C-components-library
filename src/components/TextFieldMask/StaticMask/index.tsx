@@ -9,6 +9,7 @@ import { TextField } from "../../TextField"
 export const StaticMask = ({
   label = "",
   formatMaskToUse,
+  placeholderToUse,
   format = " ",
   ...props
 }: Props) => {
@@ -35,8 +36,8 @@ export const StaticMask = ({
     <ReactPatternFormat
       {...props}
       placeholder={
-        formatMaskToUse && formatMaskToUse != "currency"
-          ? defaultMaskMapping[formatMaskToUse].placeholder
+        placeholderToUse && placeholderToUse != "currency"
+          ? defaultMaskMapping[placeholderToUse].placeholder
           : props.placeholder
       }
       format={

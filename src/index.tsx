@@ -1,4 +1,11 @@
-export { styled, getCssText } from "./stitches.config"
+export {
+  styled,
+  getCssText,
+  createTheme,
+  keyframes,
+  theme,
+  config
+} from "./stitches.config"
 
 export { Alert } from "./components/Alert"
 export { Avatar } from "./components/Avatar"
@@ -17,8 +24,10 @@ export { Select } from "./components/Select"
 export { Separator } from "./components/Separator/styles"
 export { Switch } from "./components/Switch"
 export { Table } from "./components/Table"
+export { useTablePagination } from "./components/Table/utils"
 export { Tabs } from "./components/Tabs"
 export { TextField } from "./components/TextField"
 export { TextFieldMask } from "./components/TextFieldMask"
 export { Tooltip } from "./components/Tooltips"
 export { Typography } from "./components/Typography"
+export { ProgressBar } from "./components/ProgressBar"

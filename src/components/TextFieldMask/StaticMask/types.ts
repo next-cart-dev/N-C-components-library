@@ -77,4 +77,8 @@ export type Props = {
    *
    */
   formatMaskToUse?: MaskType | "currency"
+  /**
+   *
+   */
+  placeholderToUse?: MaskType | "currency"
 }

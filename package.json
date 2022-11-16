@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.9.12-development",
+  "version": "0.9.22-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,9 +31,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
-    "@babel/plugin-transform-runtime": "^7.18.10",
-    "@commitlint/cli": "^17.0.3",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.1.0",
+    "@faker-js/faker": "^7.6.0",
     "@radix-ui/react-avatar": "^1.0.0",
     "@radix-ui/react-checkbox": "^1.0.0",
     "@radix-ui/react-dialog": "^1.0.0",
@@ -52,7 +53,7 @@
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@stitches/react": "^1.2.8",
-    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
@@ -103,6 +104,7 @@
     "react-select-event": "^5.5.1",
     "react-tooltip": "^4.2.21",
     "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
@@ -112,8 +114,8 @@
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "config": {
     "commitizen": {
