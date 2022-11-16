@@ -8,7 +8,13 @@ import { TextFieldMask } from "."
 
 export const InputMaskStory = ({ ...props }: Props) => {
   return (
-    <Box style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+    <Box
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: "20px"
+      }}
+    >
       <TextFieldMask
         {...props}
         placeholderToUse="mobile"
