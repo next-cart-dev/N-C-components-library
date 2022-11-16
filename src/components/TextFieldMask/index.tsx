@@ -4,8 +4,6 @@ import { CurrencyMask } from "./CurrencyMask"
 import { StaticMask } from "./StaticMask"
 import { Props } from "./types"
 
-import { Box } from "../Box"
-
 export const TextFieldMask = ({
   label = "",
   formatMaskToUse,
