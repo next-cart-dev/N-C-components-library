@@ -1,6 +1,6 @@
 import React from "react"
 
-import { render, screen } from "@testing-library/react"
+import { render, screen, fireEvent } from "@testing-library/react"
 
 import { TextFieldMask } from "."
 
@@ -18,7 +18,9 @@ describe("<TextFieldMask />", () => {
   })
 
   it("should format currencies values correctly", () => {
-    render(<TextFieldMask formatMaskToUse="currency" value={"200"} />)
+    const { container } = render(<TextFieldMask formatMaskToUse="currency" />)
+    const input = container.querySelector('input[name="currency"]') as Element
+    fireEvent.change(input, { target: { value: "200" } })
     const inputMaskCurrencyFormatter = screen.getByDisplayValue("R$ 2,00")
     expect(inputMaskCurrencyFormatter).toBeVisible()
   })
