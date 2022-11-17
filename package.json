@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.9.22-development",
+  "version": "0.9.24-development",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -99,7 +99,7 @@
     "react-day-picker": "^8.1.4",
     "react-dom": "17.0.2",
     "react-icons": "^4.4.0",
-    "react-number-format": "^4.9.3",
+    "react-number-format": "^5.0.1",
     "react-select": "^5.4.0",
     "react-select-event": "^5.5.1",
     "react-tooltip": "^4.2.21",

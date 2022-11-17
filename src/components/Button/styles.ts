@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config"
 export const Button = styled("button", {
   all: "unset",
   cursor: "pointer",
-  fontSize: "$18",
+  fontSize: "$16",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -60,7 +60,6 @@ export const Button = styled("button", {
     size: {
       small: {
         padding: "$2 $16",
-        fontSize: "$16",
         height: "$space$32"
       },
       medium: {

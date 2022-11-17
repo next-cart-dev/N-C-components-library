@@ -22,7 +22,8 @@ export const TextField = ({
   helperText,
   inputSize = "default",
   variant,
-  adornment
+  adornment,
+  inputRef
 }: Props) => {
   const [adornmentPadding, setAdornmentPadding] = useState<number>(0)
   const adornmentRef = useRef<HTMLDivElement>(null)
@@ -80,6 +81,7 @@ export const TextField = ({
           placeholder={placeholder}
           disabled={disabled}
           css={inputCSS}
+          ref={inputRef}
         />
         {adornment?.position === "right" && (
           <S.InputAdornment

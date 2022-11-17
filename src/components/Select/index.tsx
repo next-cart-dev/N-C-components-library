@@ -21,7 +21,9 @@ export const Select = ({
   id,
   label,
   inputId,
+  inputRef,
   name,
+  defaultValue,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
@@ -37,7 +39,9 @@ export const Select = ({
       <components.Placeholder {...props}>{placeholder}</components.Placeholder>
     )
   }
+
   const labelCSS = label && { marginBottom: "8px" }
+
   return (
     <Box>
       <Box css={{ ...labelCSS }}>
@@ -47,6 +51,7 @@ export const Select = ({
       </Box>
       <ReactSelect
         {...props}
+        defaultValue={defaultValue}
         options={options}
         styles={SelectStyled}
         components={{ Placeholder, DropdownIndicator }}
@@ -54,6 +59,7 @@ export const Select = ({
         isClearable={isClearable}
         name={name}
         id={id}
+        ref={inputRef}
         inputId={inputId}
         aria-label={label}
       />
