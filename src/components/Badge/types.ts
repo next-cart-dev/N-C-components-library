@@ -29,4 +29,5 @@ export type Props = ComponentPropsWithoutRef<"div"> & {
    * themes variants of badges and tags
    */
   variant?: "success" | "info" | "danger" | "warning"
+  className?: string
 }
