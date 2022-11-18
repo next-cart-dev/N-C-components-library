@@ -72,7 +72,7 @@ export const StoryDefault = () => {
         pageIndex,
         pageSize,
         pageCount: 1,
-        itemCount: 3,
+        itemCount: data.length,
         setPagination
       }}
     />
