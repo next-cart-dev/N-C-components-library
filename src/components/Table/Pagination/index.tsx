@@ -9,18 +9,18 @@ import { usePaginationRange } from "./usePaginationRange"
 import { Box } from "../../Box"
 import { Icon } from "../../Icon"
 import * as S from "../styles"
-
+import { Props as PaginationProps } from "../types"
 type Props = {
   table: Table<any>
+  pagination?: any
 }
 
-export const TablePagination = ({ table }: Props) => {
+export const TablePagination = ({ table, pagination }: Props) => {
   const { items, currentPage } = usePaginationRange({
     currentPage: table.getState().pagination.pageIndex,
     totalPages: table.getPageCount()
   })
 
-  console.log(items)
   const ButtonHandler = ({ page }: { page: string | number }) => {
     if (typeof page === "number") {
       const onClick = () => {
@@ -43,6 +43,16 @@ export const TablePagination = ({ table }: Props) => {
 
   return (
     <S.Pagination>
+      <S.CounterItems>
+        Resultado: &nbsp;
+        {pagination.itemCount +
+          1 -
+          (pagination.pageIndex + 1) * pagination.pageSize}
+        &nbsp; - &nbsp;
+        {(pagination.pageIndex + 1) * pagination.pageSize}
+        &nbsp; de &nbsp;
+        {pagination.itemCount}
+      </S.CounterItems>
       <Box css={{ display: "flex", flexFlow: "row", alignItems: "center" }}>
         <S.PaginationButton
           type="button"

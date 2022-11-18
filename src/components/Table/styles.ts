@@ -118,6 +118,10 @@ export const Pagination = styled("div", {
   borderBottomRightRadius: "4px",
   "@media (min-width: 768px)": {
     flexFlow: "row",
-    justifyContent: "flex-end"
+    justifyContent: "space-between"
   }
+})
+
+export const CounterItems = styled("span", {
+  color: "$neutral100"
 })

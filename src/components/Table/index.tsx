@@ -23,6 +23,7 @@ export function Table({ data, columns, pagination }: Props) {
     () => ({ pageIndex: pagination.pageIndex, pageSize: pagination.pageSize }),
     [pagination.pageIndex, pagination.pageSize]
   )
+
   const table = useReactTable({
     data,
     columns,
@@ -125,7 +126,7 @@ export function Table({ data, columns, pagination }: Props) {
           ))}
         </S.TableBody>
       </S.Table>
-      <TablePagination table={table} />
+      <TablePagination table={table} pagination={pagination} />
     </Box>
   )
 }
