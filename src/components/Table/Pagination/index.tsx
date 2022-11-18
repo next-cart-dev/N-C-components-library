@@ -4,6 +4,7 @@ import { Table } from "@tanstack/react-table"
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs"
 import { v4 as uuid } from "uuid"
 
+import { CounterItems } from "./CounterItems"
 import { usePaginationRange } from "./usePaginationRange"
 
 import { Box } from "../../Box"
@@ -40,19 +41,9 @@ export const TablePagination = ({ table, pagination }: Props) => {
 
     return <S.PaginationEllipsis>{page}</S.PaginationEllipsis>
   }
-
   return (
     <S.Pagination>
-      <S.CounterItems>
-        Resultado: &nbsp;
-        {pagination.itemCount +
-          1 -
-          (pagination.pageIndex + 1) * pagination.pageSize}
-        &nbsp; - &nbsp;
-        {(pagination.pageIndex + 1) * pagination.pageSize}
-        &nbsp; de &nbsp;
-        {pagination.itemCount}
-      </S.CounterItems>
+      <CounterItems pagination={pagination} />
       <Box css={{ display: "flex", flexFlow: "row", alignItems: "center" }}>
         <S.PaginationButton
           type="button"
