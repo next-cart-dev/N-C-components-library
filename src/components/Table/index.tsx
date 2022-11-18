@@ -17,7 +17,7 @@ import { Props } from "./types"
 import { Box } from "../Box"
 import { Icon } from "../Icon"
 
-export function Table({ data, columns, pagination }: Props) {
+export function Table({ data, columns, pagination, onSortingChange }: Props) {
   const [sorting, setSorting] = useState<SortingState>([])
   const internalPagination = useMemo(
     () => ({ pageIndex: pagination.pageIndex, pageSize: pagination.pageSize }),
@@ -28,11 +28,11 @@ export function Table({ data, columns, pagination }: Props) {
     data,
     columns,
     state: {
-      sorting,
+      sorting: sorting,
       pagination: internalPagination
     },
     pageCount: pagination.pageCount,
-    onSortingChange: setSorting,
+    onSortingChange: onSortingChange || setSorting,
     onPaginationChange: pagination.setPagination,
     manualPagination: true,
     getSortedRowModel: getSortedRowModel(),
