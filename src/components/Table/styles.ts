@@ -13,14 +13,14 @@ export const TableHead = styled("div", {
 
 export const TableBody = styled("div", {
   display: "grid",
-  height: "300px"
+  maxHeight: "350px"
 })
 
 export const TableRow = styled("div", {
   display: "flex",
   fontSize: "$16",
   color: "$text700",
-  width: "100%",
+  minWidth: "100%",
   "@media (min-width: 768px)": {
     fontSize: "$18"
   }
@@ -60,13 +60,20 @@ export const PaginationButton = styled("button", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "$8",
   color: "$text200",
   fontSize: "$16",
   cursor: "pointer",
-  transition: "font-weight 0.3s ease-in-out",
+  height: "32px",
+  width: "32px",
+  marginLeft: "$4",
+  marginRight: "$4",
+  transition:
+    "font-weight 0.3s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out",
+  borderRadius: "100%",
   "@media (min-width: 768px)": {
-    fontSize: "$18"
+    fontSize: "$18",
+    marginLeft: "$8",
+    marginRight: "$8"
   },
   variants: {
     variant: {
@@ -76,14 +83,31 @@ export const PaginationButton = styled("button", {
     }
   },
   "&:hover": {
-    fontWeight: "$semibold"
+    fontWeight: "$semibold",
+    backgroundColor: "$text100",
+    color: "$primary500"
   },
   "&:disabled": {
     opacity: "0.3"
   }
 })
 
+export const PaginationEllipsis = styled("button", {
+  all: "unset",
+  height: "32px",
+  width: "32px",
+  color: "$text200",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  fontSize: "$16",
+  "@media (min-width: 768px)": {
+    fontSize: "$18"
+  }
+})
+
 export const Pagination = styled("div", {
+  userSelect: "none",
   width: "100%",
   padding: "$16",
   backgroundColor: "$primary500",
@@ -96,4 +120,8 @@ export const Pagination = styled("div", {
     flexFlow: "row",
     justifyContent: "space-between"
   }
+})
+
+export const CounterItems = styled("span", {
+  color: "$neutral100"
 })

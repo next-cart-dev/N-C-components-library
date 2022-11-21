@@ -12,7 +12,8 @@ export const Badge = ({
   endIcon,
   id,
   css,
-  variant
+  variant,
+  className
 }: Props) => {
   const [showCloseIcon, setShowCloseIcon] = useState(false)
   const [closeTag, setCloseTag] = useState(false)
@@ -21,6 +22,7 @@ export const Badge = ({
       {type === "tag" ? (
         !closeTag && (
           <S.Tag
+            className={className}
             css={{ ...css }}
             onMouseEnter={() => setShowCloseIcon(true)}
             onMouseLeave={() => setShowCloseIcon(false)}
@@ -36,7 +38,7 @@ export const Badge = ({
           </S.Tag>
         )
       ) : (
-        <S.Badge variant={variant} css={css}>
+        <S.Badge className={className} variant={variant} css={css}>
           <S.IconContainer>{startIcon}</S.IconContainer>
           {children}
           <S.IconContainer>{endIcon}</S.IconContainer>

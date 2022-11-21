@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef } from "react"
+import React, { ComponentPropsWithoutRef, RefCallback } from "react"
 
 export type Props = ComponentPropsWithoutRef<"input"> & {
   /**
@@ -31,4 +31,5 @@ export type Props = ComponentPropsWithoutRef<"input"> & {
     node: React.ReactNode
     onClick?: () => void
   }
+  inputRef?: RefCallback<HTMLInputElement>
 }
