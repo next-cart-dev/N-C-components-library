@@ -1,11 +1,10 @@
-import React, { useMemo, useState } from "react"
+import React, { useMemo } from "react"
 
 import {
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  SortingState,
   useReactTable
 } from "@tanstack/react-table"
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs"
@@ -17,8 +16,13 @@ import { Props } from "./types"
 import { Box } from "../Box"
 import { Icon } from "../Icon"
 
-export function Table({ data, columns, pagination, onSortingChange }: Props) {
-  const [sorting, setSorting] = useState<SortingState>([])
+export function Table({
+  data,
+  columns,
+  pagination,
+  sorting,
+  setSorting
+}: Props) {
   const internalPagination = useMemo(
     () => ({ pageIndex: pagination.pageIndex, pageSize: pagination.pageSize }),
     [pagination.pageIndex, pagination.pageSize]
@@ -32,7 +36,7 @@ export function Table({ data, columns, pagination, onSortingChange }: Props) {
       pagination: internalPagination
     },
     pageCount: pagination.pageCount,
-    onSortingChange: onSortingChange || setSorting,
+    onSortingChange: setSorting,
     onPaginationChange: pagination.setPagination,
     manualPagination: true,
     getSortedRowModel: getSortedRowModel(),
