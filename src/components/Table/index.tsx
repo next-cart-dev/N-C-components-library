@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useMemo } from "react"
 
 import {
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  SortingState,
   useReactTable
 } from "@tanstack/react-table"
 import { BsCaretDownFill, BsCaretUpFill } from "react-icons/bs"
