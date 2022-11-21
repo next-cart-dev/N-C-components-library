@@ -10,7 +10,7 @@ import { usePaginationRange } from "./usePaginationRange"
 import { Box } from "../../Box"
 import { Icon } from "../../Icon"
 import * as S from "../styles"
-import { Props as PaginationProps } from "../types"
+
 type Props = {
   table: Table<any>
   pagination?: any

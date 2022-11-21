@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react"
 
 import { CounterItems } from "."
 
-describe.skip("<CounterItems />", () => {
+describe("<CounterItems />", () => {
   it("should render the result 0 - 0  de 0", () => {
     render(
       <CounterItems
@@ -16,7 +16,7 @@ describe.skip("<CounterItems />", () => {
         }}
       />
     )
-    const counter = screen.getByText("Resultado: 1 - 3 de 12")
+    const counter = screen.getByText("Resultado: 0 - 0 de 0")
     expect(counter).toBeVisible()
   })
 
@@ -27,7 +27,7 @@ describe.skip("<CounterItems />", () => {
           pageSize: 3,
           itemCount: 12,
           pageIndex: 0,
-          pageCount: 5
+          pageCount: 4
         }}
       />
     )
