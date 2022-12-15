@@ -1,20 +1,13 @@
 import React from "react"
 
 import { BsCaretDownFill } from "react-icons/bs"
-import ReactSelect, {
+import {
   components,
   DropdownIndicatorProps,
   PlaceholderProps
 } from "react-select"
 
-import {
-  DangerVariant,
-  ErrorMessage,
-  InfoVariant,
-  SelectStyled,
-  SuccessVariant,
-  WarningVariant
-} from "./styles"
+import { ErrorMessage, ReactSelect } from "./styles"
 import { Props } from "./types"
 
 import { Box } from "../Box"
@@ -53,19 +46,15 @@ export const Select = ({
 
   const defaultVariantMapping = {
     success: {
-      input: SuccessVariant,
       label: "$tertiary500"
     },
     danger: {
-      input: DangerVariant,
       label: "$danger500"
     },
     warning: {
-      input: WarningVariant,
       label: "$warning500"
     },
     info: {
-      input: InfoVariant,
       label: "$info500"
     }
   }
@@ -90,12 +79,13 @@ export const Select = ({
           {...props}
           defaultValue={defaultValue}
           options={options}
-          styles={variant ? defaultVariantMapping[variant].input : SelectStyled}
+          variant={variant}
           components={{ Placeholder, DropdownIndicator }}
           isMulti={isMulti}
           isClearable={isClearable}
           name={name}
           id={id}
+          classNamePrefix="react-select"
           ref={inputRef}
           inputId={inputId}
           aria-label={label}
