@@ -7,7 +7,14 @@ import ReactSelect, {
   PlaceholderProps
 } from "react-select"
 
-import { SelectStyled } from "./styles"
+import {
+  DangerVariant,
+  ErrorMessage,
+  InfoVariant,
+  SelectStyled,
+  SuccessVariant,
+  WarningVariant
+} from "./styles"
 import { Props } from "./types"
 
 import { Box } from "../Box"
@@ -23,7 +30,9 @@ export const Select = ({
   inputId,
   inputRef,
   name,
+  helperText,
   defaultValue,
+  variant,
   ...props
 }: Props) => {
   const DropdownIndicator = ({ ...props }: DropdownIndicatorProps) => {
@@ -40,29 +49,59 @@ export const Select = ({
     )
   }
 
-  const labelCSS = label && { marginBottom: "8px" }
+  const labelGAP = label && { marginBottom: "8px" }
+
+  const defaultVariantMapping = {
+    success: {
+      input: SuccessVariant,
+      label: "$tertiary500"
+    },
+    danger: {
+      input: DangerVariant,
+      label: "$danger500"
+    },
+    warning: {
+      input: WarningVariant,
+      label: "$warning500"
+    },
+    info: {
+      input: InfoVariant,
+      label: "$info500"
+    }
+  }
+
+  const labelCSS = {
+    marginBottom: "$8",
+    fontSize: "$14",
+    letterSpacing: "$0.5",
+    color: variant ? defaultVariantMapping[variant].label : "$primary500",
+    display: "block"
+  }
 
   return (
-    <Box>
-      <Box css={{ ...labelCSS }}>
-        <Box as="label" htmlFor={id} css={{ color: "$primary500" }}>
-          {label}
+    <>
+      <Box>
+        <Box css={{ ...labelGAP }}>
+          <Box as="label" htmlFor={id} css={labelCSS}>
+            {label}
+          </Box>
         </Box>
+        <ReactSelect
+          {...props}
+          defaultValue={defaultValue}
+          options={options}
+          styles={variant ? defaultVariantMapping[variant].input : SelectStyled}
+          components={{ Placeholder, DropdownIndicator }}
+          isMulti={isMulti}
+          isClearable={isClearable}
+          name={name}
+          id={id}
+          ref={inputRef}
+          inputId={inputId}
+          aria-label={label}
+        />
       </Box>
-      <ReactSelect
-        {...props}
-        defaultValue={defaultValue}
-        options={options}
-        styles={SelectStyled}
-        components={{ Placeholder, DropdownIndicator }}
-        isMulti={isMulti}
-        isClearable={isClearable}
-        name={name}
-        id={id}
-        ref={inputRef}
-        inputId={inputId}
-        aria-label={label}
-      />
-    </Box>
+      <ErrorMessage>{helperText}</ErrorMessage>
+    </>
   )
 }

@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import { faker } from "@faker-js/faker"
-import { createColumnHelper } from "@tanstack/react-table"
+import { createColumnHelper, SortingState } from "@tanstack/react-table"
 
 import { useTablePagination } from "./utils"
 
@@ -59,6 +59,8 @@ export const data = Array.from(Array(3).keys()).map(() => ({
 }))
 
 export const StoryDefault = () => {
+  const [sorting, setSorting] = useState<SortingState>([])
+
   const { pageIndex, setPagination, pageSize } = useTablePagination({
     pageSize: 3,
     pageIndex: 0
@@ -68,11 +70,13 @@ export const StoryDefault = () => {
     <Table
       data={data}
       columns={columnsExample}
+      sorting={sorting}
+      setSorting={setSorting}
       pagination={{
         pageIndex,
         pageSize,
         pageCount: 1,
-        itemCount: 3,
+        itemCount: data.length,
         setPagination
       }}
     />

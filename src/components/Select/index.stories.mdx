@@ -5,6 +5,9 @@ import { Box } from "../Box"
 <Meta title="Select" component={Select} />
 
 <Story name="Select">
+  <Box css={{ display: "grid", gap:"10px", gridTemplateColumns: '1fr 1fr' }}>
+  <Box>
+  <h2>Standard Select Variant</h2>
   <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
     <Box css={{ width: "300px" }}>
       <Select
@@ -33,5 +36,166 @@ import { Box } from "../Box"
         placeholder="Select..."
       />
     </Box>
+  </Box>
+  <h2>With helperText</h2>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        label="Single"
+        id="Single"
+        name="Single"
+        placeholder="Select..."
+        helperText='Mensagem de erro'
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        label="isMulti"
+        id="isMulti"
+        name="isMulti"
+        placeholder="Select..."
+         helperText='Mensagem de erro'
+      />
+    </Box>
+  </Box>
+  </Box>
+  <Box>
+  <h2>Variants</h2>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        label="Single Info Select Variant"
+        id="Single"
+        name="Single"
+        placeholder="Select..."
+        variant='info'
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        label="isMulti Info Select Variant"
+        id="isMulti"
+        name="isMulti"
+        placeholder="Select..."
+        variant='info'
+      />
+    </Box>
+  </Box>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        label="Single Warning Select Variant"
+        id="Single"
+        name="Single"
+        placeholder="Select..."
+        variant='warning'
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        label="isMulti Warning Select Variant"
+        id="isMulti"
+        name="isMulti"
+        placeholder="Select..."
+        variant='warning'
+      />
+    </Box>
+  </Box>
+  <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        label="Single Danger Select Variant"
+        id="Single"
+        name="Single"
+        placeholder="Select..."
+        variant='danger'
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        label="isMulti Danger Select Variant"
+        id="isMulti"
+        name="isMulti"
+        placeholder="Select..."
+        variant='danger'
+      />
+    </Box>
+  </Box>
+    <Box css={{ display: "flex", gap: "20px", alignItems: 'flex-end' }}>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        label="Single Success Select Variant"
+        id="Single"
+        name="Single"
+        placeholder="Select..."
+        variant='success'
+      />
+    </Box>
+    <Box css={{ width: "300px" }}>
+      <Select
+        options={[
+          { value: "red", label: "Red" },
+          { value: "blue", label: "Blue" },
+          { value: "black", label: "Black" }
+        ]}
+        isMulti
+        label="isMulti Success Select Variant"
+        id="isMulti"
+        name="isMulti"
+        placeholder="Select..."
+        variant='success'
+      />
+    </Box>
+  </Box>
+  </Box>
   </Box>
 </Story>
