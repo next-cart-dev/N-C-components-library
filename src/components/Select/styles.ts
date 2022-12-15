@@ -1,158 +1,91 @@
-import { StylesConfig } from "react-select"
+import reactSelect from "react-select"
 
-import { styled, theme } from "../../stitches.config"
+import { styled } from "../../stitches.config"
 
-const colors = theme.colors
-
-export const SelectStyled: StylesConfig = {
-  control: (styles) => ({
-    ...styles,
+export const ReactSelect = styled(reactSelect, {
+  ".react-select__control": {
     borderRadius: "4px",
-    borderColor: colors.primary500.value,
+    borderColor: "$primary500",
     height: "48px"
-  }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    background: colors.primary500.value,
+  },
+  ".react-select__indicator": {
+    background: "$primary500",
     borderRadius: "0 2px 2px 0",
     height: "100%",
     display: "flex",
     justifyContent: "center",
     padding: "0 10px",
     alignItems: "center"
-  }),
-  indicatorSeparator: () => ({ display: "none" }),
-  clearIndicator: (styles) => ({
-    ...styles,
-    padding: "2px"
-  }),
-  option: (styles, { isFocused }) => ({
-    ...styles,
-    background: isFocused ? colors.primary400.value : colors.neutral500.value,
-    color: colors.text500.value
-  }),
-  menu: (styles) => ({ ...styles, background: colors.neutral500.value }),
-  multiValueRemove: (styles) => ({
-    ...styles,
+  },
+  ".react-select__indicator-separator": {
+    display: "none"
+  },
+  ".react-select__clear-indicator": {
+    background: "transparent !important"
+  },
+  ".react-select__multi-value__remove": {
     "&:hover": {
-      background: colors.primary500.value,
-      color: colors.text200.value
+      background: "$primary500",
+      color: "$text200"
     }
-  })
-}
-
-export const DangerVariant: StylesConfig = {
-  ...SelectStyled,
-  control: (styles) => ({
-    ...styles,
-    borderRadius: "4px",
-    borderColor: colors.danger500.value,
-    height: "48px"
-  }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    background: colors.danger500.value,
-    borderRadius: "0 2px 2px 0",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    padding: "0 10px",
-    alignItems: "center"
-  }),
-  multiValueRemove: (styles) => ({
-    ...styles,
-    "&:hover": {
-      background: colors.danger500.value,
-      color: colors.text200.value
+  },
+  variants: {
+    variant: {
+      info: {
+        ".react-select__control": {
+          borderColor: "$info500"
+        },
+        ".react-select__indicator": {
+          background: "$info500"
+        },
+        ".react-select__multi-value__remove": {
+          "&:hover": {
+            background: "$info500"
+          }
+        }
+      },
+      danger: {
+        ".react-select__control": {
+          borderColor: "$danger500"
+        },
+        ".react-select__indicator": {
+          background: "$danger500"
+        },
+        ".react-select__multi-value__remove": {
+          "&:hover": {
+            background: "$danger500"
+          }
+        }
+      },
+      success: {
+        ".react-select__control": {
+          borderColor: "$tertiary500"
+        },
+        ".react-select__indicator": {
+          background: "$tertiary500"
+        },
+        ".react-select__multi-value__remove": {
+          "&:hover": {
+            background: "$tertiary500"
+          }
+        }
+      },
+      warning: {
+        ".react-select__control": {
+          borderColor: "$warning500"
+        },
+        ".react-select__indicator": {
+          background: "$warning500"
+        },
+        ".react-select__multi-value__remove": {
+          "&:hover": {
+            background: "$warning500"
+          }
+        }
+      }
     }
-  })
-}
-
-export const InfoVariant: StylesConfig = {
-  ...SelectStyled,
-  control: (styles) => ({
-    ...styles,
-    borderRadius: "4px",
-    borderColor: colors.info500.value,
-    height: "48px"
-  }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    background: colors.info500.value,
-    borderRadius: "0 2px 2px 0",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    padding: "0 10px",
-    alignItems: "center"
-  }),
-  multiValueRemove: (styles) => ({
-    ...styles,
-    "&:hover": {
-      background: colors.info500.value,
-      color: colors.text200.value
-    }
-  })
-}
-
-export const WarningVariant: StylesConfig = {
-  ...SelectStyled,
-  control: (styles) => ({
-    ...styles,
-    borderRadius: "4px",
-    borderColor: colors.warning500.value,
-    height: "48px"
-  }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    background: colors.warning500.value,
-    borderRadius: "0 2px 2px 0",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    padding: "0 10px",
-    alignItems: "center"
-  }),
-  multiValueRemove: (styles) => ({
-    ...styles,
-    "&:hover": {
-      background: colors.warning500.value,
-      color: colors.text200.value
-    }
-  })
-}
-
-export const SuccessVariant: StylesConfig = {
-  ...SelectStyled,
-  control: (styles) => ({
-    ...styles,
-    borderRadius: "4px",
-    borderColor: colors.tertiary500.value,
-    height: "48px"
-  }),
-  container: (styles) => ({ ...styles, borderRadius: "4px", width: "100%" }),
-  dropdownIndicator: (styles) => ({
-    ...styles,
-    background: colors.tertiary500.value,
-    borderRadius: "0 2px 2px 0",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    padding: "0 10px",
-    alignItems: "center"
-  }),
-  multiValueRemove: (styles) => ({
-    ...styles,
-    "&:hover": {
-      background: colors.tertiary500.value,
-      color: colors.text200.value
-    }
-  })
-}
+  }
+})
 
 export const ErrorMessage = styled("p", {
   color: "$danger500",
