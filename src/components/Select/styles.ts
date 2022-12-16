@@ -29,6 +29,12 @@ export const ReactSelect = styled(reactSelect, {
       color: "$text200"
     }
   },
+  ".react-select__option": {
+    "&:hover": {
+      background: "$nextCartPurple300"
+    },
+    background: "white"
+  },
   variants: {
     variant: {
       info: {
@@ -41,6 +47,11 @@ export const ReactSelect = styled(reactSelect, {
         ".react-select__multi-value__remove": {
           "&:hover": {
             background: "$info500"
+          }
+        },
+        ".react-select__option": {
+          "&:hover": {
+            background: "$info300"
           }
         }
       },
@@ -55,6 +66,11 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$danger500"
           }
+        },
+        ".react-select__option": {
+          "&:hover": {
+            background: "$danger300"
+          }
         }
       },
       success: {
@@ -68,6 +84,11 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$tertiary500"
           }
+        },
+        ".react-select__option": {
+          "&:hover": {
+            background: "$tertiary300"
+          }
         }
       },
       warning: {
@@ -80,6 +101,11 @@ export const ReactSelect = styled(reactSelect, {
         ".react-select__multi-value__remove": {
           "&:hover": {
             background: "$warning500"
+          }
+        },
+        ".react-select__option": {
+          "&:hover": {
+            background: "$warning300"
           }
         }
       }
