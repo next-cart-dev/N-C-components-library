@@ -2,8 +2,7 @@ import { styled } from "../../stitches.config"
 
 export const Table = styled("div", {
   width: "100%",
-  height: "100%",
-  maxHeight: "100vh",
+  maxHeight: "100%",
   display: "flex",
   flexFlow: "column",
   overflow: "auto"
