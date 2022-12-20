@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { faker } from "@faker-js/faker"
 import { createColumnHelper, SortingState } from "@tanstack/react-table"
