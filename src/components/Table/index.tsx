@@ -45,7 +45,7 @@ export function Table({
   })
 
   return (
-    <Box>
+    <Box css={{ height: "100%" }}>
       <S.Table>
         <S.TableHead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -114,7 +114,11 @@ export function Table({
         </S.TableHead>
         <S.TableBody>
           {table.getRowModel().rows.map((row) => (
-            <S.TableRow key={row.id} data-testid={`table-row-${row.id}`}>
+            <S.TableRow
+              css={{ height: "100%" }}
+              key={row.id}
+              data-testid={`table-row-${row.id}`}
+            >
               {row.getVisibleCells().map((cell) => (
                 <S.TableBodyCell
                   key={cell.id}
