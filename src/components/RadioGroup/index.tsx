@@ -38,10 +38,6 @@ export const RadioGroup = ({
             id={option.id}
             value={option.value}
             disabled={option.disabled}
-            data-options={JSON.stringify({
-              value: option.value,
-              label: option.label
-            })}
             onClick={() =>
               onValueChange({ label: option.label, value: option.value })
             }
