@@ -10,6 +10,7 @@ export const RadioGroup = ({
   orientation = "vertical",
   loop = true,
   defaultValue,
+  onValueChange,
   options
 }: Props) => {
   return (
@@ -37,6 +38,13 @@ export const RadioGroup = ({
             id={option.id}
             value={option.value}
             disabled={option.disabled}
+            data-options={JSON.stringify({
+              value: option.value,
+              label: option.label
+            })}
+            onClick={() =>
+              onValueChange({ label: option.label, value: option.value })
+            }
           >
             <S.RadioGroupIndicator />
           </S.RadioGroupRadio>
