@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 
-import { Props, SourceType } from "./types"
+import { SourceType } from "react-number-format/types/types"
+
+import { Props } from "./types"
 
 import { TextField } from "../../TextField"
 
@@ -44,7 +46,7 @@ export const CurrencyMask = ({ label = "", onValueChange }: Props) => {
 
         const formattedValue = "R$ " + currencyFormatter(e.target.value)
         const value = currencyFormatter(e.target.value)
-          .replaceAll(".", "")
+          .replace(/\./g, "")
           .replace(",", ".")
         const floatValue = Number(value)
 

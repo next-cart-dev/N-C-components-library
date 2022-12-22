@@ -1,20 +1,4 @@
-import { SyntheticEvent } from "react"
-
-export declare enum SourceType {
-  event = "event",
-  props = "prop"
-}
-
-export type SourceInfo = {
-  event?: SyntheticEvent
-  source: SourceType
-}
-
-export type Values = {
-  value: string
-  floatValue: number
-  formattedValue: string
-}
+import { NumberFormatValues, SourceInfo } from "react-number-format"
 
 export type Props = {
   /**
@@ -23,5 +7,5 @@ export type Props = {
    * @default empty string
    */
   label?: string
-  onValueChange?: (values: Values, sourceInfo: SourceInfo) => void
+  onValueChange?: (values: NumberFormatValues, sourceInfo: SourceInfo) => void
 }
