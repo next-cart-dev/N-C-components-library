@@ -43,9 +43,6 @@ export const InputMaskStory = ({ ...props }: Props) => {
         {...props}
         placeholderToUse="currency"
         formatMaskToUse="currency"
-        onValueChange={(values, sourceEvent) =>
-          console.log(values, sourceEvent)
-        }
         label="Currency"
       />
     </Box>
