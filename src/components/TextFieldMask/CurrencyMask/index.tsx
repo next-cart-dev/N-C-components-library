@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { Props } from "./types"
+import { Props, SourceType } from "./types"
 
 import { TextField } from "../../TextField"
 
@@ -42,20 +42,25 @@ export const CurrencyMask = ({ label = "", onValueChange }: Props) => {
       onChange={(e) => {
         if (e.target.value.length > 23) return e.preventDefault()
 
-        const value = "R$ " + currencyFormatter(e.target.value)
-        const floatValue = Number(
-          currencyFormatter(e.target.value)
-            .replaceAll(".", "")
-            .replace(",", ".")
-        )
+        const formattedValue = "R$ " + currencyFormatter(e.target.value)
+        const value = currencyFormatter(e.target.value)
+          .replaceAll(".", "")
+          .replace(",", ".")
+        const floatValue = Number(value)
 
-        !e.target.value ? setValue("") : setValue(value)
+        !e.target.value ? setValue("") : setValue(formattedValue)
 
         onValueChange &&
-          onValueChange({
-            value: value,
-            floatValue: floatValue
-          })
+          onValueChange(
+            {
+              value: value,
+              formattedValue: formattedValue,
+              floatValue: floatValue
+            },
+            {
+              source: "event" as SourceType.event
+            }
+          )
       }}
       name="currency"
       placeholder="R$ 0,00"
