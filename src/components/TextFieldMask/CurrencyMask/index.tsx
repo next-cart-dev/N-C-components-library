@@ -4,7 +4,7 @@ import { Props } from "./types"
 
 import { TextField } from "../../TextField"
 
-export const CurrencyMask = ({ label = "" }: Props) => {
+export const CurrencyMask = ({ label = "", onValueChange }: Props) => {
   /**
    * @desc Function that will format the value in pt-br currency
    * @param value
@@ -41,11 +41,21 @@ export const CurrencyMask = ({ label = "" }: Props) => {
       value={value}
       onChange={(e) => {
         if (e.target.value.length > 23) return e.preventDefault()
-        else if (!e.target.value) setValue("")
-        else {
-          const formattedValue = currencyFormatter(e.target.value)
-          setValue("R$ " + formattedValue)
-        }
+
+        const value = "R$ " + currencyFormatter(e.target.value)
+        const floatValue = Number(
+          currencyFormatter(e.target.value)
+            .replaceAll(".", "")
+            .replace(",", ".")
+        )
+
+        !e.target.value ? setValue("") : setValue(value)
+
+        onValueChange &&
+          onValueChange({
+            value: value,
+            floatValue: floatValue
+          })
       }}
       name="currency"
       placeholder="R$ 0,00"

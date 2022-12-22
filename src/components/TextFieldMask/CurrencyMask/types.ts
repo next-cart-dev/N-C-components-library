@@ -5,4 +5,5 @@ export type Props = {
    * @default empty string
    */
   label?: string
+  onValueChange?: (values: { value: string; floatValue: number }) => void
 }
