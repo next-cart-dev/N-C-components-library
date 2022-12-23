@@ -1,3 +1,5 @@
+import selectEvent from "react-select-event"
+
 export {
   styled,
   getCssText,
@@ -6,6 +8,8 @@ export {
   theme,
   config
 } from "./stitches.config"
+
+export { selectEvent }
 
 export { Alert } from "./components/Alert"
 export { Avatar } from "./components/Avatar"
