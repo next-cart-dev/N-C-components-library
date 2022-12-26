@@ -43,4 +43,8 @@ export type ButtonProps = ComponentPropsWithoutRef<"button"> & {
    * The element placed after the children.
    */
   endIcon?: React.ReactNode
+  /**
+   * Trigger a spinner after the children.
+   */
+  loading?: boolean
 }

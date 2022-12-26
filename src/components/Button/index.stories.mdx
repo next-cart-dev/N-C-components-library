@@ -14,7 +14,7 @@ import { Icon } from "../Icon"
   >
     <div>
       <span>Small</span>
-      <Button variant="primary" size="small">
+      <Button  variant="primary" size="small">
         Clique aqui
       </Button>
     </div>
@@ -214,6 +214,237 @@ import { Icon } from "../Icon"
     <div>
       <span>Full width with start/end icon</span>
       <Button
+        variant="primary"
+        size="fullWidth"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+  <h1>With Loading</h1>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
+    <div>
+      <span>Small</span>
+      <Button loading variant="primary" size="small">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium</span>
+      <Button loading variant="primary">Clique aqui</Button>
+    </div>
+    <div>
+      <span>Large</span>
+      <Button loading variant="primary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width</span>
+      <Button loading variant="primary" size="fullWidth">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small disabled</span>
+      <Button loading variant="primary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium disabled</span>
+      <Button loading variant="primary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="primary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="primary" size="fullWidth" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="small"
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start icon</span>
+      <Button
+        loading
+        variant="primary"
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="fullWidth"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon disabled</span>
+      <Button
+        loading
+        variant="primary"
+        size="small"
+        disabled
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start icon disabled</span>
+      <Button
+        loading
+        variant="primary"
+        disabled
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon disabled</span>
+      <Button
+        loading
+        variant="primary"
+        size="large"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon disabled</span>
+      <Button
+        loading
+        variant="primary"
+        size="fullWidth"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with end icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="small"
+        endIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with end icon</span>
+      <Button
+        loading
+        variant="primary"
+        endIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with end icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="large"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with end icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="fullWidth"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start/end icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="small"
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start/end icon</span>
+      <Button
+        loading
+        variant="primary"
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start/end icon</span>
+      <Button
+        loading
+        variant="primary"
+        size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start/end icon</span>
+      <Button
+        loading
         variant="primary"
         size="fullWidth"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
@@ -431,6 +662,237 @@ import { Icon } from "../Icon"
     <div>
       <span>Full width with start/end icon</span>
       <Button
+        variant="secondary"
+        size="fullWidth"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+  <h1>With Loading</h1>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
+    <div>
+      <span>Small</span>
+      <Button loading variant="secondary" size="small">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium</span>
+      <Button loading variant="secondary">Clique aqui</Button>
+    </div>
+    <div>
+      <span>Large</span>
+      <Button loading variant="secondary" size="large">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width</span>
+      <Button loading variant="secondary" size="fullWidth">
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small disabled</span>
+      <Button loading variant="secondary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium disabled</span>
+      <Button loading variant="secondary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="secondary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="secondary" size="fullWidth" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="small"
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start icon</span>
+      <Button
+        loading
+        variant="secondary"
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="fullWidth"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start icon disabled</span>
+      <Button
+        loading
+        variant="secondary"
+        size="small"
+        disabled
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start icon disabled</span>
+      <Button
+        loading
+        variant="secondary"
+        disabled
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start icon disabled</span>
+      <Button
+        loading
+        variant="secondary"
+        size="large"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start icon disabled</span>
+      <Button
+        loading
+        variant="secondary"
+        size="fullWidth"
+        disabled
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="small"
+        endIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        endIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="large"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="fullWidth"
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Small with start/end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="small"
+        startIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="small" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium with start/end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        startIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="medium" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large with start/end icon</span>
+      <Button
+        loading
+        variant="secondary"
+        size="large"
+        startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+        endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
+      >
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full width with start/end icon</span>
+      <Button
+        loading
         variant="secondary"
         size="fullWidth"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
