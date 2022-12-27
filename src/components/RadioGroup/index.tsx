@@ -1,7 +1,5 @@
 import React from "react"
 
-import { Root } from "@radix-ui/react-radio-group"
-
 import * as S from "./styles"
 import { Props } from "./types"
 
