@@ -27,17 +27,12 @@ export const Button = ({
       type={type}
       id={id}
       size={size}
-      disabled={disabled}
+      disabled={loading || disabled}
     >
-      {startIcon && startIcon}
+      {startIcon && !loading && startIcon}
       {children}
-      {endIcon && endIcon}
-      {loading && (
-        <Loading
-          color={variant === "secondary" || disabled ? "black" : "white"}
-          size={16}
-        />
-      )}
+      {endIcon && !loading && endIcon}
+      {loading && <Loading color={"black"} size={16} />}
     </S.Button>
   )
 }
