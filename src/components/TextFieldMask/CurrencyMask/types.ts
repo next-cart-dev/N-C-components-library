@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from "react"
+
 import { NumberFormatValues, SourceInfo } from "react-number-format"
 
 export type Props = {
@@ -8,4 +10,5 @@ export type Props = {
    */
   label?: string
   onValueChange?: (values: NumberFormatValues, sourceInfo: SourceInfo) => void
+  onChange?: ChangeEventHandler<HTMLInputElement> | undefined
 }
