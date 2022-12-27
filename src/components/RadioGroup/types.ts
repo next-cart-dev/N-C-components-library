@@ -9,7 +9,7 @@ export type Selected = { label: string; value: string }
 
 export type Props = {
   defaultValue?: string
-  onValueChange: (selected: Selected) => void
+  onValueChange: (value: string) => void
   name: string
   required?: boolean
   orientation?: "horizontal" | "vertical" | undefined

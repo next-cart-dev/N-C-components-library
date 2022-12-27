@@ -1,10 +1,11 @@
 import React from "react"
 
+import { Root } from "@radix-ui/react-radio-group"
+
 import * as S from "./styles"
 import { Props } from "./types"
 
 import { Box } from "../Box"
-
 export const RadioGroup = ({
   name,
   orientation = "vertical",
@@ -18,6 +19,7 @@ export const RadioGroup = ({
       name={name}
       orientation={orientation}
       defaultValue={defaultValue}
+      onValueChange={onValueChange}
       loop={loop}
       css={{
         display: "flex",
@@ -38,9 +40,6 @@ export const RadioGroup = ({
             id={option.id}
             value={option.value}
             disabled={option.disabled}
-            onClick={() =>
-              onValueChange({ label: option.label, value: option.value })
-            }
           >
             <S.RadioGroupIndicator />
           </S.RadioGroupRadio>
