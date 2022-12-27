@@ -5,6 +5,8 @@ type RadioButton = {
   disabled?: boolean
 }
 
+export type Selected = { label: string; value: string }
+
 export type Props = {
   defaultValue?: string
   onValueChange: (value: string) => void

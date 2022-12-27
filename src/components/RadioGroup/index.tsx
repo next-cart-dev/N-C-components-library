@@ -4,12 +4,12 @@ import * as S from "./styles"
 import { Props } from "./types"
 
 import { Box } from "../Box"
-
 export const RadioGroup = ({
   name,
   orientation = "vertical",
   loop = true,
   defaultValue,
+  onValueChange,
   options
 }: Props) => {
   return (
@@ -17,6 +17,7 @@ export const RadioGroup = ({
       name={name}
       orientation={orientation}
       defaultValue={defaultValue}
+      onValueChange={onValueChange}
       loop={loop}
       css={{
         display: "flex",
