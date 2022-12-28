@@ -10,6 +10,8 @@ export const Input = styled("input", {
   $$successBorderColor: "$colors$tertiary500",
   $$infoBorderColor: "$colors$info500",
   $$warningBorderColor: "$colors$warning500",
+  // See more about the fix here: https://codepen.io/vassi/pen/ojrwYm
+  "-webkit-appearance": "none",
   padding: "0 $16",
   fontSize: "$18",
   height: "48px",
