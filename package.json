@@ -135,5 +135,8 @@
       "path": "dist/index.js",
       "limit": "10 kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "react-spinners": "^0.13.7"
+  }
 }

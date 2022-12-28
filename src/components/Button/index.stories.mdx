@@ -14,7 +14,7 @@ import { Icon } from "../Icon"
   >
     <div>
       <span>Small</span>
-      <Button variant="primary" size="small">
+      <Button  variant="primary" size="small">
         Clique aqui
       </Button>
     </div>
@@ -219,6 +219,35 @@ import { Icon } from "../Icon"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
         endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+  <h1>With Loading</h1>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
+    <div>
+      <span>Small disabled</span>
+      <Button loading variant="primary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium disabled</span>
+      <Button loading variant="primary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="primary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full Witdth disabled</span>
+      <Button loading variant="primary" size="fullWidth" disabled>
         Clique aqui
       </Button>
     </div>
@@ -436,6 +465,35 @@ import { Icon } from "../Icon"
         startIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
         endIcon={<Icon size="large" icon={<BsCurrencyDollar />} />}
       >
+        Clique aqui
+      </Button>
+    </div>
+  </div>
+  <h1>With Loading</h1>
+  <div
+    style={{ display: "grid", gap: 16, gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
+  >
+    <div>
+      <span>Small disabled</span>
+      <Button loading variant="secondary" size="small" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Medium disabled</span>
+      <Button loading variant="secondary" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Large disabled</span>
+      <Button loading variant="secondary" size="large" disabled>
+        Clique aqui
+      </Button>
+    </div>
+    <div>
+      <span>Full Witdth disabled</span>
+      <Button loading variant="secondary" size="fullWidth" disabled>
         Clique aqui
       </Button>
     </div>

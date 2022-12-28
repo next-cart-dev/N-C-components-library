@@ -3,6 +3,8 @@ import React from "react"
 import * as S from "./styles"
 import { ButtonProps } from "./types"
 
+import { Loading } from "../Loading"
+
 export const Button = ({
   children,
   variant = "primary",
@@ -12,6 +14,7 @@ export const Button = ({
   disabled = false,
   startIcon,
   endIcon,
+  loading,
   size = "medium",
   ...props
 }: ButtonProps) => {
@@ -24,11 +27,12 @@ export const Button = ({
       type={type}
       id={id}
       size={size}
-      disabled={disabled}
+      disabled={loading || disabled}
     >
-      {startIcon && startIcon}
+      {startIcon && !loading && startIcon}
       {children}
-      {endIcon && endIcon}
+      {endIcon && !loading && endIcon}
+      {loading && <Loading color={"black"} size={16} />}
     </S.Button>
   )
 }

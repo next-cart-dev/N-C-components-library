@@ -1,0 +1,18 @@
+import { Meta, Story } from "@storybook/addon-docs"
+import {Loading} from '.'
+import {Box} from '../Box'
+
+<Meta title="Loading" component={Loading} />
+
+<Story name="LoadingComponent">
+  <Box css={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+      height: '100%'
+    }}
+  >
+    <Loading/>
+  </Box>
+</Story>
