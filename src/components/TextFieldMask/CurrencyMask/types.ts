@@ -11,4 +11,5 @@ export type Props = {
   label?: string
   onValueChange?: (values: NumberFormatValues, sourceInfo: SourceInfo) => void
   onChange?: ChangeEventHandler<HTMLInputElement> | undefined
+  value?: string
 }

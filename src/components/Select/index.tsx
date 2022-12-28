@@ -91,7 +91,7 @@ export const Select = ({
           aria-label={label}
         />
       </Box>
-      <ErrorMessage>{helperText}</ErrorMessage>
+      {helperText && <ErrorMessage>{helperText}</ErrorMessage>}
     </>
   )
 }

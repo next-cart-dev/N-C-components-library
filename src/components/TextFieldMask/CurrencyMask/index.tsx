@@ -9,14 +9,15 @@ import { TextField } from "../../TextField"
 export const CurrencyMask = ({
   label = "",
   onValueChange,
-  onChange
+  onChange,
+  value: valueProp
 }: Props) => {
   /**
    * @desc Function that will format the value in pt-br currency
    * @param value
    * @returns the format mask
    */
-  const [value, setValue] = useState<string>("")
+  const [value, setValue] = useState<string>(valueProp ?? "")
 
   const currencyFormatter = (value: string) => {
     const valueToNumber = +value.replace(/\D/g, "")
@@ -44,7 +45,7 @@ export const CurrencyMask = ({
 
   return (
     <TextField
-      value={value}
+      value={valueProp ? `R$ ${currencyFormatter(value)}` : value}
       onChange={(e) => {
         if (e.target.value.length > 23) return e.preventDefault()
 
