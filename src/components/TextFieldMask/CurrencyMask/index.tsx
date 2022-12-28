@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ChangeEvent, useEffect, useState } from "react"
 
 import { SourceType } from "react-number-format/types/types"
 
@@ -17,7 +17,7 @@ export const CurrencyMask = ({
    * @param value
    * @returns the format mask
    */
-  const [value, setValue] = useState<string>(valueProp ?? "")
+  const [value, setValue] = useState<string>("")
 
   const currencyFormatter = (value: string) => {
     const valueToNumber = +value.replace(/\D/g, "")
@@ -37,44 +37,54 @@ export const CurrencyMask = ({
           dot = dot + 1
         }
       }
-      return splittedThousand.join("") + "," + nonInteger
+      return "R$ " + splittedThousand.join("") + "," + nonInteger
     } else {
-      return DECIMAL_NUMBER.replace(".", ",")
+      return "R$ " + DECIMAL_NUMBER.replace(".", ",")
     }
   }
 
+  const onChane = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > 23) return event.preventDefault()
+
+    const formattedValue = currencyFormatter(event.target.value)
+    const value = currencyFormatter(event.target.value)
+      .replace(/\./g, "")
+      .replace(",", ".")
+    const floatValue = Number(value)
+
+    !event.target.value ? setValue("") : setValue(formattedValue)
+
+    const mappedEvent = {
+      ...event,
+      target: {
+        ...event.target,
+        value: formattedValue
+      }
+    }
+
+    onChange && onChange(mappedEvent)
+    onValueChange &&
+      onValueChange(
+        {
+          value: value,
+          formattedValue: formattedValue,
+          floatValue: floatValue
+        },
+        {
+          source: "event" as SourceType.event
+        }
+      )
+  }
+
+  useEffect(() => {
+    setValue(currencyFormatter(String(valueProp)))
+  }, [valueProp])
+
   return (
     <TextField
-      value={valueProp ? `R$ ${currencyFormatter(value)}` : value}
+      value={value}
       onChange={(e) => {
-        if (e.target.value.length > 23) return e.preventDefault()
-
-        const formattedValue = "R$ " + currencyFormatter(e.target.value)
-        const value = currencyFormatter(e.target.value)
-          .replace(/\./g, "")
-          .replace(",", ".")
-        const floatValue = Number(value)
-
-        !e.target.value ? setValue("") : setValue(formattedValue)
-        const event = {
-          ...e,
-          target: {
-            ...e.target,
-            value: formattedValue
-          }
-        }
-        onChange && onChange(event)
-        onValueChange &&
-          onValueChange(
-            {
-              value: value,
-              formattedValue: formattedValue,
-              floatValue: floatValue
-            },
-            {
-              source: "event" as SourceType.event
-            }
-          )
+        onChane(e)
       }}
       name="currency"
       placeholder="R$ 0,00"
