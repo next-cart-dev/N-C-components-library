@@ -9,7 +9,7 @@ import { TextField } from "../../TextField"
 export const CurrencyMask = ({
   label = "",
   onValueChange,
-  onChange,
+  onChange: onChangeProp,
   value: valueProp
 }: Props) => {
   /**
@@ -43,7 +43,7 @@ export const CurrencyMask = ({
     }
   }
 
-  const onChane = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length > 23) return event.preventDefault()
 
     const formattedValue = currencyFormatter(event.target.value)
@@ -62,7 +62,7 @@ export const CurrencyMask = ({
       }
     }
 
-    onChange && onChange(mappedEvent)
+    onChangeProp && onChangeProp(mappedEvent)
     onValueChange &&
       onValueChange(
         {
@@ -84,7 +84,7 @@ export const CurrencyMask = ({
     <TextField
       value={value}
       onChange={(e) => {
-        onChane(e)
+        onChange(e)
       }}
       name="currency"
       placeholder="R$ 0,00"
