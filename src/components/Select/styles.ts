@@ -17,6 +17,10 @@ export const ReactSelect = styled(reactSelect, {
     padding: "0 10px",
     alignItems: "center"
   },
+  ".react-select__option--is-selected": {
+    background: "$nextCartPurple400 !important",
+    color: "$text700"
+  },
   ".react-select__indicator-separator": {
     display: "none"
   },
@@ -53,6 +57,9 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$info300"
           }
+        },
+        ".react-select__option--is-selected": {
+          background: "$info400 !important"
         }
       },
       danger: {
@@ -71,6 +78,9 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$danger300"
           }
+        },
+        ".react-select__option--is-selected": {
+          background: "$danger400 !important"
         }
       },
       success: {
@@ -89,6 +99,9 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$tertiary300"
           }
+        },
+        ".react-select__option--is-selected": {
+          background: "$tertiary400 !important"
         }
       },
       warning: {
@@ -107,6 +120,9 @@ export const ReactSelect = styled(reactSelect, {
           "&:hover": {
             background: "$warning300"
           }
+        },
+        ".react-select__option--is-selected": {
+          background: "$warning400 !important"
         }
       }
     }
