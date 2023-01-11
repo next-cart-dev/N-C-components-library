@@ -50,7 +50,8 @@ export const ModalContent = styled(Dialog.Content, {
   }
 })
 
-export const CloseIcon = styled(GrClose, {
+export const CloseIcon = styled("button", {
+  all: "unset",
   cursor: "pointer",
   fontSize: "$22"
 })

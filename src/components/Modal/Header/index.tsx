@@ -1,6 +1,7 @@
 import React from "react"
 
 import * as Dialog from "@radix-ui/react-dialog"
+import { GrClose } from "react-icons/gr"
 
 import { Props } from "./types"
 
@@ -18,7 +19,9 @@ export const ModalHeader = ({ children, css }: Props) => {
     <S.ModalHeader css={css}>
       {component}
       <Dialog.Close asChild data-testid="modal-close-icon">
-        <S.CloseIcon />
+        <S.CloseIcon>
+          <GrClose />
+        </S.CloseIcon>
       </Dialog.Close>
     </S.ModalHeader>
   )
