@@ -10,7 +10,8 @@ export const CurrencyMask = ({
   label = "",
   onValueChange,
   onChange: onChangeProp,
-  value: valueProp
+  value: valueProp,
+  inputSize
 }: Props) => {
   /**
    * @desc Function that will format the value in pt-br currency
@@ -82,6 +83,7 @@ export const CurrencyMask = ({
 
   return (
     <TextField
+      inputSize={inputSize}
       value={value}
       onChange={(e) => {
         onChange(e)

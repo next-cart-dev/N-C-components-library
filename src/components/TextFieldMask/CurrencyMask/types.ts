@@ -2,7 +2,9 @@ import { ChangeEventHandler } from "react"
 
 import { NumberFormatValues, SourceInfo } from "react-number-format"
 
-export type Props = {
+import { Props as TextFieldProps } from "../../TextField/types"
+
+export type Props = TextFieldProps & {
   /**
    * Input Label
    * @options string
