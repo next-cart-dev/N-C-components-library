@@ -17,6 +17,9 @@ export const ReactSelect = styled(reactSelect, {
     padding: "0 10px",
     alignItems: "center"
   },
+  ".react-select__menu-list": {
+    maxHeight: "150px"
+  },
   ".react-select__option--is-selected": {
     background: "$nextCartPurple400 !important",
     color: "$text700"
