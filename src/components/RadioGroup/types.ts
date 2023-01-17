@@ -1,3 +1,5 @@
+import { RefCallback } from "react"
+
 type RadioButton = {
   label: string
   value: string
@@ -5,11 +7,13 @@ type RadioButton = {
   disabled?: boolean
 }
 
-export type Selected = { label: string; value: string }
-
 export type Props = {
   defaultValue?: string
+  value: string
   onValueChange: (value: string) => void
+  onBlur?: React.FocusEventHandler<HTMLDivElement>
+  id: string
+  inputRef: RefCallback<HTMLDivElement>
   name: string
   required?: boolean
   orientation?: "horizontal" | "vertical" | undefined
