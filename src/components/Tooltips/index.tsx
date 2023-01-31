@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import * as S from "./styles"
 import { Props } from "./types"
@@ -6,33 +6,52 @@ import { Props } from "./types"
 import { Box } from "../Box"
 
 export const Tooltip = ({
-  effect = "solid",
   place = "top",
   tip,
   children,
   type = "dark",
-  id,
-  border
+  offset = 14,
+  id
 }: Props) => {
+  const [showTip, setShowTip] = useState(false)
+
+  const oppositeSideToApplySpace = {
+    top: "bottom",
+    bottom: "top",
+    right: "left",
+    left: "right"
+  }
+
   return (
-    <Box style={{ display: "flex" }} data-testid="box-container">
-      <Box data-testid="tooltip">
-        <S.ReactTooltipStyled
-          effect={effect}
-          place={place}
-          id={id}
-          border={border}
-          data-class="tooltip"
-        />
-      </Box>
+    <S.Container
+      variant={place}
+      data-testid={"box-container" + id}
+      onMouseEnter={() => setShowTip(true)}
+      id={id}
+      onMouseLeave={() => setShowTip(false)}
+    >
+      {showTip && (
+        <S.Tooltip
+          css={{
+            [oppositeSideToApplySpace[place]]: `calc(100% + ${offset}px)`
+          }}
+          data-testid={"tooltip" + id}
+          id={id + "_" + tip}
+        >
+          <S.TipContent>
+            {tip}
+            <S.Arrow variant={place}></S.Arrow>
+          </S.TipContent>
+        </S.Tooltip>
+      )}
       <Box
         data-tip={tip}
-        data-for={id}
+        id={id + "_" + tip}
         data-type={type}
         data-testid="children-container"
       >
         {children}
       </Box>
-    </Box>
+    </S.Container>
   )
 }
