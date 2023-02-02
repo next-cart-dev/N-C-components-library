@@ -60,6 +60,7 @@ export const TextField = ({
       <Box css={containerCSS}>
         {adornment?.position === "left" && (
           <S.InputAdornment
+            data-testid={`input-${id}-adornment`}
             onClick={adornment?.onClick}
             variant={variant}
             ref={adornmentRef}
@@ -85,6 +86,7 @@ export const TextField = ({
         />
         {adornment?.position === "right" && (
           <S.InputAdornment
+            data-testid={`input-${id}-adornment`}
             onClick={adornment?.onClick}
             variant={variant}
             ref={adornmentRef}
