@@ -11,6 +11,7 @@ export const StaticMask = ({
   formatMaskToUse,
   placeholderToUse,
   format = " ",
+  type,
   ...props
 }: Props) => {
   const defaultMaskMapping: DefaultMaskMapping = {
@@ -45,7 +46,7 @@ export const StaticMask = ({
           ? defaultMaskMapping[formatMaskToUse].mask
           : format
       }
-      type="text"
+      type={type}
       label={label}
       customInput={TextField}
     />

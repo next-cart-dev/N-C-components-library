@@ -8,17 +8,19 @@ export const TextFieldMask = ({
   label = "",
   formatMaskToUse,
   placeholderToUse,
+  type,
   ...props
 }: Props) => {
   return (
     <>
       {formatMaskToUse === "currency" ? (
-        <CurrencyMask {...props} label={label} />
+        <CurrencyMask {...props} type={type} label={label} />
       ) : (
         <StaticMask
           {...props}
           formatMaskToUse={formatMaskToUse}
           placeholderToUse={placeholderToUse}
+          type={type}
           label={label}
         />
       )}
