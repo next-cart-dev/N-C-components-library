@@ -3,8 +3,6 @@ import React, { useState } from "react"
 import * as S from "./styles"
 import { Props } from "./types"
 
-import { Box } from "../Box"
-
 export const Badge = ({
   children,
   type = "badge",
@@ -13,12 +11,19 @@ export const Badge = ({
   id,
   css,
   variant,
-  className
+  className,
+  onDelete
 }: Props) => {
   const [showCloseIcon, setShowCloseIcon] = useState(false)
   const [closeTag, setCloseTag] = useState(false)
+
+  const handleOnDelete = () => {
+    onDelete?.()
+    setCloseTag(true)
+  }
+
   return (
-    <Box>
+    <>
       {type === "tag" ? (
         !closeTag && (
           <S.Tag
@@ -31,7 +36,7 @@ export const Badge = ({
             {children}
             {showCloseIcon && (
               <S.CloseIcon
-                onClick={() => setCloseTag(true)}
+                onClick={handleOnDelete}
                 data-testid={`tag-${id}-delete-button`}
               />
             )}
@@ -44,6 +49,6 @@ export const Badge = ({
           <S.IconContainer>{endIcon}</S.IconContainer>
         </S.Badge>
       )}
-    </Box>
+    </>
   )
 }

@@ -30,4 +30,5 @@ export type Props = ComponentPropsWithoutRef<"div"> & {
    */
   variant?: "success" | "info" | "danger" | "warning"
   className?: string
+  onDelete?: () => void
 }
