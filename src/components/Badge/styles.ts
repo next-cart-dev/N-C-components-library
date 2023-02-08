@@ -44,7 +44,24 @@ export const IconContainer = styled("div", {
   ...flex
 })
 
+export const CloseIcon = styled(GrClose, {
+  cursor: "pointer",
+  position: "absolute",
+  right: "$4",
+  backgroundColor: "$primary300",
+  height: "100%",
+  "@media (min-width: 600px)": {
+    display: "none",
+    "&:hover": {
+      display: "flex"
+    }
+  }
+})
+
 export const Tag = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "1fr 10px",
+  gap: "$8",
   padding: "$4 $8",
   borderRadius: "4px",
   backgroundColor: "$primary300",
@@ -52,13 +69,7 @@ export const Tag = styled("div", {
   width: "fit-content",
   position: "relative",
   cursor: "default",
-  ...flex
-})
-
-export const CloseIcon = styled(GrClose, {
-  cursor: "pointer",
-  position: "absolute",
-  right: "$4",
-  backgroundColor: "$primary300",
-  height: "100%"
+  "&:hover svg": {
+    display: "flex"
+  }
 })

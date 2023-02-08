@@ -14,7 +14,6 @@ export const Badge = ({
   className,
   onDelete
 }: Props) => {
-  const [showCloseIcon, setShowCloseIcon] = useState(false)
   const [closeTag, setCloseTag] = useState(false)
 
   const handleOnDelete = () => {
@@ -29,17 +28,13 @@ export const Badge = ({
           <S.Tag
             className={className}
             css={{ ...css }}
-            onMouseEnter={() => setShowCloseIcon(true)}
-            onMouseLeave={() => setShowCloseIcon(false)}
             data-testid={`tag-${id}`}
           >
             {children}
-            {showCloseIcon && (
-              <S.CloseIcon
-                onClick={handleOnDelete}
-                data-testid={`tag-${id}-delete-button`}
-              />
-            )}
+            <S.CloseIcon
+              onClick={handleOnDelete}
+              data-testid={`tag-${id}-delete-button`}
+            />
           </S.Tag>
         )
       ) : (

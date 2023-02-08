@@ -20,10 +20,10 @@ describe("<Badge />", () => {
         teste children
       </Badge>
     )
-    const tag = screen.getByTestId(/tag-2/)
+    const tag = screen.getByTestId("tag-2")
     fireEvent.mouseEnter(tag)
 
-    const btnClose = screen.getByTestId(/tag-2-delete-button/)
+    const btnClose = screen.getByTestId("tag-2-delete-button")
     fireEvent.click(btnClose)
 
     expect(tag).not.toBeVisible()
