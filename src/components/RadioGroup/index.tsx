@@ -37,7 +37,9 @@ export const RadioGroup = ({
         <Box
           key={option.id}
           css={{
-            display: "flex",
+            display: "grid",
+            gridTemplateColumns: "20px 1fr",
+            gap: "$8",
             alignItems: "center",
             ...(orientation === "vertical" && { marginBottom: "$16" }),
             ...(orientation === "horizontal" && { marginRight: "$16" })
