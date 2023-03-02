@@ -1,35 +1,43 @@
 import React from "react"
 
-import { render, screen, fireEvent, act } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 
 import { Tooltip } from "."
 
 describe("<Tooltip />", () => {
-  it("should render the tooltip correctly", () => {
+  global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn()
+  }))
+
+  afterEach(jest.clearAllMocks)
+
+  it("should render the tooltip correctly", async () => {
     render(
-      <Tooltip id="1" tip="tooltip tip">
+      <Tooltip id="1" tip="tip">
         <div>tooltip</div>
       </Tooltip>
     )
 
-    const boxContainer = screen.getByTestId(/box-container1/)
+    const boxContainer = await screen.findByText("tooltip")
 
-    act(() => {
-      fireEvent.mouseEnter(boxContainer)
-    })
+    await userEvent.hover(boxContainer)
 
-    const tooltip = screen.getByText("tooltip tip")
+    const tooltip = await screen.findAllByText("tip")
 
-    expect(tooltip).toBeVisible()
+    expect(tooltip[0]).toBeVisible()
   })
 
-  it("should render the children correctly", () => {
+  it("should render the children correctly", async () => {
     render(
-      <Tooltip id="2" tip="tooltip tip">
+      <Tooltip id="2" tip="tip">
         <div>tooltip</div>
       </Tooltip>
     )
-    const childrenElement = screen.getByText(/tooltip/)
+
+    const childrenElement = await screen.findByText("tooltip")
     expect(childrenElement).toBeVisible()
   })
 })

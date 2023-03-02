@@ -1,57 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
+
+import * as RadixTooltip from "@radix-ui/react-tooltip"
 
 import * as S from "./styles"
-import { Props } from "./types"
-
-import { Box } from "../Box"
+import { TooltipProps } from "./types"
 
 export const Tooltip = ({
-  place = "top",
-  tip,
+  id,
   children,
-  type = "dark",
-  offset = 14,
-  id
-}: Props) => {
-  const [showTip, setShowTip] = useState(false)
-
-  const oppositeSideToApplySpace = {
-    top: "bottom",
-    bottom: "top",
-    right: "left",
-    left: "right"
-  }
-
+  offset = 8,
+  tip,
+  place = "top"
+}: TooltipProps) => {
   return (
-    <S.Container
-      variant={place}
-      data-testid={"box-container" + id}
-      onMouseEnter={() => setShowTip(true)}
-      id={id}
-      onMouseLeave={() => setShowTip(false)}
-    >
-      {showTip && (
-        <S.Tooltip
-          css={{
-            [oppositeSideToApplySpace[place]]: `calc(100% + ${offset}px)`
-          }}
-          data-testid={"tooltip" + id}
-          id={id + "_" + tip}
-        >
-          <S.TipContent>
+    <RadixTooltip.Provider>
+      <RadixTooltip.Root delayDuration={100}>
+        <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
+        <RadixTooltip.Portal id={id}>
+          <S.TooltipContent sideOffset={offset} side={place}>
             {tip}
-            <S.Arrow variant={place}></S.Arrow>
-          </S.TipContent>
-        </S.Tooltip>
-      )}
-      <Box
-        data-tip={tip}
-        id={id + "_" + tip}
-        data-type={type}
-        data-testid="children-container"
-      >
-        {children}
-      </Box>
-    </S.Container>
+            <S.TooltipArrow />
+          </S.TooltipContent>
+        </RadixTooltip.Portal>
+      </RadixTooltip.Root>
+    </RadixTooltip.Provider>
   )
 }

@@ -3,11 +3,7 @@ import React from "react"
 type Place = "top" | "right" | "bottom" | "left"
 type Type = "dark" | "success" | "warning" | "error" | "info" | "light"
 
-export type Props = {
-  /**
-   * Effect of tooltip, by default it is solid.
-   */
-  float?: boolean
+export type TooltipProps = {
   /**
    * Placement of tooltip. by default it is top.
    */
