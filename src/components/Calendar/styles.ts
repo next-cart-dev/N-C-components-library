@@ -3,6 +3,9 @@ import { DayPicker } from "react-day-picker"
 import { styled } from "../../stitches.config"
 
 export const Calendar = styled(DayPicker, {
+  ".rdp-month": {
+    backgroundColor: "#fff"
+  },
   ".rdp-caption_label": {
     fontWeight: "400",
     fontSize: "$14",
