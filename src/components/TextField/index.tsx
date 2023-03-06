@@ -23,7 +23,8 @@ export const TextField = ({
   inputSize = "default",
   variant,
   adornment,
-  inputRef
+  inputRef,
+  onKeyDown
 }: Props) => {
   const [adornmentPadding, setAdornmentPadding] = useState<number>(0)
   const adornmentRef = useRef<HTMLDivElement>(null)
@@ -76,6 +77,7 @@ export const TextField = ({
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          onKeyDown={onKeyDown}
           variant={variant}
           inputSize={inputSize}
           defaultValue={defaultValue}
