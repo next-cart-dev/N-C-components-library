@@ -38,7 +38,7 @@ export const RadioGroupIndicator = styled(RadioGroupPrimitive.Indicator, {
 })
 
 export const Label = styled("label", {
-  fontSize: "$16",
+  fontSize: "$14",
   letterSpacing: "1.2px",
   color: "$text500",
   cursor: "pointer"
