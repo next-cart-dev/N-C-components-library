@@ -21,10 +21,7 @@ export const TableRow = styled("div", {
   display: "flex",
   fontSize: "$16",
   color: "$text700",
-  minWidth: "100%",
-  "@media (min-width: 768px)": {
-    fontSize: "$18"
-  }
+  minWidth: "100%"
 })
 
 export const TableHeadCell = styled("div", {
@@ -38,7 +35,7 @@ export const TableHeadCell = styled("div", {
   fontWeight: "700",
   color: "$primary500",
   textAlign: "left",
-  letterSpacing: "1.2px"
+  letterSpacing: "1.25px"
 })
 
 export const TableBodyCell = styled("div", {
@@ -48,10 +45,11 @@ export const TableBodyCell = styled("div", {
   alignItems: "center",
   justifyContent: "flex-start",
   padding: "0 $8",
+  fontSize: "$14",
   textAlign: "left",
   fontWeight: "$normal",
   color: "$primary500",
-  letterSpacing: "1.2px",
+  letterSpacing: "1.05px",
   backgroundColor: "$neutral300",
   borderBottom: "1px solid $primary300"
 })
@@ -124,5 +122,8 @@ export const Pagination = styled("div", {
 })
 
 export const CounterItems = styled("span", {
+  letterSpacing: "1.25px",
+  fontSize: "$16",
+  fontWeight: "$semibold",
   color: "$neutral100"
 })
