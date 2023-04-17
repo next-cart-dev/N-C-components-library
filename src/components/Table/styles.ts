@@ -70,7 +70,7 @@ export const PaginationButton = styled("button", {
     "font-weight 0.3s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out",
   borderRadius: "100%",
   "@media (min-width: 768px)": {
-    fontSize: "$18",
+    fontSize: "$16",
     marginLeft: "$8",
     marginRight: "$8"
   },
@@ -101,7 +101,7 @@ export const PaginationEllipsis = styled("button", {
   alignItems: "center",
   fontSize: "$16",
   "@media (min-width: 768px)": {
-    fontSize: "$18"
+    fontSize: "$16"
   }
 })
 
