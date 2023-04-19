@@ -19,4 +19,6 @@ export type Props = {
   label?: string
   name: string
   checked?: boolean
+  defaultChecked?: boolean
+  required?: boolean
 }

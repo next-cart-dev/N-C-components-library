@@ -33,7 +33,7 @@ export const Thumb = styled(SwitchPrimitive.Thumb, {
 })
 
 export const Label = styled("label", {
-  fontSize: "$18",
+  fontSize: "$14",
   letterSpacing: "1.2px",
   marginLeft: "$8",
   cursor: "pointer",

@@ -11,7 +11,9 @@ export const Switch = ({
   disabled,
   name,
   onCheckedChange,
-  checked
+  required = false,
+  checked,
+  defaultChecked
 }: Props) => (
   <Box css={{ display: "flex", alignItems: "center" }}>
     <S.Switch
@@ -20,6 +22,8 @@ export const Switch = ({
       name={name}
       onCheckedChange={onCheckedChange}
       checked={checked}
+      defaultChecked={defaultChecked}
+      required={required}
     >
       <S.Thumb />
     </S.Switch>
