@@ -12,13 +12,17 @@ describe("<TextFieldMask />", () => {
   })
 
   it("should sort the value correctly", () => {
-    render(<TextFieldMask format={"####-####"} value={"99999999"} />)
+    render(
+      <TextFieldMask type="text" format={"####-####"} value={"99999999"} />
+    )
     const inputMaskFormat = screen.getByDisplayValue("9999-9999")
     expect(inputMaskFormat).toBeVisible()
   })
 
   it("should format currencies values correctly", () => {
-    const { container } = render(<TextFieldMask formatMaskToUse="currency" />)
+    const { container } = render(
+      <TextFieldMask type="text" formatMaskToUse="currency" />
+    )
     const input = container.querySelector('input[name="currency"]') as Element
     fireEvent.change(input, { target: { value: "200" } })
     const inputMaskCurrencyFormatter = screen.getByDisplayValue("R$ 2,00")
@@ -26,21 +30,35 @@ describe("<TextFieldMask />", () => {
   })
 
   it("should format cpf correctly", () => {
-    render(<TextFieldMask formatMaskToUse="cpf" value={"12345678901"} />)
+    render(
+      <TextFieldMask type="text" formatMaskToUse="cpf" value={"12345678901"} />
+    )
     const inputMaskCurrencyFormatter =
       screen.getByDisplayValue("123.456.789-01")
     expect(inputMaskCurrencyFormatter).toBeVisible()
   })
 
   it("should format cnpj correctly", () => {
-    render(<TextFieldMask formatMaskToUse="cnpj" value={"92281839000163"} />)
+    render(
+      <TextFieldMask
+        type="text"
+        formatMaskToUse="cnpj"
+        value={"92281839000163"}
+      />
+    )
     const inputMaskCurrencyFormatter =
       screen.getByDisplayValue("92.281.839/0001-63")
     expect(inputMaskCurrencyFormatter).toBeVisible()
   })
 
   it("should format mobile phone correctly", () => {
-    render(<TextFieldMask formatMaskToUse="mobile" value={"11988223355"} />)
+    render(
+      <TextFieldMask
+        type="text"
+        formatMaskToUse="mobile"
+        value={"11988223355"}
+      />
+    )
     const inputMaskCurrencyFormatter = screen.getByDisplayValue(
       "+55 (11) 98822-3355"
     )
