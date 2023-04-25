@@ -1,8 +1,9 @@
 import reactSelect from "react-select"
+import CreatableSelect from "react-select/creatable"
 
 import { styled } from "../../stitches.config"
 
-export const ReactSelect = styled(reactSelect, {
+const styles = {
   ".react-select__control": {
     borderRadius: "4px",
     borderColor: "$primary500",
@@ -129,6 +130,15 @@ export const ReactSelect = styled(reactSelect, {
         }
       }
     }
+  }
+}
+
+export const ReactSelect = styled(reactSelect, styles)
+
+export const ReactSelectCreatable = styled(CreatableSelect, {
+  ...styles,
+  ".react-select__value-container--has-value": {
+    flexWrap: "nowrap"
   }
 })
 

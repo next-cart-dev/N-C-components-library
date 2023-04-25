@@ -1,5 +1,4 @@
 import * as Dialog from "@radix-ui/react-dialog"
-import { GrClose } from "react-icons/gr"
 
 import { styled, keyframes } from "../../stitches.config"
 
