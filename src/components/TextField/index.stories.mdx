@@ -38,7 +38,7 @@ import { TextField } from "./index.tsx"
         inputSize="fullWidth"
         placeholder="Insira o seu nome"
         width="100%"
-      /> 
+      />
     </div>
     <div>
       <span>Validation</span>
@@ -84,8 +84,9 @@ import { TextField } from "./index.tsx"
           label="Nome"
           id="text-field7"
           name="text-field7"
-          type="password"
+          type="text"
           placeholder="Digite o valor"
+          isClearable
           adornment={{
             position: "right",
             node: <Icon size="large" icon={<AiFillEye />} />,
@@ -141,7 +142,7 @@ import { TextField } from "./index.tsx"
           placeholder="Insira o seu nome"
           variant="warning"
           adornment={{ position: "right", node: "Right text" }}
-        /> 
+        />
       </Box>
     </div>
   </Box>
