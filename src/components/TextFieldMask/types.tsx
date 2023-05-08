@@ -4,7 +4,7 @@ import { NumberFormatValues, SourceInfo } from "react-number-format"
 
 import { Props as PatternProps } from "./StaticMask/types"
 
-import { Props as TextFieldProps } from "../TextField/types"
+import { TextFieldProps } from "../TextField/types"
 
 export type MaskType = "cpf" | "cnpj" | "date" | "currency" | "mobile"
 

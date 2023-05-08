@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
 
+import { TextFieldAdornment } from "./components/TextFieldAdornment"
+import { TextFieldClearIcon } from "./components/TextFieldClearIcon"
 import * as S from "./styles"
-import { Props } from "./types"
+import { TextFieldProps } from "./types"
 
 import { Box } from "../Box"
 import { FormGroup } from "../FormGroup"
@@ -19,13 +21,15 @@ export const TextField = ({
   onChange,
   onBlur,
   defaultValue,
+  isClearable,
+  onClear,
   helperText,
   inputSize = "default",
   variant,
   adornment,
   inputRef,
   onKeyDown
-}: Props) => {
+}: TextFieldProps) => {
   const [adornmentPadding, setAdornmentPadding] = useState<number>(0)
   const adornmentRef = useRef<HTMLDivElement>(null)
 
@@ -38,17 +42,15 @@ export const TextField = ({
 
   const inputCSS = {
     ...(adornment?.position === "left" && { paddingLeft: adornmentPadding }),
-    ...(adornment?.position === "right" && { paddingRight: adornmentPadding })
+    ...(adornment?.position === "right" && {
+      paddingRight: isClearable ? adornmentPadding + 24 : adornmentPadding
+    })
   }
 
   const containerCSS = {
     width: inputSize === "fullWidth" ? "100%" : S.INPUT_SIZE,
     position: "relative",
     display: "inline-flex"
-  }
-
-  const adornmentCSS = {
-    ...(adornment?.onClick && { cursor: "pointer" })
   }
 
   return (
@@ -60,15 +62,12 @@ export const TextField = ({
       )}
       <Box css={containerCSS}>
         {adornment?.position === "left" && (
-          <S.InputAdornment
-            data-testid={`input-${id}-adornment`}
-            onClick={adornment?.onClick}
+          <TextFieldAdornment
+            id={id}
+            adornment={adornment}
             variant={variant}
-            ref={adornmentRef}
-            css={adornmentCSS}
-          >
-            {adornment.node}
-          </S.InputAdornment>
+            adornmentRef={adornmentRef}
+          />
         )}
         <S.Input
           id={id}
@@ -86,16 +85,20 @@ export const TextField = ({
           css={inputCSS}
           ref={inputRef}
         />
+        {isClearable && (
+          <TextFieldClearIcon
+            adornment={adornment}
+            onClear={onClear}
+            padding={adornmentPadding}
+          />
+        )}
         {adornment?.position === "right" && (
-          <S.InputAdornment
-            data-testid={`input-${id}-adornment`}
-            onClick={adornment?.onClick}
+          <TextFieldAdornment
+            id={id}
+            adornment={adornment}
             variant={variant}
-            ref={adornmentRef}
-            css={{ ...adornmentCSS, right: 0 }}
-          >
-            {adornment.node}
-          </S.InputAdornment>
+            adornmentRef={adornmentRef}
+          />
         )}
       </Box>
       {helperText && (

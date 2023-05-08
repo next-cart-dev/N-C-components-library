@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef, RefCallback } from "react"
 
-export type Props = ComponentPropsWithoutRef<"input"> & {
+export type TextFieldProps = ComponentPropsWithoutRef<"input"> & {
   /**
    * The input label.
    */
@@ -32,4 +32,6 @@ export type Props = ComponentPropsWithoutRef<"input"> & {
     onClick?: () => void
   }
   inputRef?: RefCallback<HTMLInputElement>
+  isClearable?: boolean
+  onClear?: () => void
 }
