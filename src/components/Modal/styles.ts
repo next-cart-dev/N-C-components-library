@@ -24,13 +24,13 @@ export const ModalOverlay = styled(Dialog.Overlay, {
 
 export const ModalContent = styled(Dialog.Content, {
   backgroundColor: "$background100",
-  height: "100vh",
-  width: "100vw",
   border: "1px solid $background500",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   zIndex: "3",
+  width: "90vw",
+  maxHeight: "85vh",
   flexDirection: "column",
   boxShadow:
     "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
