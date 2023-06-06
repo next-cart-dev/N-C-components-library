@@ -9,7 +9,9 @@ export const Table = styled("div", {
 })
 
 export const TableHead = styled("div", {
-  display: "grid"
+  display: "grid",
+  position: "sticky",
+  top: "0"
 })
 
 export const TableBody = styled("div", {
