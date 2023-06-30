@@ -17,6 +17,7 @@ import { Box } from "../Box"
 import { Icon } from "../Icon"
 
 export function Table({
+  id,
   data,
   columns,
   pagination,
@@ -53,7 +54,7 @@ export function Table({
           "@media (min-width: 768px)": { height: "50vh" }
         }}
       >
-        <S.Table>
+        <S.Table id={id}>
           <S.TableHead>
             {table.getHeaderGroups().map((headerGroup) => (
               <S.TableRow key={headerGroup.id}>
