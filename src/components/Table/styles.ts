@@ -2,22 +2,24 @@ import { styled } from "../../stitches.config"
 
 export const Table = styled("div", {
   width: "100%",
-  maxHeight: "100%",
+  height: "100%",
   display: "flex",
   flexFlow: "column",
   overflow: "auto"
 })
 
 export const TableHead = styled("div", {
-  display: "grid"
+  display: "grid",
+  position: "sticky",
+  top: "0"
 })
 
 export const TableBody = styled("div", {
-  display: "grid",
-  maxHeight: "calc(100vh - 110px)"
+  height: "100%"
 })
 
 export const TableRow = styled("div", {
+  height: "50px",
   display: "flex",
   fontSize: "$16",
   color: "$text700",

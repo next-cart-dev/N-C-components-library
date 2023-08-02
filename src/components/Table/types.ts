@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-table"
 
 export type Props = {
+  id: string
   data: any[]
   columns: any[]
   sorting: SortingState
