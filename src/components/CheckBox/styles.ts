@@ -9,8 +9,8 @@ export const WrapperCheckBox = styled("div", {
 
 export const StyledCheckBox = styled(CheckboxPrimitive.Root, {
   backgroundColor: "transparent",
-  width: "20px",
-  height: "20px",
+  width: "16px",
+  height: "16px",
   border: "1px solid $primary500",
   borderRadius: "4px",
   display: "flex",
@@ -45,7 +45,7 @@ export const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 
 export const Label = styled("label", {
   color: "$text500",
-  fontSize: "$18",
+  fontSize: "$14",
   marginLeft: "$8",
   fontWeight: "$normal",
   letterSpacing: "1.2px",

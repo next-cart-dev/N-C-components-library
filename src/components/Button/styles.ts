@@ -3,12 +3,12 @@ import { styled } from "../../stitches.config"
 export const Button = styled("button", {
   all: "unset",
   cursor: "pointer",
-  fontSize: "$16",
+  fontSize: "$14",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  fontWeight: "$semibold",
-  letterSpacing: "$0.4",
+  fontWeight: "$normal",
+  letterSpacing: "1.2px",
   gap: "$16",
   boxSizing: "border-box",
   borderRadius: "4px",
@@ -18,7 +18,7 @@ export const Button = styled("button", {
   variants: {
     variant: {
       primary: {
-        background: "$primary500",
+        background: "linear-gradient(90deg, #2E3B59 0%, #455473 100%)",
         color: "$neutral100",
         "& svg path": {
           fill: "$text200"
@@ -60,18 +60,18 @@ export const Button = styled("button", {
     size: {
       small: {
         padding: "$2 $16",
-        height: "$space$32"
+        height: "32px"
       },
       medium: {
         padding: "0 $16",
-        height: "$space$40"
+        height: "40px"
       },
       large: {
         padding: "0 $16",
-        height: "$space$48"
+        height: "48px"
       },
       fullWidth: {
-        height: "$space$48",
+        height: "40px",
         width: "100%"
       }
     }

@@ -19,6 +19,7 @@ export const TabsTrigger = styled(Tabs.Trigger, {
   padding: "0 $16",
   height: "48px",
   fontSize: "$18",
+  letterSpacing: "1.2px",
   color: "$primary500",
   display: "flex",
   justifyContent: "center",

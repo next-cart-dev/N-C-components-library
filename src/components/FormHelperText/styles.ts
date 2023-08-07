@@ -2,6 +2,7 @@ import { styled } from "../../stitches.config"
 
 export const FormHelperText = styled("p", {
   fontSize: "$12",
+  letterSpacing: "1.2px",
   marginTop: "6px",
   marginLeft: "$8",
   marginBottom: "0",
