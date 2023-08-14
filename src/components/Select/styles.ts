@@ -7,7 +7,9 @@ const styles = {
   ".react-select__control": {
     borderRadius: "4px",
     borderColor: "$primary500",
-    height: "48px"
+    height: "40px",
+    fontSize: "$14",
+    letterSpacing: "1.2px"
   },
   ".react-select__indicator": {
     background: "$primary500",
@@ -38,6 +40,8 @@ const styles = {
     }
   },
   ".react-select__option": {
+    fontSize: "$14",
+    letterSpacing: "1.2px",
     "&:hover": {
       background: "$nextCartPurple300"
     },
@@ -146,5 +150,6 @@ export const ErrorMessage = styled("p", {
   color: "$danger500",
   margin: "6px 0 0 10px",
   fontSize: "12px",
+  letterSpacing: "1.2px",
   height: "12px"
 })

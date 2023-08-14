@@ -20,7 +20,7 @@ export const TextFieldClearIcon = ({
         css={{
           position: "absolute",
           right: adornment?.position === "right" ? padding : "$16",
-          top: "$16",
+          top: "12px",
           cursor: "pointer",
           color: "$secondary500",
           "&:hover": { color: "$secondary700" }

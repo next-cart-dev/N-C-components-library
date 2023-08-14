@@ -62,7 +62,7 @@ export const Select = ({
   const labelCSS = {
     marginBottom: "$8",
     fontSize: "$14",
-    letterSpacing: "$0.5",
+    letterSpacing: "1.2px",
     color: variant ? defaultVariantMapping[variant].label : "$primary500",
     display: "block"
   }
