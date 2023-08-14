@@ -35,7 +35,7 @@ export const Button = styled("button", {
         }
       },
       secondary: {
-        background: "$neutral200",
+        background: "transparent",
         color: "$primary500",
         "& svg path": {
           fill: "$primary500"

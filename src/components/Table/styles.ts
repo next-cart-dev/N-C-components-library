@@ -5,7 +5,8 @@ export const Table = styled("div", {
   height: "100%",
   display: "flex",
   flexFlow: "column",
-  overflow: "auto"
+  overflow: "auto",
+  backgroundColor: "#fff"
 })
 
 export const TableHead = styled("div", {
@@ -52,7 +53,7 @@ export const TableBodyCell = styled("div", {
   fontWeight: "$normal",
   color: "$primary500",
   letterSpacing: "1.05px",
-  backgroundColor: "$neutral300",
+  backgroundColor: "#fff",
   borderBottom: "1px solid $primary300"
 })
 
