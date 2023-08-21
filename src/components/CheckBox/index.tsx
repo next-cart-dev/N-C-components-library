@@ -10,12 +10,14 @@ export const Checkbox = ({
   id,
   disabled,
   checked,
+  name,
   onCheckedChange
 }: Props) => {
   return (
     <S.WrapperCheckBox>
       <S.StyledCheckBox
         id={id}
+        name={name}
         disabled={disabled}
         checked={checked}
         onCheckedChange={onCheckedChange}

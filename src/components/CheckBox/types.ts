@@ -7,4 +7,5 @@ export type Props = {
   onCheckedChange?: (checked: CheckedState) => void
   disabled?: boolean
   ariaControls?: string
+  name: string
 }
