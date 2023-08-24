@@ -28,7 +28,7 @@ export const Button = styled("button", {
         },
         "&:disabled": {
           color: "$neutral700",
-          background: "$neutral500",
+          background: "$text300",
           "& svg path": {
             fill: "$neutral700"
           }
