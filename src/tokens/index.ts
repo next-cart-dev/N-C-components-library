@@ -90,6 +90,8 @@ export const lightTheme = {
       nextCartGreen600: "#3BC284",
       nextCartGreen700: "#33A872",
       gradienteLemonGreen: "linear-gradient(90deg, #42d994 0%, #5ef275 100%)",
+      gradienteLemonGreenDark:
+        "linear-gradient(90deg, #3BC284 0%, #33A872 100%)",
       gradienteDarkBlue: "linear-gradient(90deg, #2e3b59 0%, #455473 100%)",
       gradienteDarkPurple: "linear-gradient(90deg, #4a368c 0%, #8578b5 100%)",
       text100: "#e7ebf3",

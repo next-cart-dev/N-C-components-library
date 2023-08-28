@@ -8,7 +8,7 @@ export const Button = styled("button", {
   justifyContent: "center",
   alignItems: "center",
   fontWeight: "$normal",
-  letterSpacing: "1.2px",
+  letterSpacing: "1.25px",
   gap: "$16",
   boxSizing: "border-box",
   borderRadius: "4px",
@@ -45,6 +45,48 @@ export const Button = styled("button", {
           background: "$primary200",
           "& svg path": {
             fill: "$primary500"
+          }
+        },
+        "&:disabled": {
+          color: "$neutral700",
+          background: "$neutral500",
+          borderColor: "$neutral700",
+          "& svg path": {
+            fill: "$neutral700"
+          }
+        }
+      },
+      tertiary: {
+        background: "$gradienteLemonGreen",
+        color: "$text500",
+        "& svg path": {
+          fill: "$text500"
+        },
+        "&:hover": {
+          background: "$gradienteLemonGreenDark",
+          "& svg path": {
+            fill: ""
+          }
+        },
+        "&:disabled": {
+          color: "$neutral700",
+          background: "$neutral500",
+          borderColor: "$neutral700",
+          "& svg path": {
+            fill: "$neutral700"
+          }
+        }
+      },
+      danger: {
+        background: "$danger600",
+        color: "$text200",
+        "& svg path": {
+          fill: "$text200"
+        },
+        "&:hover": {
+          background: "$danger700",
+          "& svg path": {
+            fill: "$text200"
           }
         },
         "&:disabled": {
