@@ -4,6 +4,9 @@ import { styled } from "../../stitches.config"
 
 export const Calendar = styled(DayPicker, {
   ".rdp-month": {
+    boxShadow: "2px 2px 10px 0px #00000033",
+    borderRadius: "10px",
+    padding: "$8",
     backgroundColor: "#fff"
   },
   ".rdp-caption_label": {
