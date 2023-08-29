@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from "react"
 
+import { CSS } from "@stitches/react"
+
 import { TextFieldAdornment } from "./components/TextFieldAdornment"
 import { TextFieldClearIcon } from "./components/TextFieldClearIcon"
 import * as S from "./styles"
 import { TextFieldProps } from "./types"
 
+import { config } from "../../stitches.config"
 import { Box } from "../Box"
 import { FormGroup } from "../FormGroup"
 import { FormHelperText } from "../FormHelperText"
@@ -40,8 +43,10 @@ export const TextField = ({
       )
   }, [adornment])
 
-  const inputCSS = {
-    ...(adornment?.position === "left" && { paddingLeft: adornmentPadding }),
+  const inputCSS: CSS<typeof config> = {
+    ...(adornment?.position === "left" && {
+      paddingLeft: adornmentPadding
+    }),
     ...(adornment?.position === "right" && {
       paddingRight: isClearable ? adornmentPadding + 24 : adornmentPadding
     })

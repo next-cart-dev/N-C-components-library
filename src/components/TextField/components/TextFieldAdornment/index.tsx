@@ -1,7 +1,10 @@
 import React from "react"
 
+import { CSS } from "@stitches/react"
+
 import { TextFieldAdornmentProps } from "./types"
 
+import { config } from "../../../../stitches.config"
 import * as S from "../../styles"
 
 export const TextFieldAdornment = ({
@@ -10,8 +13,16 @@ export const TextFieldAdornment = ({
   adornmentRef,
   adornment
 }: TextFieldAdornmentProps) => {
-  const adornmentCSS = {
-    ...(adornment?.onClick && { cursor: "pointer" })
+  const adornmentCSS: CSS<typeof config> = {
+    ...(adornment?.onClick && { cursor: "pointer" }),
+    ...(adornment?.position === "left" && {
+      borderTopLeftRadius: "4px",
+      borderBottomLeftRadius: "4px"
+    }),
+    ...(adornment?.position === "right" && {
+      borderTopRightRadius: "4px",
+      borderBottomRightRadius: "4px"
+    })
   }
 
   if (adornment?.position === "left") {

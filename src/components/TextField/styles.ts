@@ -19,23 +19,22 @@ export const Input = styled("input", {
   color: "$text700",
   fontWeight: "$normal",
   letterSpacing: "1.2px",
-  border: "none",
   borderRadius: "4px",
-  boxShadow: "0 0 0 1px $$borderColor",
+  border: "1px solid $$borderColor",
   outline: "none",
   transition: "box-shadow 0.3s ease-in-out, background 0.1s ease-in-out",
   "&:hover": {
     background: "$primary200"
   },
   "&:disabled": {
-    boxShadow: "0 0 0 1px $$disabledBorderColor",
+    border: "1px solid $$disabledBorderColor",
     background: "#fff"
   },
   "&::placeholder": {
     color: "$text400"
   },
   "&:focus-visible": {
-    boxShadow: "0 0 0 2px $$borderColor"
+    boxShadow: "0 0 0 1px $$borderColor"
   },
   variants: {
     inputSize: {
@@ -48,48 +47,48 @@ export const Input = styled("input", {
     },
     variant: {
       success: {
-        boxShadow: "0 0 0 1px $$successBorderColor",
+        border: "1px solid $$successBorderColor",
         "&:hover": {
           background: "$success200"
         },
         "&:focus-visible": {
-          boxShadow: "0 0 0 2px $$successBorderColor"
+          boxShadow: "0 0 0 1px $$successBorderColor"
         },
         "&::placeholder": {
           color: "$tertiary500"
         }
       },
       danger: {
-        boxShadow: "0 0 0 1px $$dangerBorderColor",
+        border: "1px solid $$dangerBorderColor",
         "&:hover": {
           background: "$danger200"
         },
         "&:focus-visible": {
-          boxShadow: "0 0 0 2px $$dangerBorderColor"
+          boxShadow: "0 0 0 1px $$dangerBorderColor"
         },
         "&::placeholder": {
           color: "$danger500"
         }
       },
       info: {
-        boxShadow: "0 0 0 1px $$infoBorderColor",
+        border: "1px solid $$infoBorderColor",
         "&:hover": {
           background: "$info200"
         },
         "&:focus-visible": {
-          boxShadow: "0 0 0 2px $$infoBorderColor"
+          boxShadow: "0 0 0 1px $$infoBorderColor"
         },
         "&::placeholder": {
           color: "$info500"
         }
       },
       warning: {
-        boxShadow: "0 0 0 1px $$warningBorderColor",
+        border: "1px solid $$warningBorderColor",
         "&:hover": {
           background: "$warning200"
         },
         "&:focus-visible": {
-          boxShadow: "0 0 0 2px $$warningBorderColor"
+          boxShadow: "0 0 0 1px $$warningBorderColor"
         },
         "&::placeholder": {
           color: "$warning500"
