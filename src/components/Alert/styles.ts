@@ -36,7 +36,7 @@ export const AlertTitle = styled("span", {
 })
 
 export const AlertMessage = styled("span", {
-  fontSize: "$12",
+  fontSize: "$14",
   fontWeight: "$normal",
   letterSpacing: "1px"
 })
