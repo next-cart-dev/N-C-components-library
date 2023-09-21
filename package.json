@@ -1,7 +1,7 @@
 {
   "name": "@next-cart-dev/design-system",
   "author": "next-cart-dev",
-  "version": "0.9.57-canary.16",
+  "version": "0.9.57-canary.17",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
