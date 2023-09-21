@@ -99,13 +99,13 @@ export const Button = styled("button", {
         }
       },
       success: {
-        background: "$success600",
+        background: "$tertiary600",
         color: "$text200",
         "& svg path": {
           fill: "$text200"
         },
         "&:hover": {
-          background: "$success700",
+          background: "$tertiary700",
           "& svg path": {
             fill: "$text200"
           }

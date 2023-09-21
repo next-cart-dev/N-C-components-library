@@ -11,7 +11,7 @@ export type ButtonProps = ComponentPropsWithoutRef<"button"> & {
    * The button variant style.
    * @default 'primary'
    */
-  variant?: "primary" | "secondary" | "tertiary" | "danger"
+  variant?: "primary" | "secondary" | "tertiary" | "success" | "danger"
   /**
    * The button size.
    * @default 'small'
