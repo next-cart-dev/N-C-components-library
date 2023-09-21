@@ -97,6 +97,27 @@ export const Button = styled("button", {
             fill: "$neutral700"
           }
         }
+      },
+      success: {
+        background: "$success600",
+        color: "$text200",
+        "& svg path": {
+          fill: "$text200"
+        },
+        "&:hover": {
+          background: "$success700",
+          "& svg path": {
+            fill: "$text200"
+          }
+        },
+        "&:disabled": {
+          color: "$neutral700",
+          background: "$neutral500",
+          borderColor: "$neutral700",
+          "& svg path": {
+            fill: "$neutral700"
+          }
+        }
       }
     },
     size: {
